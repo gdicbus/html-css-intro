@@ -383,13 +383,13 @@
 
       <section>
         <h3>Stand-Alone Elements</h3>
-        <p>An element that only renders itself, and cannot wrap around any other content. These elements are "self-closing",
-          which means there is no closing tag. Note the location of the
+        <p>An element that doesn't wrap around any other content. They are "self-closing", which means there is no closing tag.
+          Note the location of the
           <code>/</code> character in these tags:</p>
         <ul>
           <li>An
             <strong>image</strong> tag:
-            <pre><code class="html">&lt;img src="cat-photo.jpg"/&gt;</code></pre>
+            <pre><code class="html">&lt;img/&gt;</code></pre>
           </li>
           <li>A
             <strong>horizontal rule</strong> tag:
@@ -403,79 +403,105 @@
       </section>
 
       <section>
-        <h3>Anatomy of an HTML element</h3>
-        <ul>
-          <li>
-            <strong>Attribute</strong>
-            <ul>
-              <li>Provides additional information about the HTML element</li>
-              <li>Class, ID, language, style, identity, source</li>
-              <li>Placed inside an opening tag, before the right angle bracket.</li>
-            </ul>
-          </li>
-          <li>
-            <strong>Value</strong>
-            <ul>
-              <li>Value is the value assigned to a given attribute.</li>
-              <li>Values must be contained inside quotation marks.</li>
-              <li>
-                <pre><code class ="html ">&lt;div id="copyright "&gt;&copy;Girl Develop It logo 2016&lt;/div&gt;
-&lt;img src="my_picture.jpg " /&gt;
-&lt;a href="http://girldevelopit.com "&gt;Girl Develop It&lt;/a&gt;
+        <h3>Element Attributes</h3>
+        <p>All HTML tags accept "attributes," which provide additional information and configurations.</p>
+        <p>They are placed
+          <strong>inside</strong> an opening tag, after the tag name.</p>
+        <p>Attributes consist of a name and a value, and the value must be contained inside quotation marks.</p>
+        <pre><code class ="html">&lt;input type="text" placeholder="Enter your name here." /&gt;
+
+&lt;a href="http://girldevelopit.com"&gt;Girl Develop It&lt;/a&gt;
+
+&lt;img src="cat-photo.jpg" alt="Image of an adorable cat." /&gt;
 </code></pre>
-              </li>
-            </ul>
-          </li>
-        </ul>
+        <small>Some elements, like
+          <code>img</code>, are useless without attributes!</small>
       </section>
 
       <!-- HTML Page-->
       <section>
-        <h3>Doctype</h3>
-        <p>The first thing on an HTML page is the doctype, which tells the browser which version of the markup language the
-          page is using.</p>
-        <pre><code class = "html ">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN " "http:// www.w3.org/TR/html4/loose.dtd "&gt;
-</code></pre>
-        <pre><code class = "html ">&lt;!DOCTYPE html&gt;
-</code></pre>
-        <p>
-          <small>* The doctype is case-insensitive.
-            <br/>DOCtype, doctype, DocType and DoCtYpe are all valid.</small>
-        </p>
+        <h3>The HTML Must-Have Elements</h3>
+        <aside class="notes">
+          Websites are made up of many different combinations of elements and content. However, there are a few tags that every website
+          must have in order to be a real webpage.
+        </aside>
       </section>
 
       <section>
-        <h3>HTML Tag</h3>
-        <p>After &lt;doctype&gt;, the page content must be contained between &lt;html&gt; tags.</p>
-        <pre><code class = "html ">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
+        <h3>The !Doctype Element</h3>
+        <p>The first thing in an HTML document is the
+          <code>&lt;!Doctype&gt;</code> declaration, which tells the browser which version of the markup language the page is using. Essentially, it tells
+          the browser how to display the following code.
+          <br/>In our case we want it to display HTML.
+        </p>
+        <pre><code class="html">&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN " "http:// www.w3.org/TR/html4/loose.dtd "&gt;
+</code></pre>
+        <small>* HTML 4.01 is outdated now. But if, for any reason, you need to use an older version of HTML, you can tell the browser
+          so via the !Doctype.</small>
+        <pre><code class ="html">&lt;!DOCTYPE html&gt;
+</code></pre>
+        <small>* This tag is case-insensitive, which is why you'll see it capitalized in various ways around the web, and probably
+          even within these slides.</small>
+      </section>
+
+      <section>
+        <h3>The HTML Root Element</h3>
+        <p>After
+          <code>&lt;!Doctype&gt;</code>, the
+          <strong>entirety</strong> of a page's content must be contained within
+          <code>&lt;html&gt;</code> tags. This is the element where we can declare which language is used for the majority of the written content
+          of the page.</p>
+        <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
 
 &lt;/html&gt;
 </code></pre>
+        <small>* In this case, we're using
+          <code>en</code> for English. The codes
+          <code>de</code> (German),
+          <code>fr</code> (French), and
+          <code>es</code> (Spanish) are also available,
+          <a href="https://www.ietf.org/rfc/bcp/bcp47.txt" title="Tags for Identifying Languages">as well as many others</a>.</small>
       </section>
 
       <section>
-        <h3>Head and Body Tags</h3>
+        <h3>Head and Body Elements</h3>
         <p>
-          <strong>Head:</strong> The head contains the title of the page &amp; meta information about the page. Meta information
-          is not visible to the user, but has many purposes, like providing information to search engines.</p>
+          <strong>Head:</strong> The head contains the
+          <code>&lt;title&gt;</code> of the page &amp; meta information about the page. Meta information is not visible to the user, but has many purposes,
+          like providing information to search engines.</p>
         <p>
           <strong>Body:</strong> The body contains the actual content of the page. Everything that is contained in the body is visible
-          to the user.</p>
+          to the user via their browser.</p>
+        <aside class="notes">
+          These are somewhat strange to conceptualize, so here's a metaphor that I hope will help. The HEAD of a webpage contains the
+          mental, telepathic brainwaves that it sends to the browser and to search engines. None of the contents of the HEAD
+          show up on the webpage itself. They're rendered elsewhere, either in the browser's chrome (like the tab where the
+          title appears) or in a search engine. Eventually we'll link things like fonts and styles via the HEAD, as well.
+          The BODY, meanwhile, is what the browser actually renders: the visible portion of the website.
+        </aside>
       </section>
 
       <!--example of head and body tags-->
       <section>
-        <h3>Head and Body Tags: Example</h3>
+        <h3>Head and Body Elements</h3>
         <img src="img/example-headbody.png " alt="example of head and body " />
       </section>
 
       <section>
-        <h3>Head and Body Tags</h3>
-        <pre><code class = "html ">&lt;!DOCTYPE html&gt;
-&lt;html&gt;
+        <h3>The HTML Must-Have Elements</h3>
+        <p>Here it is, the bare minimum of a website!
+          <br/> Each of these elements are only declared once, eg. a webpage can only have one
+          <code>doctype</code>,
+          <code>html</code> root,
+          <code>head</code>,
+          <code>title</code> and
+          <code>body</code>.
+        </p>
+        <pre><code class="html">&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
   &lt;head&gt;
-    &lt;title&gt;Title of the page &lt;/title&gt;
+    &lt;title&gt;Title of the page&lt;/title&gt;
   &lt;/head&gt;
   &lt;body&gt;
     The page content here.
@@ -484,10 +510,21 @@
 </code></pre>
       </section>
 
+      <!-- TO DO
+
+      Move nesting slides up before the Develop It??????
+
+      -->
+
       <!-- Develop it -->
       <section>
         <h3>Let's develop it!</h3>
-        <p>Let's get our web page set up with a doctype, head, title and body.</p>
+        <p>Let's get our web page set up with a
+          <code>doctype</code>,
+          <code>html</code> root,
+          <code>head</code>,
+          <code>title</code> and
+          <code>body</code>.</p>
         <p>Later we'll add some content.</p>
       </section>
 
