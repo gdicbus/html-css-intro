@@ -70,8 +70,7 @@
           </ul>
         </div>
         <aside class="notes">
-          Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes
-          window (hit »S« on your keyboard).
+          A portion of your class fees go into our scholarship fund, so thank you!
         </aside>
       </section>
 
@@ -106,49 +105,57 @@
             <li>What is your favorite or dream vacation destination?</li>
           </ul>
         </div>
-      </section>
-
-
-      <!-- What is HTML?-->
-      <section>
-        <h3>What is HTML?</h3>
-        <p>HTML is the code that allows us to build websites</p>
-        <img src="img/homepage-view.png " alt="Screenshot of the Girl Develop It Homepage ">
-      </section>
-
-      <section>
-        <h3>What is HTML?</h3>
-        <p>If you 'view the source', you see this</p>
-        <img src="img/homepage-html.png " alt="Screenshot of the Girl Develop It page source code ">
+        <aside class="notes">
+          We're going to be spending a bit of time together, so let's get to know each other!
+        </aside>
       </section>
 
       <!-- History of HTML-->
       <section>
-        <h3>History of HTML</h3>
-        <ul>
-          <li>Invented by Tim Berners-Lee</li>
-          <li>Created "hypertext " to share scientific papers</li>
-          <li>First web page August 6, 1991</li>
-          <li>Standardized by w3 Consortium (pack of super nerds)</li>
-        </ul>
+        <h3>So, what is HTML?</h3>
+        <h4>
+          <strong class="green">H</strong>yper
+          <strong class="green">T</strong>ext
+          <strong class="green">M</strong>arkup
+          <strong class="green">L</strong>anguage</h4>
+        <blockquote>Hypertext Markup Language (HTML) is the standard markup language for creating web pages</blockquote>
+        <small>Source:
+          <a href="https://en.wikipedia.org/wiki/HTML">Wikipedia</a>
+        </small>
+        <br/>
+        <p>Invented by Sir Tim Berners-Lee in the early 90's, HTML was initially created as a way to share scientific papers.
+          It is now governed and maintained by the good people of
+          <a href="https://www.w3.org/" title "The World Wide Web Consortium">the W3C</a>.</p>
       </section>
 
       <section>
-        <h3>History of HTML</h3>
-        <ul>
-          <li>
-            <strong>H</strong>yper
-            <strong>T</strong>ext
-            <strong>M</strong>arkup
-            <strong>L</strong>anguage</li>
-          <li>Early 90s</li>
-          <li>HTML 4 in 1997</li>
-          <li>XHTML in 2000</li>
-          <li>HTML 5 in 2014</li>
-        </ul>
+        <h3>What is a web page?</h3>
+        <p>A structured document that is viewed with a Web browser on a computer or mobile device screen.</p>
+        <img src="img/homepage-view.png " alt="Screenshot of the Girl Develop It Homepage ">
       </section>
 
-      <!-- Terms-->
+      <section>
+        <h3>What does HTML look like?</h3>
+        <p>If you 'view the source' of any web page, you will see something like this:</p>
+        <img src="img/homepage-html.png " alt="Screenshot of the Girl Develop It page source code ">
+      </section>
+
+      <!-- See some HTML -->
+      <section>
+        <h3>Let's see some HTML!</h3>
+        <p>Take the next 5 minutes to check out the underlying HTML of your favorite or most-frequented websites by viewing
+          the page's source.</p>
+        <br/>
+        <p>Right-click anywhere on the website and select "View Source" or "View Page Source".</p>
+        <br/>
+        <p>Alternatively, you can use your keyboard:
+          <br/>
+          <code>option + command + U</code> on Mac
+          <br/>or
+          <code>control + U</code> on Windows.</p>
+      </section>
+
+      <!-- Terms
       <section>
         <h3>Terms</h3>
         <ul>
@@ -166,12 +173,24 @@
             <br /> The inner workings and functionality of a website or application.</li>
         </ul>
       </section>
+-->
 
       <!-- Nitty gritty 1 - Clients and servers -->
       <section>
-        <h3>Clients and servers</h3>
-        <p>How your computer accesses websites</p>
-        <img src="img/client-server.png " alt="Diagram showing computer connecting to server " />
+        <h3>How does a website get to a device?</h3>
+        <img src="img/client-server-model.svg " alt="Diagram showing computer connecting to server " />
+        <br/>
+        <small>Image credit:
+          <a href="https://commons.wikimedia.org/w/index.php?curid=15782858">David Vignoni</a>
+        </small>
+        <aside class="notes">
+          This is an extremely simplified explanation, but it will suffice. Websites that we view on the internet are "hosted" on a
+          server. There are tons of servers out there in the world, but their function is the same: they store data and are
+          connected to the internet. The devices we use to view the internet, whether they're phones, laptops, or desktops,
+          are all considered "clients" when it comes to the web. They are also connected to the internet. When you type in
+          a website address or click a link within a web browser, the device asks for the data associated with what you're
+          trying to find. The server "serves" it to the device, and the browser displays the result!
+        </aside>
       </section>
 
       <!-- Nitty gritty 2 - Tools -->
@@ -195,8 +214,6 @@
             <a href="https://notepad-plus-plus.org/ " target="_blank ">Notepad++</a> - Windows
             <br />
             <a href="http://www.sublimetext.com/ " target="_blank ">Sublime Text</a> - Windows, Mac, Linux
-            <br />
-            <a href="http://www.barebones.com/products/textwrangler/TextWrangler " target="_blank ">TextWrangler</a> - Mac</li>
         </ul>
       </section>
 
@@ -246,13 +263,19 @@
       <section>
         <h3>Anatomy of a website</h3>
         <p>
-          <strong>Your Content</strong>
+          <strong>Your Content</strong> (Text, images, etc.)
           <br />
-          <strong>+ HTML</strong>: Structure
+          <span class="green">+ </span>
           <br />
-          <strong>+ CSS</strong>: Presentation
+          <strong>HTML</strong> (Structure)
           <br />
-          <strong>= Your Website</strong>
+          <span class="green">+ </span>
+          <br />
+          <strong>CSS</strong> (Presentation)
+          <br />
+          <span class="green">= </span>
+          <br />
+          <strong>Your Website</strong>
         </p>
         <p>A website is a way to present your content to the world. HTML allows you to structure the content in a meaningful
           way and CSS allows you to customize and enhance the appearance of the content.</p>
@@ -263,16 +286,16 @@
         <p>Concrete example:</p>
         <ul>
           <li>The words in a paragraph are your
-            <strong>content</strong>
+            <strong>content</strong>.
             <pre>How to paint. That's easy. What to paint. That's much harder.</pre>
           </li>
           <li>Putting your content into an HTML tag to make it look like a paragraph is
-            <strong>structure</strong>
-            <pre><code class ="html ">&lt;p&gt;How to paint. That's easy. What to paint. That's much harder.&lt;/p&gt;
+            <strong>structure</strong>.
+            <pre><code class="html">&lt;p&gt;How to paint. That's easy. What to paint. That's much harder.&lt;/p&gt;
 </code></pre>
           </li>
-          <li>Making the font of your paragraph green, 24px in size, and italic is
-            <strong>presentation</strong>
+          <li>Making the text of your paragraph green, 24px in size, and italic is
+            <strong>presentation</strong>.
             <br />
             <p style="font-size:24px; color:green; font-style: italic; ">How to paint. That's easy. What to paint. That's much harder.</p>
           </li>
@@ -281,57 +304,100 @@
 
       <!-- HTML element-->
       <section>
-        <h3>Anatomy of an HTML element</h3>
+        <h3>HTML Elements</h3>
+        <p>An element is an individual piece of information that is displayed by a browser. Websites are comprised of many elements.
+          Browsers will present display elements in specific ways.</p>
+        <br/>
+        <p>Element examples: </p>
         <ul>
-          <li>
-            <strong>Element</strong>
-            <ul>
-              <li>An individual component of HTML</li>
-              <li>Available elements include: paragraph, heading, table, list, link, image, etc.</li>
-            </ul>
+          <li>Paragraph</li>
+          <li>Heading</li>
+          <li>Link (aka Anchor)</li>
+          <li>Table</li>
+          <li>Image</li>
+        </ul>
+        <p>
+          ...
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" title="Mozilla Developer Network HTML Element Reference">and
+            <em>many</em> more.</a>
+        </p>
+      </section>
+
+      <!-- HTML Tags-->
+      <section>
+        <h3>HTML Tags</h3>
+        <p>The code written to tell a browser which HTML Elements to display.
+        </p>
+        <br/>
+        <p>The following code...
+        </p>
+        <pre><code class="html">&lt;button&gt;I'm a button.&lt;/button&gt;</code></pre>
+        <br/>
+        <p>... creates a button that can be clicked.</p>
+        <button style="font-size:20px;">I'm a button.</button>
+      </section>
+
+      <!-- anatomy of a tag -->
+      <section>
+        <h3>Basic HTML Tag Anatomy</h3>
+        <img src="img/tagbreakdown.png " alt="Tag breakdown " style="border: none; box-shadow: none; " />
+      </section>
+
+      <section>
+        <h3>Container Elements</h3>
+        <p>These elements wrap around content, including other elements.</p>
+        <ul>
+          <li>A
+            <strong>paragraph</strong> is represented by
+            <code>&lt;p&gt;</code> tags:
+            <pre><code class="html">&lt;p&gt;Once upon a time there was a paragraph.&lt;/p&gt;</code></pre>
           </li>
-          <li>
-            <strong>Tag</strong>
-            <ul>
-              <li>Marks the beginning &amp; end of an element</li>
-              <li>Opening tag and Closing Tag</li>
-              <li>Tags contain characters that indicate the tag's purpose
-                <pre><code class ="html ">&lt;tagname&gt;Stuff in the middle&lt;/tagname&gt;</code></pre>
-              </li>
-              <li>
-                <pre><code class ="html ">&lt;p&gt; This is a sample paragraph.&lt;/p&gt;</code></pre>
-              </li>
-            </ul>
+          <li>An
+            <strong>anchor</strong> (the element that lets us click on hyperlinks) is represented by
+            <code>&lt;a&gt;</code> tags:
+            <pre><code class="html">&lt;a href="www.google.com"&gt;A link to Google&lt;/a&gt;</code></pre>
           </li>
+          <li>Text that is
+            <strong>emphasized</strong> (typically shown in italic) is represented by
+            <code>&lt;em&gt;</code> tags:
+            <pre><code class="html">She &lt;em&gt;really&lt;/em&gt; likes cats.</code></pre>
+          </li>
+          <!-- <li>An
+            <strong>unordered list</strong> containing a
+            <strong>list item</strong>:</li>
+          <pre><code class="html">&lt;ul&gt;
+  &lt;li&gt;I am text inside a list item.&lt;/li&gt;
+&lt;/ul&gt;
+            </code></pre>
+          </li>
+          <li>A
+            <strong>navigation</strong> element containing an
+            <strong>hyperlink</strong>:
+            <pre><code class="html">&lt;nav&gt;
+  &lt;a href="www.google.com"&gt;A link to Google&lt;/a&gt;
+&lt;/nav&gt;
+            </code></pre>
+          </li> -->
         </ul>
       </section>
 
-      <!--anatomy of a tag -->
       <section>
-        <h3>Tag Breakdown</h3>
-        <img src="img/tagbreakdown.png " alt="Tag breakdown " style="border: none; box-shadow: none; " />
-      </section>
-      <section>
-        <h3>Anatomy of an HTML element</h3>
+        <h3>Stand-Alone Elements</h3>
+        <p>An element that only renders itself, and cannot wrap around any other content. These elements are "self-closing",
+          which means there is no closing tag. Note the location of the
+          <code>/</code> character in these tags:</p>
         <ul>
-          <li>
-            <strong>Container Element</strong>
-            <ul>
-              <li>An element that can contain other elements or content
-              </li>
-              <li>A paragraph (&lt;p>) contains text</li>
-            </ul>
+          <li>An
+            <strong>image</strong> tag:
+            <pre><code class="html">&lt;img src="cat-photo.jpg"/&gt;</code></pre>
           </li>
-          <li>
-            <strong>Stand Alone Element</strong>
-            <ul>
-              <li>An element that cannot contain anything else</li>
-              <li>
-                <pre><code class = "html ">&lt;br/&gt;
-&lt;img/&gt;
-</code></pre>
-              </li>
-            </ul>
+          <li>A
+            <strong>horizontal rule</strong> tag:
+            <pre><code class="html">&lt;hr/&gt;</code></pre>
+          </li>
+          <li>A
+            <strong>line break</strong> (like hitting the enter key in a word processer to jump down one line) tag:
+            <pre><code class="html">&lt;br/&gt;</code></pre>
           </li>
         </ul>
       </section>
