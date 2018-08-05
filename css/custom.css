@@ -10,9 +10,13 @@
 
 div.halfblock{
 	float: left;
-	width: 45%;
+	width: 48%;
 	text-align: left;
-	margin-right: 5%;
+	margin-right: 4%;
+}
+
+div.halfblock + div.halfblock {
+    margin-right: 0;
 }
 
 div.left-align{
@@ -59,4 +63,22 @@ div.left-align{
     overflow: visible;
     position: static;
     width: auto;
+}
+
+/*********************************************
+ * DEFINITION LISTS
+ *********************************************/
+.reveal dl {
+  text-align: left;
+}
+
+.reveal dt {
+  background: #ddd;
+  font-size: .65em;
+  font-weight: 800;
+  padding: 0 .25em;
+}
+
+.reveal dd {
+  padding: .25em 0;
 }
