@@ -824,8 +824,20 @@
       <!-- Line Break-->
       <section>
         <h3>Line Break</h3>
-        <p>Functions the same way that hitting "enter" in a text editor would.</p>
-        <pre><code class="html">&lt;p&gt;
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd><pre><code>&lt;br/&gt;</code></pre></dd>
+              <dt>Category:</dt>
+              <dd>Inline</dd>
+              <dt>Acceptable content:</dt>
+              <dd>None<dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+              <p>Since browsers do not acknowledge line returns in HTML documents, the <code>break</code> element must be used.</p>
+              <pre><code class="html">&lt;p&gt;
   Which cats enjoy bowling?&lt;br/&gt;
   &lt;br/&gt;
   &lt;br/&gt;
@@ -836,148 +848,230 @@
   &lt;br/&gt;
   &lt;br/&gt;
   Alley cats.
-&lt;/p&gt;
-</code></pre>
+&lt;/p&gt;</code></pre>
+          </div>
+        </div>
       </section>
 
       <!-- Lists-->
       <section>
-        <h3>Unordered & Ordered Lists</h3>
-        <p>Both types of lists use the same <code>li</code> (list item) elements. Wrapping a list item in <code>ul</code> or <code>ol</code> will effect how the list item's bullet will display.</p>
-        <br/>
+        <h3>List Items</h3>
         <div>
           <div class="halfblock">
-            <pre><code class="html">&lt;ul&gt;
-  &lt;li&gt;Cats&lt;/li&gt;
-  &lt;li&gt;Dogs&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-            <br/>
-            <pre><code class="html">&lt;ol&gt;
-  &lt;li&gt;Breakfast&lt;/li&gt;
-  &lt;li&gt;Lunch&lt;/li&gt;
-  &lt;li&gt;Dinner&lt;/li&gt;
-&lt;/ol&gt;
-</code></pre>
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd><pre><code>&lt;li&gt;&lt;/li&gt;</code></pre></dd>
+              <dt>Category:</dt>
+              <dd>Block</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Technically anything as long as it belongs in the list<dd>
+            </dl>
           </div>
           <div class="halfblock">
-            <p>Unordered list (bullets)</p>
-            <ul>
-              <li>Cats</li>
-              <li>Dogs</li>
-            </ul>
-            <br/>
-            <br/>
-            <p>Ordered list (sequence)</p>
-            <ol>
-              <li>Breakfast</li>
-              <li>Lunch</li>
-              <li>Dinner</li>
-            </ol>
+            <p>List Item elements render a single item within a list. They must be nested inside a list element (see next slide). The browser will automatically render a bullet or numeral depending on the list type.</p>
           </div>
-          <div class="clear"></div>
         </div>
       </section>
 
-      <!-- example of lists -->
+      <section>
+        <h3>Lists</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd><pre><code>&lt;ol&gt;&lt;/ol&gt;
+&lt;ul&gt;&lt;/ul&gt;</code></pre></dd>
+              <dt>Category:</dt>
+              <dd>Block</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Only List Items (<code>li</code>) can be directly nested into lists</dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <h5>Unordered List</h5>
+            <pre><code class="html">&lt;ul&gt;
+  &lt;li&gt;Cats&lt;/li&gt;
+  &lt;li&gt;Dogs&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+<ul>
+    <li>Cats</li>
+    <li>Dogs</li>
+  </ul>
+<br/>
+<br/>
+<h5>Ordered List</h5>
+              <pre><code class="html">&lt;ol&gt;
+  &lt;li&gt;Breakfast&lt;/li&gt;
+  &lt;li&gt;Lunch&lt;/li&gt;
+  &lt;li&gt;Dinner&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            <ol>
+                <li>Breakfast</li>
+                <li>Lunch</li>
+                <li>Dinner</li>
+              </ol>
+              <br/>
+          </div>
+        </div>
+        </section>
+
+      <!-- example of lists
       <section>
         <h3>Lists: Examples</h3>
         <p>Lists can be used to organize any list of items.</p>
-        <img src="img/example-lists.png " alt="Examples of lists " />
+        <img src="img/example-lists.png" alt="Examples of lists" />
         <p>
-          <small>You'd be surprised how often lists are used in web design.</small>
+          <small>You might be surprised how often lists are used in web design.</small>
         </p>
-      </section>
+      </section> -->
+
+      <!--Tables-->
+      <section>
+        <h3>Tables</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd><pre><code>&lt;table&gt;&lt;/table&gt;
+&lt;thead&gt;&lt;/thead&gt;
+&lt;tbody&gt;&lt;/tbody&gt;
+&lt;tr&gt;&lt;/tr&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;td&gt;&lt;/td&gt;
+&lt;tfoot&gt;&lt;/tfoot&gt;
+&lt;caption&gt;&lt;/caption&gt;
+&lt;col&gt;&lt;/col&gt;
+&lt;colgroup&gt;&lt;/colgroup&gt;</code></pre></dd>
+              <dt>Category:</dt>
+              <dd>Block</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Tabular data<dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <p>HTML provides multiple elements for constructing tables, which should be used only for displaying tabular data, or as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank" title="Navigate to the Mozilla Developer Network's documentation on the Table element">Mozilla Developer Network describes</a> it: "information presented in a two-dimensional table comprised of rows and columns of cells containing data".
+          </div>
+        </div>
+        </section>
+
+        <section>
+          <h3>Table: Example</h3>
+          <div>
+            <div class="halfblock">
+              <pre><code class="html">&lt;table&gt;
+  &lt;tr&gt;
+    &lt;th&gt;Cats&lt;/th&gt;
+    &lt;th&gt;Dogs&lt;/th&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Calico&lt;/td&gt;
+    &lt;td&gt;Pitbull&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Tabby&lt;/td&gt;
+    &lt;td&gt;Dalmation&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+            <div class="halfblock">
+              <img src="img/example-simple-table.png" alt="A table with three rows and two columns, listing types of dogs and cats" />
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h3>Table: Example</h3>
+          <div>
+            <div class="halfblock">
+              <pre style="width: 100%;margin:0;"><code class="html">&lt;table&gt;
+  &lt;caption&gt;Country Facts&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Country&lt;/th&gt;
+      &lt;th&gt;Capital&lt;/th&gt;
+      &lt;th&gt;Population&lt;/th&gt;
+      &lt;th&gt;Language&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tr&gt;
+    &lt;td&gt;USA&lt;/td&gt;
+    &lt;td&gt;Washington, D.C.&lt;/td&gt;
+    &lt;td&gt;309 million&lt;/td&gt;
+    &lt;td&gt;English&lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt;Sweden&lt;/td&gt;
+    &lt;td&gt;Stockholm&lt;/td&gt;
+    &lt;td&gt;9 million&lt;/td&gt;
+    &lt;td&gt;Swedish&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+            </div>
+            <div class="halfblock">
+              <img src="img/example-table-complex.png" alt="A table with three rows and four columns, listing facts about the US and Sweden" />
+            </div>
+          </div>
+        </section>
+
+        <!-- Table Examples
+        <section>
+          <h3>Tables: Examples</h3>
+          <p>Tables can be styled with CSS to add zebra striping or to highlight important rows/columns.</p>
+          <img src="img/example-tables.png " alt="Example of tables " />
+        </section> -->
 
       <!-- Develop it!-->
       <section>
         <h3>Let's Develop it!</h3>
-        <p>Let's add one of each ordered and unordered lists to our page.</p>
-        <p>We can make a list of links or even a list of images!</p>
+        <p>Let's add one of each <strong>ordered</strong> and <strong>unordered</strong> lists to our page. Put whatever you want in your list items, text, links, images, or even other lists!</p>
+        <p>Come up with some tabular data and try your hand at a <strong>table</strong>. Indentation will be helpful here!</p>
+        <p>Add some <strong>line breaks</strong> to text content throughout your page and see how it effects the display.</p>
       </section>
 
       <!--Comments-->
       <section>
         <h3>Comments</h3>
-        <p>You can add comments to your code that will not be seen by the browser, but only visible when viewing the code.</p>
-        <pre><code class="html">&lt;!-- Comment goes here --&gt;
-</code></pre>
-        <p>
-          <small>Comments can be used to organize your code into sections so you (or someone else) can easily understand your code.
-            It can also be used to 'comment out' large chunks of code to hide it from the browser.</small>
-        </p>
-        <pre><code class="html">&lt;!-- Beginning of header --&gt;
-&lt;div id="header "&gt;Header Content &lt;/div&gt;
-&lt;!-- End of header --&gt;
-
-&lt;!--
-&lt;ol&gt;
-&lt;li&gt;List Item&lt;/li&gt;
-&lt;li&gt;Another List Item&lt;/li&gt;
-&lt;/ol>
--->
-</code></pre>
-      </section>
-
-      <!--Tables-->
-      <section>
-        <h3>Tables</h3>
-        <p>Tables are a way to represent complex information in a grid format.</p>
-        <p>Tables are made up of rows and columns.</p>
+        <p>Comments are not displayed by the browser. They are only visible when viewing the code itself.</p>
+        <pre style="width: 60%; text-align: center"><code class="html">&lt;!-- Comment content goes here --&gt;</code></pre>
+        <br/>
         <div>
-          <div class="halfblock">
-            <pre><code class="html">&lt;table&gt;
-&lt;tr&gt;
-&lt;th&gt;Head&lt;/th&gt;
-&lt;th&gt;Head&lt;/th&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;Data&lt;/td&gt;
-&lt;td&gt;Data&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/table&gt;
-</code></pre>
-          </div>
-          <div class="halfblock">
-            <table style="border: 1px solid">
-              <tr>
-                <th style="border: 1px solid">Head</th>
-                <th style="border: 1px solid">Head</th>
-              </tr>
-              <tr>
-                <td style="border: 1px solid">Data</td>
-                <td style="border: 1px solid">Data</td>
-              </tr>
-            </table>
-          </div>
-          <div class="clear"></div>
+          <div class="halfblock"><p>Comments can be used to explain the purpose of sections of code for clarity.</p>
+            <pre><code class="html">&lt;!-- Copyright Start --&gt;
+&lt;p&gt;Contents &copy; of Acme Co.&lt;/p&gt;
+&lt;!-- Copyright End --&gt;</code></pre></div>
+          <div class="halfblock"><p>They can also be used make large chunks of code hidden from the browser.</p>
+            <pre><code class="html">&lt;!--
+&lt;ol&gt;
+  &lt;li&gt;List Item&lt;/li&gt;
+  &lt;li&gt;Another List Item&lt;/li&gt;
+&lt;/ol&gt;
+-->
+            </code></pre>
+            <p style="text-align:center"><small>This is commonly referred to as "commenting out" code.</small></p>
+            </div>
         </div>
-      </section>
-
-      <!-- Table Examples -->
-      <section>
-        <h3>Tables: Examples</h3>
-        <p>Tables can be styled with CSS to add zebra striping or to highlight important rows/columns.</p>
-        <img src="img/example-tables.png " alt="Example of tables " />
       </section>
 
       <!-- Character codes-->
       <section>
-        <h3>Character codes</h3>
-        <p>There are character codes for many different characters in many different languages</p>
+        <h3>Escaped Characters</h3>
+        <p>HTML is written in the same set of characters that use to write in English. When we need to distinguish between characters meant to be read by the browser and those meant to be read by humans, we can use <strong>escaped characters</strong>. Here's a <a href="https://dev.w3.org/html5/html-author/charref" title="Navigate to the World Wide Web Consortium's character entity reference chart.">list of all of them</a>.</p>
+        <img src="img/example-escaped-characters.png" />
         <div class="halfblock">
-          <ul>
-            <li>Delta: &amp;delta; &delta;</li>
-            <li>Copyright symbol: &amp;copy; &copy;</li>
-            <li>Grave: &amp;grave; &grave;</li>
-            <li>An grave a: &amp;agrave; &agrave;</li>
-            <li>A full list is available at
-              <a href="http://htmlandcssbook.com/extras/html-escape-codes/ " target="_blank">htmlandcssbook.com</a>
-            </li>
+          <h5>Commonly escaped HTML characters:</h5>
+          <ul style="font-size: .75em;">
+            <li><strong>Quote</strong>: &amp;quot; (&quot;)</li>
+            <li><strong>Less-than</strong>: &amp;lt; (&lt;)</li>
+            <li><strong>Greater-than</strong>: &amp;gt; (&gt;)</li>
           </ul>
         </div>
         <div class="halfblock">
-          <img src="img/example-characters.png " alt="Example of Characters " />
+            <h5>Other useful escaped characters:</h5>
+          <ul style="font-size: .75em;">
+            <li><strong>Copyright symbol:</strong> &amp;copy; (&copy;)</li>
+            <li><strong>Inverted exclamation</strong>: &amp;iexcl; (&iexcl;)</li>
+            <li><strong>Non-breaking space</strong>: &amp;nbsp; (&nbsp;)</li>
+          </ul>
         </div>
         <div class="clear"></div>
       </section>
