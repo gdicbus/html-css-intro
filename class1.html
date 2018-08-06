@@ -89,7 +89,7 @@
             </li>
             <li>
               Office Hours:
-              <a href="https://calendly.com/csteinert/officehours" alt="Caitlin's Calendly Office Hours link">Sign up, they're free!</a>
+              <a href="https://calendly.com/csteinert/officehours" title="Navigate to Caitlin's Calendly Office Hours sign-up page">Sign up, they're free!</a>
             </li>
           </ul>
         </div>
@@ -102,7 +102,7 @@
           <ul>
             <li>Who are you?</li>
             <li>What do you hope to get out of the class?</li>
-            <li>What is your favorite or dream vacation destination?</li>
+            <li>What is your favorite childhood TV show or book?</li>
           </ul>
         </div>
         <aside class="notes">
@@ -178,7 +178,7 @@
       <!-- Nitty gritty 1 - Clients and servers -->
       <section>
         <h3>How does a website get to a device?</h3>
-        <img src="img/client-server-model.svg " alt="Diagram showing computer connecting to server " />
+        <img src="img/Client-server-model.png" alt="Diagram showing computer connecting to server " />
         <br/>
         <small>Image credit:
           <a href="https://commons.wikimedia.org/w/index.php?curid=15782858">David Vignoni</a>
@@ -188,8 +188,8 @@
           server. There are tons of servers out there in the world, but their function is the same: they store data and are
           connected to the internet. The devices we use to view the internet, whether they're phones, laptops, or desktops,
           are all considered "clients" when it comes to the web. They are also connected to the internet. When you type in
-          a website address or click a link within a web browser, the device asks for the data associated with what you're
-          trying to find. The server "serves" it to the device, and the browser displays the result!
+          a website address or click a hyperlink within a web browser, the device asks for the data associated with what
+          you're trying to find. The server "serves" it to the device, and the browser displays the result!
         </aside>
       </section>
 
@@ -245,19 +245,8 @@
 
       <section>
         <h3>Goals</h3>
-        <img src="img/goal.jpg " alt="Soccer goal on beach " />
-        <p>
-          <small>Photo credit:
-            <a href="http://www.flickr.com/photos/corscri/1320198723/">Corscri Daje Tutti!</a>
-            <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-          </small>
-        </p>
-      </section>
-      <section>
-        <h3>Final project</h3>
-        <img src="img/sample-page.png " alt="Screenshot of a sample page " />
-        <p>By the end of the class, you will have built a simple site using HTML and CSS on a topic of your choice.
-          <a href="sample-code/final/index.html " target="_blank">Here is one about rock climbing.</a>
+        <p>By the end of the class, you will have built a simple site using HTML and CSS on a topic of your choice.</p>
+        <img src="img/sample-page.png" alt="Screenshot of a sample page" />
       </section>
 
       <section>
@@ -312,7 +301,7 @@
         <ul>
           <li>Paragraph</li>
           <li>Heading</li>
-          <li>Link (aka Anchor)</li>
+          <li>Anchor (aka Hyperlink)</li>
           <li>Table</li>
           <li>Image</li>
         </ul>
@@ -355,7 +344,7 @@
           <li>An
             <strong>anchor</strong> (the element that lets us click on hyperlinks) is represented by
             <code>&lt;a&gt;</code> tags:
-            <pre><code class="html">&lt;a href="www.google.com"&gt;A link to Google&lt;/a&gt;</code></pre>
+            <pre><code class="html">&lt;a href="www.google.com"&gt;Go to Google&lt;/a&gt;</code></pre>
           </li>
           <li>Text that is
             <strong>emphasized</strong> (typically shown in italic) is represented by
@@ -575,35 +564,46 @@
       <!-- Element types -->
       <section>
         <h3>Block vs Inline</h3>
-            <p><strong class="blue">Block</strong> elements start on a new line, force elements after them to start on a new line, and take up as much width
-              as they can.</p>
-            <p style="background:papayawhip">I am a block-level paragraph.</p>
-            <p style="background:PaleTurquoise">I, too, am a block-level paragraph.</p>
-            <hr style="margin: 1em 0;" />
-            <p><strong class="blue">Inline</strong> elements "flow in line" with their surroundings and only take up as much space as they need.</p>
-            <p style="border: 3px solid papayawhip">Inside of this paragraph we have a <span style="background:PaleTurquoise">span</span> and an <a href="#" style="background:PaleTurquoise">anchor</a>, both of which are inline elements.</p>
+        <p>
+          <strong class="blue">Block</strong> elements start on a new line, force elements after them to start on a new line, and take up as much
+          width as they can.</p>
+        <p style="background:papayawhip">I am a block-level paragraph.</p>
+        <p style="background:PaleTurquoise">I, too, am a block-level paragraph.</p>
+        <hr style="margin: 1em 0;" />
+        <p>
+          <strong class="blue">Inline</strong> elements "flow in line" with their surroundings and only take up as much space as they need.</p>
+        <p style="border: 3px solid papayawhip">Inside of this paragraph we have a
+          <span style="background:PaleTurquoise">span</span> and an
+          <a href="#" style="background:PaleTurquoise">anchor</a>, both of which are inline elements.</p>
       </section>
 
       <!-- Paragraphs-->
       <section>
         <h3>Paragraph</h3>
-          <div>
-            <div class="halfblock">
-              <dl>
-                <dt>Tag(s):</dt>
-                <dd><pre><code>&lt;p&gt;&lt;/p&gt;</code></pre></dd>
-                <dt>Category:</dt>
-                <dd>Block</dd>
-                <dt>Acceptable content:</dt>
-                <dd>Text and inline elements.<dd>
-              </dl>
-            </div>
-            <div class="halfblock">
-              <p>By default, browsers will add top and bottom margin (shown below in orange) to paragraphs so that they are visually separated without any extra effort.<p>
-            </div>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;p&gt;&lt;/p&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Block</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Text and inline elements.
+                <dd>
+            </dl>
           </div>
-          <img src="img/unstyled_paragraph.png " alt="A paragraph on a webpage highlighted using the developer tools to show that margin is added automatically." title="A paragraph on a webpage highlighted using the developer tools to show that margin is added automatically." />
-        </section>
+          <div class="halfblock">
+            <p>By default, browsers will add top and bottom margin (shown below in orange) to paragraphs so that they are visually
+              separated without any extra effort.
+              <p>
+          </div>
+        </div>
+        <img src="img/unstyled_paragraph.png " alt="A paragraph on a webpage highlighted using the developer tools to show that margin is added automatically."
+          title="A paragraph on a webpage highlighted using the developer tools to show that margin is added automatically."
+        />
+      </section>
 
       <!-- Headings-->
       <section>
@@ -612,77 +612,99 @@
           <div class="halfblock">
             <dl>
               <dt>Tag(s):</dt>
-              <dd><pre><code>&lt;h1&gt;&lt;/h1&gt;
+              <dd>
+                <pre><code>&lt;h1&gt;&lt;/h1&gt;
 &lt;h2&gt;&lt;/h2&gt;
 &lt;h3&gt;&lt;/h3&gt;
 &lt;h4&gt;&lt;/h4&gt;
 &lt;h5&gt;&lt;/h5&gt;
-&lt;h6&gt;&lt;/h6&gt;</code></pre></dd>
+&lt;h6&gt;&lt;/h6&gt;</code></pre>
+              </dd>
               <dt>Category:</dt>
               <dd>Block</dd>
               <dt>Acceptable content:</dt>
-              <dd>Text and inline elements.<dd>
+              <dd>Text and inline elements.
+                <dd>
             </dl>
           </div>
           <div class="halfblock">
-            <p>A heading's number indicates its hierarchy within the content, not its size.<p>
-            <img style="width: auto; height: auto;" src="img/example-headings.png " alt="Example of headings " />
+            <p>A heading's number indicates its hierarchy within the content, not its size.
+              <p>
+                <img style="width: auto; height: auto;" src="img/example-headings.png " alt="Example of headings " />
           </div>
         </div>
       </section>
 
       <!-- Emphasis -->
       <section>
-          <h3>Emphasis</h3>
-          <div>
-            <div class="halfblock">
-              <dl>
-                <dt>Tag(s):</dt>
-                <dd><pre><code>&lt;em&gt;&lt;/em&gt;</code></pre></dd>
-                <dt>Category:</dt>
-                <dd>Inline</dd>
-                <dt>Acceptable content:</dt>
-                <dd>Text and text-related inline elements.<dd>
-              </dl>
-            </div>
-            <div class="halfblock">
-              <p>Browsers will typically render emphasized text in an italic font. Screen readers will change the emphasis of the vocals, like you might if you were reading aloud.<p>
-            </div>
+        <h3>Emphasis</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;em&gt;&lt;/em&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Inline</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Text and text-related inline elements.
+                <dd>
+            </dl>
           </div>
-          <pre class="clear"><code>The trees were &lt;em&gt;very&lt;/em&gt; happy.</code></pre>
-          <p>The trees were <em>very</em> happy.</p>
-        </section>
+          <div class="halfblock">
+            <p>Browsers will typically render emphasized text in an italic font. Screen readers will change the emphasis of
+              the vocals, like you might if you were reading aloud.
+              <p>
+          </div>
+        </div>
+        <pre class="clear"><code>The trees were &lt;em&gt;very&lt;/em&gt; happy.</code></pre>
+        <p>The trees were
+          <em>very</em> happy.</p>
+      </section>
 
-        <!-- Strong-->
-        <section>
-            <h3>Strong</h3>
-            <div>
-              <div class="halfblock">
-                <dl>
-                  <dt>Tag(s):</dt>
-                  <dd><pre><code>&lt;strong&gt;&lt;/strong&gt;</code></pre></dd>
-                  <dt>Category:</dt>
-                  <dd>Inline</dd>
-                  <dt>Acceptable content:</dt>
-                  <dd>Text and text-related inline elements.<dd>
-                </dl>
-              </div>
-              <div class="halfblock">
-                <p>Strong is for content that is of "strong importance," including things of great seriousness or urgency (such as warnings). Browsers will typically render strong text in bold.</p>
-              </div>
-            </div>
-            <pre class="clear html"><code>&lt;strong&gt;Warning!&lt;/strong&gt; Railroad crossing ahead.</code></pre>
-            <p><strong>Warning!</strong> Railroad crossing ahead.</p>
-          </section>
+      <!-- Strong-->
+      <section>
+        <h3>Strong</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;strong&gt;&lt;/strong&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Inline</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Text and text-related inline elements.
+                <dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <p>Strong is for content that is of "strong importance," including things of great seriousness or urgency (such
+              as warnings). Browsers will typically render strong text in bold.</p>
+          </div>
+        </div>
+        <pre class="clear html"><code>&lt;strong&gt;Warning!&lt;/strong&gt; Railroad crossing ahead.</code></pre>
+        <p>
+          <strong>Warning!</strong> Railroad crossing ahead.</p>
+      </section>
 
       <!--develop it!-->
       <section>
         <h3>Let's Develop it!</h3>
         <p>Let's add some content to our site!</p>
-        <p>Add one of each level of heading (<code>h1</code> through <code>h6</code>) with 1-2 short paragraphs of text below each heading. </p>
-        <p>Use <code>&lt;strong&gt;</code> and <code>&lt;em&gt;</code> within a few paragraphs.</p>
-        <br/><br/>
-        <p>Not sure what to write in your paragraphs? Use some <a href="https://www.shopify.com/partners/blog/79940998-15-funny-lorem-ipsum-generators-to-shake-up-your-design-mockups" target="_blank">meaningless lorem ipsum</a> text!</p>
+        <p>Add one of each level of heading (
+          <code>h1</code> through
+          <code>h6</code>) with 1-2 short paragraphs of text below each heading. </p>
+        <p>Use
+          <code>&lt;strong&gt;</code> and
+          <code>&lt;em&gt;</code> within a few paragraphs.</p>
+        <br/>
+        <br/>
+        <p>Not sure what to write in your paragraphs? Use some
+          <a href="https://www.shopify.com/partners/blog/79940998-15-funny-lorem-ipsum-generators-to-shake-up-your-design-mockups"
+            target="_blank">meaningless lorem ipsum</a> text!</p>
       </section>
 
       <!-- Anchor-->
@@ -692,34 +714,47 @@
           <div class="halfblock">
             <dl>
               <dt>Tag(s):</dt>
-              <dd><pre><code>&lt;a&gt;&lt;/a&gt;</code></pre></dd>
+              <dd>
+                <pre><code>&lt;a&gt;&lt;/a&gt;</code></pre>
+              </dd>
               <dt>Category:</dt>
               <dd>Inline</dd>
               <dt>Common attributes</dt>
-              <dd><code>href</code>, <code>target</code>, & <code>title</code></dd>
+              <dd>
+                <code>href</code>,
+                <code>target</code>, &
+                <code>title</code>
+              </dd>
               <dt>Acceptable content:</dt>
-              <dd>The text that will be clickable and text-related inline elements.<dd>
+              <dd>The text that will be clickable and text-related inline elements.
+                <dd>
             </dl>
           </div>
           <div class="halfblock">
-            <p>Not to be confused with the <code>&lt;link&gt;</code> element! Anchors are used to create the hyperlinks you're used to seeing on the internet. Browsers tend to show them as blue, underlined text.</p>
+            <p>Not to be confused with the
+              <code>&lt;link&gt;</code> element! Anchors are used to create the hyperlinks you're used to seeing on the internet. Browsers tend to
+              show them as blue, underlined text.</p>
             <img src="img/example-anchor.png " alt="Example of a hyperlink with blue, underlined text." />
           </div>
         </div>
-        <pre class="clear html"><code>Here's a link to &lt;a href="www.anotherwebsite.com"&gt;another website&lt;/a&gt;.</code></pre>
+        <pre class="clear html"><code>Here's a hyperlink to &lt;a href="www.anotherwebsite.com"&gt;another website&lt;/a&gt;.</code></pre>
       </section>
 
       <!-- Link Attributes -->
       <section>
         <h3>Anchor Attributes</h3>
-        <p><code>href</code> tells the browser what path to follow when the anchor is clicked/tapped.</p>
+        <p>
+          <code>href</code> tells the browser what path to follow when the anchor is clicked/tapped.</p>
         <pre><code class="html">&lt;a href="www.google.com"&gt;Google&lt;/a&gt;</code></pre>
         <pre><code class="html">&lt;a href="mailto:caitlin@csteinert.com"&gt;Email me!&lt;/a&gt;</code></pre>
         <hr/>
-        <p><code>target</code> tells the browser where to open the link; this one would open in a new tab/window.</p>
+        <p>
+          <code>target</code> tells the browser where to open the hyperlink; this one would open in a new tab/window.</p>
         <pre><code class="html">&lt;a href="www.google.com" target="_blank"&gt;Google&lt;/a&gt;</code></pre>
         <hr/>
-        <p><code>title</code> describes the purpose the link. On computers, it renders as a tooltip seen by hovering with a mouse. It is also read aloud by screen readers.</p>
+        <p>
+          <code>title</code> describes the purpose the hyperlink. On computers, it renders as a tooltip seen by hovering with a mouse. It is
+          also read aloud by screen readers.</p>
         <pre><code class="html">&lt;a href="www.google.com" title="Navigate to Google's website"&gt;Google&lt;/a&gt;</code></pre>
       </section>
 
@@ -730,18 +765,28 @@
           <div class="halfblock">
             <dl>
               <dt>Tag(s):</dt>
-              <dd><pre><code>&lt;img/&gt;</code></pre></dd>
+              <dd>
+                <pre><code>&lt;img/&gt;</code></pre>
+              </dd>
               <dt>Category:</dt>
               <dd>Inline</dd>
               <dt>Common attributes</dt>
-              <dd><code>alt</code>, <code>src</code>, & <code>title</code></dd>
+              <dd>
+                <code>alt</code>,
+                <code>src</code>, &
+                <code>title</code>
+              </dd>
               <dt>Acceptable content:</dt>
-              <dd>None, only attributes.<dd>
+              <dd>None, only attributes.
+                <dd>
             </dl>
           </div>
           <div class="halfblock">
-            <p>The <code>img</code> tag is self-closing, so it cannot contain any nested elements. If the source path (<code>src</code>) provided is incorrect, the browser will show a sad little broken image:</p>
-            <img src="img/example-broken-image.png" alt="The image a browser displays when the source path to an image is incorrect" title="The image a browser displays when the source path to an image is incorrect" />
+            <p>The
+              <code>img</code> tag is self-closing, so it cannot contain any nested elements. If the source path (
+              <code>src</code>) provided is incorrect, the browser will show a sad little broken image:</p>
+            <img src="img/example-broken-image.png" alt="The image a browser displays when the source path to an image is incorrect"
+              title="The image a browser displays when the source path to an image is incorrect" />
           </div>
         </div>
         <pre class="clear html"><code>&lt;img src="cat.png" alt="Photo of a cat" title="Photo of a cat"/&gt;</code></pre>
@@ -750,14 +795,19 @@
       <!-- Image Attributes -->
       <section>
         <h3>Image Attributes</h3>
-        <p><code>alt</code> is text that will be displayed if, for whatever reason, the image doesn't load.</p>
-        <img style="max-height: 36px;" src="img/example-image-alt.png" alt="A broken image graphic with the alt text 'This image is super broken' next to it" title="A broken image graphic with the alt text 'This image is super broken' next to it" />
+        <p>
+          <code>alt</code> is text that will be displayed if, for whatever reason, the image doesn't load.</p>
+        <img style="max-height: 36px;" src="img/example-image-alt.png" alt="A broken image graphic with the alt text 'This image is super broken' next to it"
+          title="A broken image graphic with the alt text 'This image is super broken' next to it" />
         <pre><code class="html">&lt;img src="" alt="This image is super broken"/&gt;</code></pre>
         <hr/>
-        <p><code>src</code> tells the browser where to look for the image file.</p>
+        <p>
+          <code>src</code> tells the browser where to look for the image file.</p>
         <pre><code class="html">&lt;img src="some/folder/somewhere/cat.png"/&gt;</code></pre>
         <hr/>
-        <p><code>title</code> describes the purpose the image. On computers, it renders as a tooltip seen by hovering with a mouse. It is also read aloud by screen readers.</p>
+        <p>
+          <code>title</code> describes the purpose the image. On computers, it renders as a tooltip seen by hovering with a mouse. It is also
+          read aloud by screen readers.</p>
         <pre><code class="html">&lt;img src="cat.png" title="A cat being absolutely adorable"/&gt;</code></pre>
       </section>
 
@@ -769,55 +819,67 @@
             <img style="max-width: 100%" src="img/example-absolute-vs-relative.jpg" />
           </div>
           <div class="halfblock">
-            <p>Say this website was live on the internet at <code>www.my-website.com</code>.</p>
-            <p>If we wanted to add a link to <code>calico.html</code> on <code>index.html</code>, we could do so using an <span class="blue">absolute</span> path, which includes the domain name.</p>
+            <p>Say this website was live on the internet at
+              <code>www.my-website.com</code>.</p>
+            <p>If we wanted to add a hyperlink to
+              <code>calico.html</code> on
+              <code>index.html</code>, we could do so using an
+              <span class="blue">absolute</span> path, which includes the domain name.</p>
             <p>Any page or image published on the internet can be linked this way.</p>
           </div>
         </div>
-        <pre class="clear"><code>&lt;a href="http://www.my-website.com/cats/calico.html"&gt;Link to Calico&lt;/a&gt;</code></pre>
+        <pre class="clear"><code>&lt;a href="http://www.my-website.com/cats/calico.html"&gt;See a Calico&lt;/a&gt;</code></pre>
       </section>
 
       <!-- Relative path -->
       <section>
         <h3>Path Types: Relative</h3>
         <div>
-            <div class="halfblock">
-              <img style="max-width: 90%" src="img/example-absolute-vs-relative.jpg" />
-            </div>
-            <div class="halfblock">
-              <br/>
-              <p>While our websites still live on our computers, we have to link using <span class="blue">relative</span> paths.</p>
-              <p>If we wanted to put the image <code>calico.png</code> on the page <code>calico.html</code>, it would look like this:</p>
-            </div>
+          <div class="halfblock">
+            <img style="max-width: 90%" src="img/example-absolute-vs-relative.jpg" />
           </div>
-          <pre class="clear"><code>&lt;img src="../../images/cat-photos/calico.png"/&gt;</code></pre>
-          <p>Each instance of <code>../</code> means "ascend one directory".</p>
-        </section>
+          <div class="halfblock">
+            <br/>
+            <p>While our websites still live on our computers, we have to use
+              <span class="blue">relative</span> paths.</p>
+            <p>If we wanted to put the image
+              <code>calico.png</code> on the page
+              <code>calico.html</code>, it would look like this:</p>
+          </div>
+        </div>
+        <pre class="clear"><code>&lt;img src="../../images/cat-photos/calico.png"/&gt;</code></pre>
+        <p>Each instance of
+          <code>../</code> means "ascend one directory".</p>
+      </section>
 
-        <!-- Relative path -->
+      <!-- Relative path -->
       <section>
-          <h3>Path Types: Relative</h3>
-          <div>
-            <div class="halfblock">
-              <img style="max-width: 90%" src="img/example-absolute-vs-relative.jpg" />
-            </div>
-            <div class="halfblock">
-              <br/>
-              <p>A relative link on page <code>index.html</code> to <code>calico.html</code> looks like:</p>
-              <pre style="margin: 0; width: 100%"><code>&lt;a href="cats/calico.html"&gt;Calico&lt;a&gt;</code></pre>
-              <br/>
-              <br/>
-              <p>And adding the image <code>pitbull.png</code> to the page <code>index.html</code> looks like:</p>
-            </div>
+        <h3>Path Types: Relative</h3>
+        <div>
+          <div class="halfblock">
+            <img style="max-width: 90%" src="img/example-absolute-vs-relative.jpg" />
           </div>
-          <pre class="clear"><code>&lt;img src="images/dog-photos/pitbull.png"/&gt;</code></pre>
-        </section>
+          <div class="halfblock">
+            <br/>
+            <p>A relative hyperlink on page
+              <code>index.html</code> to
+              <code>calico.html</code> looks like:</p>
+            <pre style="margin: 0; width: 100%"><code>&lt;a href="cats/calico.html"&gt;Calico&lt;a&gt;</code></pre>
+            <br/>
+            <br/>
+            <p>And adding the image
+              <code>pitbull.png</code> to the page
+              <code>index.html</code> looks like:</p>
+          </div>
+        </div>
+        <pre class="clear"><code>&lt;img src="images/dog-photos/pitbull.png"/&gt;</code></pre>
+      </section>
 
       <!-- Lets develop it-->
       <section>
         <h3>Let's Develop It</h3>
         <p>Let's add links and images to our site!</p>
-        <p>Add links that open in the same window, a new window and link to an e-mail address.</p>
+        <p>Add hyperlinks that open in the same window, a new window and hyperlink to an e-mail address.</p>
         <p>Add images using absolute paths and relative paths.</p>
       </section>
 
@@ -828,16 +890,20 @@
           <div class="halfblock">
             <dl>
               <dt>Tag(s):</dt>
-              <dd><pre><code>&lt;br/&gt;</code></pre></dd>
+              <dd>
+                <pre><code>&lt;br/&gt;</code></pre>
+              </dd>
               <dt>Category:</dt>
               <dd>Inline</dd>
               <dt>Acceptable content:</dt>
-              <dd>None<dd>
+              <dd>None
+                <dd>
             </dl>
           </div>
           <div class="halfblock">
-              <p>Since browsers do not acknowledge line returns in HTML documents, the <code>break</code> element must be used.</p>
-              <pre><code class="html">&lt;p&gt;
+            <p>Since browsers do not acknowledge line returns in HTML documents, the
+              <code>break</code> element must be used.</p>
+            <pre><code class="html">&lt;p&gt;
   Which cats enjoy bowling?&lt;br/&gt;
   &lt;br/&gt;
   &lt;br/&gt;
@@ -860,15 +926,19 @@
           <div class="halfblock">
             <dl>
               <dt>Tag(s):</dt>
-              <dd><pre><code>&lt;li&gt;&lt;/li&gt;</code></pre></dd>
+              <dd>
+                <pre><code>&lt;li&gt;&lt;/li&gt;</code></pre>
+              </dd>
               <dt>Category:</dt>
               <dd>Block</dd>
               <dt>Acceptable content:</dt>
-              <dd>Technically anything as long as it belongs in the list<dd>
+              <dd>Technically anything as long as it belongs in the list
+                <dd>
             </dl>
           </div>
           <div class="halfblock">
-            <p>List Item elements render a single item within a list. They must be nested inside a list element (see next slide). The browser will automatically render a bullet or numeral depending on the list type.</p>
+            <p>List Item elements render a single item within a list. They must be nested inside a list element (see next slide).
+              The browser will automatically render a bullet or numeral depending on the list type.</p>
           </div>
         </div>
       </section>
@@ -879,12 +949,15 @@
           <div class="halfblock">
             <dl>
               <dt>Tag(s):</dt>
-              <dd><pre><code>&lt;ol&gt;&lt;/ol&gt;
-&lt;ul&gt;&lt;/ul&gt;</code></pre></dd>
+              <dd>
+                <pre><code>&lt;ol&gt;&lt;/ol&gt;
+&lt;ul&gt;&lt;/ul&gt;</code></pre>
+              </dd>
               <dt>Category:</dt>
               <dd>Block</dd>
               <dt>Acceptable content:</dt>
-              <dd>Only List Items (<code>li</code>) can be directly nested into lists</dd>
+              <dd>Only List Items (
+                <code>li</code>) can be directly nested into lists</dd>
             </dl>
           </div>
           <div class="halfblock">
@@ -893,27 +966,27 @@
   &lt;li&gt;Cats&lt;/li&gt;
   &lt;li&gt;Dogs&lt;/li&gt;
 &lt;/ul&gt;</code></pre>
-<ul>
-    <li>Cats</li>
-    <li>Dogs</li>
-  </ul>
-<br/>
-<br/>
-<h5>Ordered List</h5>
-              <pre><code class="html">&lt;ol&gt;
+            <ul>
+              <li>Cats</li>
+              <li>Dogs</li>
+            </ul>
+            <br/>
+            <br/>
+            <h5>Ordered List</h5>
+            <pre><code class="html">&lt;ol&gt;
   &lt;li&gt;Breakfast&lt;/li&gt;
   &lt;li&gt;Lunch&lt;/li&gt;
   &lt;li&gt;Dinner&lt;/li&gt;
 &lt;/ol&gt;</code></pre>
             <ol>
-                <li>Breakfast</li>
-                <li>Lunch</li>
-                <li>Dinner</li>
-              </ol>
-              <br/>
+              <li>Breakfast</li>
+              <li>Lunch</li>
+              <li>Dinner</li>
+            </ol>
+            <br/>
           </div>
         </div>
-        </section>
+      </section>
 
       <!-- example of lists
       <section>
@@ -932,7 +1005,8 @@
           <div class="halfblock">
             <dl>
               <dt>Tag(s):</dt>
-              <dd><pre><code>&lt;table&gt;&lt;/table&gt;
+              <dd>
+                <pre><code>&lt;table&gt;&lt;/table&gt;
 &lt;thead&gt;&lt;/thead&gt;
 &lt;tbody&gt;&lt;/tbody&gt;
 &lt;tr&gt;&lt;/tr&gt;
@@ -941,24 +1015,29 @@
 &lt;tfoot&gt;&lt;/tfoot&gt;
 &lt;caption&gt;&lt;/caption&gt;
 &lt;col&gt;&lt;/col&gt;
-&lt;colgroup&gt;&lt;/colgroup&gt;</code></pre></dd>
+&lt;colgroup&gt;&lt;/colgroup&gt;</code></pre>
+              </dd>
               <dt>Category:</dt>
               <dd>Block</dd>
               <dt>Acceptable content:</dt>
-              <dd>Tabular data<dd>
+              <dd>Tabular data
+                <dd>
             </dl>
           </div>
           <div class="halfblock">
-            <p>HTML provides multiple elements for constructing tables, which should be used only for displaying tabular data, or as <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank" title="Navigate to the Mozilla Developer Network's documentation on the Table element">Mozilla Developer Network describes</a> it: "information presented in a two-dimensional table comprised of rows and columns of cells containing data".
+            <p>HTML provides multiple elements for constructing tables, which should be used only for displaying tabular data,
+              or as
+              <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table" target="_blank" title="Navigate to the Mozilla Developer Network's documentation on the Table element">Mozilla Developer Network describes</a> it: "information presented in a two-dimensional table comprised of
+              rows and columns of cells containing data".
           </div>
         </div>
-        </section>
+      </section>
 
-        <section>
-          <h3>Table: Example</h3>
-          <div>
-            <div class="halfblock">
-              <pre><code class="html">&lt;table&gt;
+      <section>
+        <h3>Table: Example</h3>
+        <div>
+          <div class="halfblock">
+            <pre><code class="html">&lt;table&gt;
   &lt;tr&gt;
     &lt;th&gt;Cats&lt;/th&gt;
     &lt;th&gt;Dogs&lt;/th&gt;
@@ -972,18 +1051,18 @@
     &lt;td&gt;Dalmation&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
-            </div>
-            <div class="halfblock">
-              <img src="img/example-simple-table.png" alt="A table with three rows and two columns, listing types of dogs and cats" />
-            </div>
           </div>
-        </section>
+          <div class="halfblock">
+            <img src="img/example-simple-table.png" alt="A table with three rows and two columns, listing types of dogs and cats" />
+          </div>
+        </div>
+      </section>
 
-        <section>
-          <h3>Table: Example</h3>
-          <div>
-            <div class="halfblock">
-              <pre style="width: 100%;margin:0;"><code class="html">&lt;table&gt;
+      <section>
+        <h3>Table: Example</h3>
+        <div>
+          <div class="halfblock">
+            <pre style="width: 100%;margin:0;"><code class="html">&lt;table&gt;
   &lt;caption&gt;Country Facts&lt;/caption&gt;
   &lt;thead&gt;
     &lt;tr&gt;
@@ -1006,14 +1085,15 @@
     &lt;td&gt;Swedish&lt;/td&gt;
   &lt;/tr&gt;
 &lt;/table&gt;</code></pre>
-            </div>
-            <div class="halfblock">
-              <img src="img/example-table-complex.png" alt="A table with three rows and four columns, listing facts about the US and Sweden" />
-            </div>
           </div>
-        </section>
+          <div class="halfblock">
+            <img src="img/example-table-complex.png" alt="A table with three rows and four columns, listing facts about the US and Sweden"
+            />
+          </div>
+        </div>
+      </section>
 
-        <!-- Table Examples
+      <!-- Table Examples
         <section>
           <h3>Tables: Examples</h3>
           <p>Tables can be styled with CSS to add zebra striping or to highlight important rows/columns.</p>
@@ -1023,9 +1103,14 @@
       <!-- Develop it!-->
       <section>
         <h3>Let's Develop it!</h3>
-        <p>Let's add one of each <strong>ordered</strong> and <strong>unordered</strong> lists to our page. Put whatever you want in your list items, text, links, images, or even other lists!</p>
-        <p>Come up with some tabular data and try your hand at a <strong>table</strong>. Indentation will be helpful here!</p>
-        <p>Add some <strong>line breaks</strong> to text content throughout your page and see how it effects the display.</p>
+        <p>Let's add one of each
+          <strong>ordered</strong> and
+          <strong>unordered</strong> lists to our page. Put whatever you want in your list items, text, hyperlinks, images, or even
+          other lists!</p>
+        <p>Come up with some tabular data and try your hand at a
+          <strong>table</strong>. Indentation will be helpful here!</p>
+        <p>Add some
+          <strong>line breaks</strong> to text content throughout your page and see how it effects the display.</p>
       </section>
 
       <!--Comments-->
@@ -1035,11 +1120,14 @@
         <pre style="width: 60%; text-align: center"><code class="html">&lt;!-- Comment content goes here --&gt;</code></pre>
         <br/>
         <div>
-          <div class="halfblock"><p>Comments can be used to explain the purpose of sections of code for clarity.</p>
+          <div class="halfblock">
+            <p>Comments can be used to explain the purpose of sections of code for clarity.</p>
             <pre><code class="html">&lt;!-- Copyright Start --&gt;
 &lt;p&gt;Contents &copy; of Acme Co.&lt;/p&gt;
-&lt;!-- Copyright End --&gt;</code></pre></div>
-          <div class="halfblock"><p>They can also be used make large chunks of code hidden from the browser.</p>
+&lt;!-- Copyright End --&gt;</code></pre>
+          </div>
+          <div class="halfblock">
+            <p>They can also be used make large chunks of code hidden from the browser.</p>
             <pre><code class="html">&lt;!--
 &lt;ol&gt;
   &lt;li&gt;List Item&lt;/li&gt;
@@ -1047,30 +1135,41 @@
 &lt;/ol&gt;
 -->
             </code></pre>
-            <p style="text-align:center"><small>This is commonly referred to as "commenting out" code.</small></p>
-            </div>
+            <p style="text-align:center">
+              <small>This is commonly referred to as "commenting out" code.</small>
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- Character codes-->
       <section>
         <h3>Escaped Characters</h3>
-        <p>HTML is written in the same set of characters that use to write in English. When we need to distinguish between characters meant to be read by the browser and those meant to be read by humans, we can use <strong>escaped characters</strong>. Here's a <a href="https://dev.w3.org/html5/html-author/charref" title="Navigate to the World Wide Web Consortium's character entity reference chart.">list of all of them</a>.</p>
+        <p>HTML is written in the same set of characters that use to write in English. When we need to distinguish between characters
+          meant to be read by the browser and those meant to be read by humans, we can use
+          <strong>escaped characters</strong>. Here's a
+          <a href="https://dev.w3.org/html5/html-author/charref" title="Navigate to the World Wide Web Consortium's character entity reference chart.">list of all of them</a>.</p>
         <img src="img/example-escaped-characters.png" />
         <div class="halfblock">
           <h5>Commonly escaped HTML characters:</h5>
           <ul style="font-size: .75em;">
-            <li><strong>Quote</strong>: &amp;quot; (&quot;)</li>
-            <li><strong>Less-than</strong>: &amp;lt; (&lt;)</li>
-            <li><strong>Greater-than</strong>: &amp;gt; (&gt;)</li>
+            <li>
+              <strong>Quote</strong>: &amp;quot; (&quot;)</li>
+            <li>
+              <strong>Less-than</strong>: &amp;lt; (&lt;)</li>
+            <li>
+              <strong>Greater-than</strong>: &amp;gt; (&gt;)</li>
           </ul>
         </div>
         <div class="halfblock">
-            <h5>Other useful escaped characters:</h5>
+          <h5>Other useful escaped characters:</h5>
           <ul style="font-size: .75em;">
-            <li><strong>Copyright symbol:</strong> &amp;copy; (&copy;)</li>
-            <li><strong>Inverted exclamation</strong>: &amp;iexcl; (&iexcl;)</li>
-            <li><strong>Non-breaking space</strong>: &amp;nbsp; (&nbsp;)</li>
+            <li>
+              <strong>Copyright symbol:</strong> &amp;copy; (&copy;)</li>
+            <li>
+              <strong>Inverted exclamation</strong>: &amp;iexcl; (&iexcl;)</li>
+            <li>
+              <strong>Non-breaking space</strong>: &amp;nbsp; (&nbsp;)</li>
           </ul>
         </div>
         <div class="clear"></div>
