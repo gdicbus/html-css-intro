@@ -1,460 +1,765 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
 
-    <title>Class 2 ~ HTML/CSS ~ Girl Develop It</title>
+<head>
+  <meta charset="utf-8">
 
-    <meta name="description" content="This is curriculum for the GDI RDU intro to web series. It was developed from the official Girl Develop It Core HTML/CSS curriculum">
-    <meta name="author" content="Girl Develop It">
+  <title>Class 2 ~ HTML/CSS ~ Girl Develop It</title>
 
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="description" content="This is curriculum for the GDI RDU intro to web series. It was developed from the official Girl Develop It Core HTML/CSS curriculum">
+  <meta name="author" content="Girl Develop It">
 
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/simple.css" id="theme">
-    <link rel="stylesheet" href="css/custom.css">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- For syntax highlighting -->
-    <!-- light editor--><link rel="stylesheet" href="lib/css/light.css">
-    <!-- dark editor<link rel="stylesheet" href="lib/css/dark.css"> -->
-    <!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
+  <link rel="stylesheet" href="css/reveal.css">
+  <link rel="stylesheet" href="css/theme/simple.css" id="theme">
+  <link rel="stylesheet" href="css/custom.css">
 
-    <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
+  <!-- For syntax highlighting -->
+  <!-- light editor-->
+  <link rel="stylesheet" href="lib/css/light.css">
+  <!-- dark editor<link rel="stylesheet" href="lib/css/dark.css"> -->
+  <!-- <link rel="stylesheet" href="lib/css/zenburn.css"> -->
 
-    <!-- If the query includes 'print-pdf', include the PDF print sheet -->
-    <script>
-      if( window.location.search.match( /print-pdf/gi ) ) {
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = 'css/print/pdf.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-      }
-    </script>
+  <link rel="stylesheet" href="plugin/accessibility-helper/css/accessibility-helper.css">
 
-    <!-- If use the PDF print sheet so students can print slides-->
+  <!-- If the query includes 'print-pdf', include the PDF print sheet -->
+  <script>
+    if (window.location.search.match(/print-pdf/gi)) {
+      var link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = 'css/print/pdf.css';
+      document.getElementsByTagName('head')[0].appendChild(link);
+    }
+  </script>
 
-    <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
-    <!--[if lt IE 9]>
+  <!-- If use the PDF print sheet so students can print slides-->
+
+  <link rel="stylesheet" href="css/print/pdf.css" type="text/css" media="print">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <!--[if lt IE 9]>
     <script src="lib/js/html5shiv.js"></script>
     <![endif]-->
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <div class="reveal">
-      <div class="slides">
-          <section>
-            <img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder">
-            <h1>Intro to HTML/CSS</h1>
-            <h2>Class 2</h2>
-          </section>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <img src="img/circle-gdi-logo.png" alt="GDI Logo" class="noborder">
+        <h1>Intro to HTML/CSS</h1>
+        <h2>Class 2</h2>
+      </section>
 
-          <!-- Quiz 1-->
-          <section>
-            <h3>Quiz Part 1</h3>
-            <p>Which tag is used to create a link to another page?</p>
-            <ol>
-              <li>&lt;p&gt;</li>
-              <li>&lt;link&gt;</li>
-              <li>&lt;a&gt;</li>
-              <li>&lt;america&gt;</li>
-            </ol>
-            <div class="fragment blue">Answer: &lt;a&gt;</div>
-          </section>
+      <!-- Quiz 1-->
+      <section>
+        <h3>Quiz Part 1</h3>
+        <p>Which tag is used to create a hyperlink element?</p>
+        <ol>
+          <li>
+            <code>&lt;p&gt;</code>
+          </li>
+          <li>
+            <code>&lt;link&gt;</code>
+          </li>
+          <li>
+            <code>&lt;a&gt;</code>
+          </li>
+          <li>
+            <code>&lt;href&gt;</code>
+          </li>
+        </ol>
+        <div class="fragment blue">Answer:
+          <code>&lt;a&gt;</code>
+        </div>
+      </section>
 
-          <!-- Quiz 2-->
-          <section>
-            <h3>Quiz Part 2</h3>
-            <p>What are the two tags that nest directly within the &lt;html&gt; tags?</p>
-            <div class="fragment blue">Answer: &lt;head&gt; and &lt;body&gt;</div>
-          </section>
+      <!-- Quiz 2-->
+      <section>
+        <h3>Quiz Part 2</h3>
+        <p>Which two elements are nested
+          <strong>directly</strong> within the
+          <code>&lt;html&gt;</code> tags?</p>
+        <div class="fragment blue">Answer:
+          <code>&lt;head&gt;</code> and
+          <code>&lt;body&gt;</code>
+        </div>
+      </section>
 
-          <!-- Quiz 3-->
-          <section>
-            <h3>Quiz Part 3</h3>
-            <p>What is it called when you have a 'tag' + 'content' + 'closing tag'?</p>
-            <div class="fragment blue">Answer: An HTML <strong>Element</strong></div>
-          </section>
+      <!-- Quiz 3-->
+      <section>
+        <h3>Quiz Part 3</h3>
+        <p>
+          <strong>True or False</strong>
+          <br/> The following code is the correct way to display an image:</p>
+        <pre><code class="html" style="text-align: center;">&lt;img&gt;"cat.png"&lt;/img&gt;</code></pre>
+        <div class="fragment blue">
+          <strong>False.</strong> This is the correct way:
+          <pre><code class="html" style="text-align: center;">&lt;img src="cat.png" /&gt;</code></pre>
 
-          <!-- Review: Role of HTML v. CSS-->
-          <section>
-            <h3>Let's Review</h3>
-            <img src="img/elephants.jpg" alt="Two elephants interacting"/>
-            <p><small>Photo credit:  <a href="http://www.flickr.com/photos/ginable/325235488/">Ginable</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a></small></p>
-          </section>
+        </div>
+      </section>
 
-          <section>
-            <h3>Anatomy of a website</h3>
-            <p><strong>Your Content</strong><br />
-            <strong>+ HTML</strong>: Structure<br />
-            <strong>+ CSS</strong>: Presentation<br />
-            <strong>= Your Website</strong></p>
-            <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it look good.</p>
-          </section>
+      <!-- Review: Role of HTML v. CSS-->
+      <section>
+        <h3>Let's Review</h3>
+      </section>
 
-          <!-- What is CSS-->
-          <section>
-            <h3>CSS: What is it?</h3>
-            <p>CSS = <strong>C</strong>ascading <strong>S</strong>tyle <strong>S</strong>heets</p>
-            <p>CSS is a "style sheet language" that lets you style the elements on your page.</p>
-            <p>CSS is works in conjunction with HTML, but is not HTML itself.</p>
-          </section>
+      <section>
+        <h3>Anatomy of a website</h3>
+        <p>
+          <strong>Your Content</strong>
+          <br />
+          <strong>+ HTML</strong>: Structure
+          <br />
+          <strong>+ CSS</strong>: Presentation
+          <br />
+          <strong>= Your Website</strong>
+        </p>
+        <p>A website is a way to present your content to the world, using HTML and CSS to present that content &amp; make it
+          look good.</p>
+      </section>
 
-          <section>
-            <h3>CSS: What can it do?</h3>
-            <p>All colored text, position, and size</p>
-            <img src = "img/homepage-view.png" alt="Screenshot of homepage">
-          </section>
+      <!-- What is CSS-->
+      <section>
+        <h3>CSS: What is it?</h3>
+        <h4>
+          <strong class="green">C</strong>ascading
+          <strong class="green">S</strong>tyle
+          <strong class="green">S</strong>heets</h4>
+        <p>A "style sheet language" that lets you effect how the elements on your page are displayed.</p>
+        <p>CSS is works in conjunction with HTML, but is not HTML itself.</p>
+        <p>The "cascading" aspect is very important, and we will cover that later in class.</p>
+      </section>
 
-          <section>
-            <h3>CSS: What does it look like?</h3>
-            <img src = "img/homepage-css.png" alt="Screenshot of CSS">
-          </section>
+      <section>
+        <h3>CSS: What can it do?</h3>
+        <p>Give color to text and areas, add background images, show and hide elements, and so much more!</p>
+        <img src="img/styled-vs-unstyled.png" alt="Screenshot of the GDI homepage with and without CSS">
+      </section>
 
-          <!-- The CSS Rule-->
-          <section>
-            <h3>The CSS Rule</h3>
-            <img src="img/cssrule.png" alt="The CSS Rule" style="border: none; box-shadow: none;"/>
-          </section>
-          <section>
-            <h3>The CSS Rule</h3>
-<pre><code class = "css">selector {
-  property: value;
+      <section>
+        <h3>CSS: What does it look like?</h3>
+        <img src="img/example-css-file.png" alt="Screenshot of CSS">
+      </section>
+
+      <!-- Connecting HTML to CSS-->
+      <section>
+        <h3>Connecting CSS to HTML</h3>
+        <p>There are three ways to connect CSS to HTML. Each is useful in certain situations.</p>
+        <ul>
+          <li>Inline</li>
+          <li>Embedded</li>
+          <li>External</li>
+        </ul>
+      </section>
+
+      <!-- Inline -->
+      <section>
+        <h3>Connecting: Inline CSS</h3>
+        <p>Although CSS and HTML are seperate languages, CSS can be written in HTML files.</p>
+        <p>When we write "inline" CSS, we write it directly onto individual HTML elements within an HTML file.</p>
+      </section>
+
+      <section>
+        <h3>Connecting: Inline CSS</h3>
+        <p>The
+          <strong>inline</strong> method allows you to add styles to a specific element using the
+          <code>style</code> HTML attribute.</p>
+        <pre style="width:100%;"><code class="html">&lt;body style="color: red;"&gt;
+  All the text on this page is red.
+&lt;/body&gt;
+
+&lt;img style="border-width: 1px;" src="cat.png" /&gt;
+
+&lt;p style="margin-top: 99px;"&gt;
+  A paragraph with lots of space above it.
+&lt;/p&gt;</code></pre>
+        <ul>
+          <li>Contents of the style attribute need to be duplicated on any other element that requires similar styling.</li>
+          <li>Difficult to override via the "embedded" and "external" connecting methods.</li>
+        </ul>
+      </section>
+
+      <!-- Embedded -->
+      <section>
+        <h3>Connecting: Embedded CSS</h3>
+        <p>Like inline CSS, embedded CSS is writtin within the HTML file it applies to.</p>
+        <p>Embedded CSS is stored in a
+          <code>&lt;style&gt;</code> element within the
+          <code>head</code> element.</p>
+      </section>
+
+      <section>
+        <h3>HTML Element: Style</h3>
+        <p>The contents of a
+          <code>style</code> element modify the presentation of the page via CSS. There should only be one
+          <code>style</code> element, and it must be within the
+          <code>head</code>.</p>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;style&gt;&lt;/style&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Metadata</dd>
+              <dt>Acceptable content:</dt>
+              <dd>CSS</dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <pre class="clear"><code class="html css">&lt;!Doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;style&gt;
+      p {
+        color: blue;
+      }
+    &lt;/style&gt;
+  &lt;/head&gt;
+  &lt;body&gt;...&lt;/body&gt;
+&lt;html&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Connecting: Embedded CSS</h3>
+        <pre><code class="html css">&lt;style&gt;
+  body {
+    background: thistle;
+  }
+
+  p {
+    margin-top: 10px;
+  }
+
+  img {
+    border-width: 1px;
+  }
+&lt;/style&gt;</code></pre>
+        <ul>
+          <li>Any paragraph or image on this page would have these styles applied to them automatically.</li>
+          <li>Embedded CSS only applies to the HTML page it is embedded within.</li>
+        </ul>
+      </section>
+
+      <!-- External-->
+      <section>
+        <h3>Connecting: External CSS</h3>
+        <div>
+          <div class="halfblock">
+            <p>CSS can be written in a separate (external)
+              <code>.css</code> file and then
+              <strong>linked</strong> to one or many HTML files.</p>
+            <br/>
+            <p>To create CSS files, we name them with the
+              <code>.css</code> extension when we save.</p>
+          </div>
+          <div class="halfblock">
+            <img src="img/example-css-file.png" alt="Screenshot of a CSS file" />
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>HTML Element: Link</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;link&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Metadata</dd>
+              <dt>Common attributes:</dt>
+              <dd>
+                <code>href</code>,
+                <code>rel</code>
+              </dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <p>The
+              <code>link</code> element (not to be confused with the
+              <code>anchor</code>!) allows us to define a path to our stylesheet within the
+              <code>head</code> of the HTML page.</p>
+            <p>Note that although this is a self-closing element, it does not need the
+              <code>/</code> at the end.</p>
+          </div>
+        </div>
+        <pre class="clear"><code class="html" style="text-align: center;">&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3>Connecting: External CSS</h3>
+        <p>The external CSS file is linked within the HTML's
+          <code>head</code> using a
+          <code>&lt;link&gt;</code> element:</p>
+        <pre style="width: 100%"><code class="html">&lt;head&gt;
+  &lt;link rel="stylesheet" href="awesome-styles.css"&gt;
+&lt;/head&gt;</code></pre>
+        <p style="text-align: left;">Linking to external CSS has been the industry-standard approach for many reasons:</p>
+        <ul>
+          <li>They create style resources that can be shared across multiple pages.</li>
+          <li>They reduce file size &amp; bandwidth.</li>
+          <li>They are easier to maintain in larger projects than inline and embedded styles.</li>
+        </ul>
+      </section>
+
+      <!-- Exercise-->
+      <!-- TODO: Add a similar slide for the HTML creation portion of class 1 -->
+      <section>
+        <h3>Let's Develop It!</h3>
+
+        <br/>
+        <p>Create a new file in your editor and save it as
+          <code>styles.css</code>. Make sure this new CSS file is in the same folder as your HTML file from last class!
+        </p>
+        <p>Copy/paste the following code into your new CSS file and save:</p>
+        <pre><code class="css">body {
+  background-color: thistle;
+}</code></pre>
+        <p>Next, add a
+          <code>&lt;link&gt;</code> in the
+          <code>head</code> of your HTML page and connect to your new CSS file. Save and refresh the page!</p>
+      </section>
+
+      <!-- The CSS Rule-->
+      <section>
+        <h3>Anatomy of the CSS Rule</h3>
+        <img src="img/cssrule.png " alt="The CSS Rule " style="border: none; box-shadow: none; " />
+      </section>
+      <section>
+        <h3>Anatomy of the CSS Rule</h3>
+        <p>The typical CSS file contains many rules.</p>
+        <div>
+          <div class="halfblock ">
+            <pre><code class="css ">h1 {
+  display: block;
+  text-align: center;
+}
+
+main {
+  font-weight: bold;
+}
+
+footer {
+  background-color: thistle;
+  color: black;
 }
 </code></pre>
-            <ul>
-              <li>A block of CSS code is a rule.</li>
-              <li>The rule starts with a selector.</li>
-              <li>It has sets of properties and values.</li>
-              <li>A property-value pair is a declaration.</li>
+          </div>
+          <div class="halfblock">
+            <ul style="margin-left: 0">
+              <li>The rule starts with a
+                <code class="pink">selector</code>.</li>
+              <li>Once the selector is stated, we open the rule with a
+                <strong>curly brace</strong> (
+                <code>{</code> )</li>
+              <li>Rules contain sets of
+                <code class="yellow">properties</code> and
+                <code class="green">values</code> .
+              </li>
+              <li>The rule ends with a closing
+                <strong>curly brace</strong>
+                (
+                <code>}</code> ).</li>
             </ul>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          <!-- Connecting HTML to CSS-->
-          <section>
-            <h3>Connecting CSS to HTML</h3>
-            <p class = "green">3 ways</p>
-            <p>"Inline"</p>
-            <p>"Embedded"</p>
-            <p>"External"</p>
-          </section>
+      <section>
+        <h3>Anatomy of the CSS Declaration</h3>
+        <p>A
+          <code class="yellow">property</code>-
+          <code class="green">value</code> pair is called a
+          <strong>declaration</strong>.</p>
+        <pre><code class="css">nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}</code></pre>
+        <ul>
+          <li>The
+            <code class="yellow">property</code> must be followed by a colon (
+            <code>:</code> )
+          </li>
+          <li>The
+            <code class="green">value</code> must be followed by a semicolon (
+            <code>;</code> )
+          </li>
+          <li>In order to be read easily (by humans) it's best for each declaration to be on its own line.</li>
+        </ul>
+      </section>
 
-          <!-- Inline -->
-          <section>
-            <h3>Connecting CSS to HTML: Inline</h3>
-<pre><code class = "html">&lt;p style="color:red"&gt;Some text.&lt;/p&gt;
-</code></pre>
-            <p>Uses the HTML attribute style.</p>
-            <p>Difficult to use in large projects</p>
-            <p>Not preferred.</p>
-          </section>
+      <section>
+        <h3>Pop Quiz!</h3>
+        <p>In the CSS below:</p>
+        <ol>
+          <li>Which is the value?</li>
+          <li>Which is the selector?</li>
+          <li>Which is the property?</li>
+        </ol>
+        <pre><code class="css">body {
+  background-color: thistle;
+}</code></pre>
+        <ol>
+          <li class="fragment green">thistle</li>
+          <li class="fragment pink">body</li>
+          <li class="fragment yellow">background-color</li>
+        </ol>
+      </section>
 
-          <!-- Embedded -->
-          <section>
-            <h3>Connecting CSS to HTML: Embedded</h3>
-<pre><code class = "html">&lt;head&gt;
-  &lt;style type="text/css"&gt;
-    p {
-      color: blue;
-      font-size: 12px;
-    }
-  &lt;/style&gt;
-&lt;/head&gt;
-</code></pre>
-            <p>Inside &lt;head&gt; element.</p>
-            <p>Uses &lt;style&gt; tag.</p>
-            <p>Can only be used in one html file</p>
-          </section>
+      <!-- Color -->
+      <section>
+        <h3>CSS Color Values</h3>
+        <p>CSS accepts many different color value types. All of the following are the same color.</p>
+        <ul>
+          <li>
+            <span class="blue">Color name</span>: thistle</li>
+          <li>
+            <span class="blue">Hexadecimal value</span>: #D8BFD8</li>
+          <li>
+            <span class="blue">RGB value</span>: rgb(216, 191, 216)</li>
+          <li>
+            <span class="blue">HSL value</span>: hsl(300, 24%, 80%)</li>
+        </ul>
+        <br/>
+        <br/>
+        <p>Here's how they look as a background-color declaration:</p>
+        <pre><code class="css">background-color: thistle;
+background-color: #D8BFD8;
+background-color: rgb(216, 191, 216);
+background-color: hsl(300, 24%, 80%);</code></pre>
+      </section>
 
-          <!-- External-->
-          <section>
-            <h3>Connecting CSS to HTML: Linked</h3>
-<pre><code class = "html">&lt;head&gt;
-  &lt;link rel="stylesheet" type="text/css" href="style.css"&gt;
-&lt;/head&gt;
-</code></pre>
-            <ul>
-              <li>Shared resource for several pages.</li>
-              <li>Reduced file size &amp; bandwidth</li>
-              <li>Easy to maintain in larger projects.</li>
-              <li>Preferred by nerds everywhere!</li>
-            </ul>
-          </section>
+      <section>
+        <h3>Let's Develop It!</h3>
+        <p>Change the value of your page's
+          <code>background-color</code> via your external CSS file. Pick whatever color you want!</p>
+        <br/>
+        <p>My Favorite Color Resources:</p>
+        <ul>
+          <li>
+            <a href="https://htmlcolorcodes.com/color-picker/" title="Navigate to the Color Picker from HTML Color Codes" target="_blank">HTML Color Codes: Color Picker</a>
+          </li>
+          <li>
+            <a href="https://htmlcolorcodes.com/color-names/" title="Navigate to the list of named colors from HTML Color Codes" target="_blank">HTML Color Codes: Named Colors</a>
+          </li>
+          <li>
+            <a href="https://www.google.com/search?q=hex+color" title="Google's color picker" target="_blank">What you get if you Google search "hex colors"</a>
+          </li>
+        </ul>
+      </section>
 
-          <!-- Exercise-->
-          <section>
-            <h3>Let's develop it</h3>
-            <ul>
-              <li>In the same foolder you used last week, create a new file called style.css</li>
-              <li>Add a link to the file in the head of your HTML file</li>
-              <li>Add the CSS rule below to the CSS file:</li>
-            </ul>
-<pre><code class = "css">body {
-  background-color: yellow;
+      <section>
+        <h3>CSS Selectors</h3>
+        <p>Selectors allow us to match our styles to the HTML elements we want to apply them to.</p>
+        <p>Let's meet the different types of selectors we can use.</p>
+      </section>
+
+      <!-- Element Type Selectors -->
+      <section>
+        <h3>Element Type Selectors</h3>
+        <p>We can use the tag name of an element within CSS to apply styles. Say we have the following in our HTML:</p>
+        <pre><code class="html">&lt;span&gt;Light blue is my favorite color.&lt;/span&gt;</code></pre>
+        <p>We can apply a background color via our CSS assigning a background-color style to
+          <code>span</code> element types.</p>
+        <pre><code class="css">span {
+  background-color: lightblue;
 }
 </code></pre>
-          </section>
+        <p>It would look something like this:
+          <span style="background-color: lightblue;">Light blue is my favorite color.</span>
+        </p>
+      </section>
 
-          <!-- CSS Syntax -->
-          <section>
-            <h3>CSS Syntax</h3>
-            <p>Declarations: Property and value of style you plan to use on HTML element. </p>
-            <p>Declarations end with a semicolon</p>
-            <p>Declaration groups are surrounded by curly brackets.</p>
-<pre><code class="css">selector {
-  property: value;
-  property: value;
-  property: value;
-}
-</code></pre>
-          </section>
-          <!-- Selectors elements-->
-          <section>
-            <h3>Selector: Element</h3>
-<pre><code class="css">p {
-  property: value;
-}
-</code></pre>
-            <p>Selects all paragraph elements.</p>
-<pre><code class="css">img {
-  property: value;
-}
-</code></pre>
-            <p>Selects all image elements.</p>
-          </section>
+      <section>
+        <h3>Element Type Selectors</h3>
+        <p>Note that when you set a style for a particular element type, it will apply to
+          <strong>every instance of that element</strong>.</p>
+        <pre><code class="css">span {
+  background-color: lightblue;
+}</code></pre>
+        <pre><code class="html">&lt;span&gt;Light blue is my favorite color.&lt;/span&gt;
+&lt;span&gt;Red is my favorite color.&lt;/span&gt;
+&lt;span&gt;Light green is my favorite color.&lt;/span&gt;
+&lt;span&gt;Purple is my favorite color.&lt;/span&gt;</code></pre>
+        <p>
+          <span style="background-color: lightblue;">Light blue is my favorite color.</span>
+          <span style="background-color: lightblue;">Red is my favorite color.</span>
+          <span style="background-color: lightblue;">Light green is my favorite color.</span>
+          <span style="background-color: lightblue;">Purple is my favorite color.</span>
+        </p>
+      </section>
 
-          <!-- Color -->
-          <section>
-            <h3>CSS Color Values</h3>
-            <p>Your browser can accept colors in many different ways:</p>
-            <ul>
-              <li><strong>Color name</strong> (ex. red)</li>
-              <li><strong>Hexadecimal value</strong> (ex. #FF0000)</li>
-              <li><strong>RGB value</strong> (ex. rgb(255, 0, 0))</li>
-              <li><strong>HSL value</strong> (ex. hsl(0, 100%, 100%))</li>
-            </ul>
-            <p>
-              The 17 standard colors are:
-              <span style="color:aqua; background:black;">aqua</span>,
-              <span style="color:black,">black</span>,
-              <span style="color:blue;">blue</span>,
-              <span style="color:fuchsia;">fuchsia</span>,
-              <span style="color:gray;">gray</span>,
-              <span style="color:grey;">grey</span>,
-              <span style="color:green;">green</span>,
-              <span style="color:lime;">lime</span>,
-              <span style="color:maroon;">maroon</span>,
-              <span style="color:navy;">navy</span>,
-              <span style="color:olive;">olive</span>,
-              <span style="color:purple;">purple</span>,
-              <span style="color:red;">red</span>,
-              <span style="color:silver; background:black;">silver</span>,
-              <span style="color:teal;">teal</span>,
-              <span style="color:white; background:black;">white</span>,
-              and <span style="color:yellow; background:black;">yellow</span>.
-            </p>
-          </section>
-          <section>
-            <h3>Property: Color</h3>
-            <p>The color property changes the color of the text.</p>
-<pre><code class = "css">p {
-  color: red;
-  color: #ff0000;
-  color: rgb(255, 0, 0);
-}
+      <section>
+        <h3>Let's Develop It!</h3>
+        <p>Let's toss in a new CSS property:
+          <code>color</code>. The
+          <code>color</code> property changes the color of the
+          <strong>text</strong> within an element.</p>
+        <pre><code class="css">span {
+  color: darkred;
+}</code></pre>
+        <p>Use the Element Type Selector method we just learned about to change the
+          <code>color</code> of the text inside
+          <code>paragraphs</code>.</p>
+      </section>
+
+      <section>
+        <h3>Descendent Selectors</h3>
+        <p>We can select HTML elements for styling based on how they're nested within other elements.</p>
+      </section>
+
+      <section>
+        <h3>Descendent Selectors</h3>
+        <p>Multiple selectors
+          <strong>separated by spaces</strong> tell the browser to get specific before applying a style.</p>
+        <p>In this case, the browser knows that if it finds an
+          <code>unordered list</code> containing a
+          <code>list item</code> containing an
+          <code>anchor</code>, it will apply this background-color to the
+          <code>anchor</code>.</p>
+        <pre><code class="css">ul li a {
+  background-color: lightblue;
+}</code></pre>
+        <p>The style is always applied to the last item in the selector list.</p>
+      </section>
+
+      <section>
+        <h3>Descendent Selectors Pop Quiz!</h3>
+        <p>Which
+          <code>anchor</code> would get the background-color?</p>
+        <pre><code class="css">p a {
+  background-color: lightblue;
+}</code></pre>
+        <pre><code class="html">&lt;p&gt;
+  Let's put some
+  &lt;a href="www.tree.com"&gt;happy trees&lt;/a&gt;
+  and bushes back in here.
+&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;We'll put some
+    &lt;a href="www.leaf.com"&gt;happy leaves&lt;/a&gt;
+    here.
+  &lt;/li&gt;
+&lt;/ul&gt;
 </code></pre>
-          </section>
+        <p class="blue fragment">Answer: the "happy trees" anchor.</p>
+      </section>
 
-          <!-- Background color-->
-          <section>
-            <h3>Property: Background-color</h3>
-            <p>The background-color property changes the color of the background.</p>
-<pre><code class = "css">p {
-  background-color: black;
-  background-color: #000000;
-  background-color: rgb(0,0,0);
-}
-</code></pre>
-          </section>
+      <section>
+        <h3>Class & ID Selectors</h3>
+        <p>Element types aren't the only identifiers for assigning styles. We can also use
+          <code>class</code> and
+          <code>id</code> attributes as identifiers.</p>
+      </section>
 
-          <!-- Exercise-->
-          <section>
-            <h3>Let's develop it</h3>
-            <ul>
-              <li>Add some rules to your css file</li>
-              <li>Change the font color and background color of different types of elements</li>
-              <li>Try selecting links, paragraphs, and lists</li>
-            </ul>
-          </section>
-
-          <!-- Multiple values -->
-          <section>
-          <h3>Property Values</h3>
-          <p>Each property can have one or more comma separated values.</p>
-<pre><code class = "css">p{
+      <section>
+        <h3>Class Selectors</h3>
+        <p>All HTML elements accept
+          <code>class</code> attributes. As the developer, you decide what any given
+          <code>class</code> does, how it's named, and which elements to apply it to.
+        </p>
+        <div>
+          <div class="halfblock">
+            <h4>CSS:</h4>
+            <p>Create a rule for your
+              <code>class</code>.
+              <code>Classes</code> are signified by a
+              <code>.</code> (period), and then the
+              <code>class</code> name.</p>
+            <pre style="width: 100%"><code class="css">.fancy {
   color: white;
-  background-color: red;
-  font-family: Arial, sans-serif;
-}
+  background: coral;
+  font-weight: bold;
+  font-style: italic;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <h4>HTML:</h4>
+            <p>Add the
+              <code>class</code> attribute to your element(s) and assign the value (the
+              <code>class</code> name).</p>
+            <pre style="width: 100%"><code class="xml">&lt;p class="fancy"&gt;
+  A fancy paragraph!
+&lt;/p&gt;
+&lt;span class="fancy"&gt;
+  A fancy span!
+&lt;/span&gt;
 </code></pre>
-          </section>
+          </div>
+        </div>
+      </section>
 
-          <!-- Fonts-->
-          <section>
-            <h3>Property: Font-family</h3>
-            <p>The font-family property defines which font is used.</p>
-<pre><code class = "css">p {
-  font-family: "Times New Roman";
+      <section>
+        <h3>Class Selectors</h3>
+        <p>
+          Multiple
+          <code>classes</code> can be added to a single element. Just make sure there are spaces between them!</p>
+        <div>
+          <div class="halfblock">
+            <pre><code class="css">.bold {
+  font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <pre style="width: 100%"><code class="xml">&lt;p class="bold italic"&gt;
+  It is very important.
+&lt;/p&gt;
+
+&lt;p class="bolditalic"&gt;
+  There is no such class.
+&lt;/p&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <!-- Fonts-->
+      <section>
+        <h3>Property: Font-family</h3>
+        <p>The font-family property defines which font is used.</p>
+        <pre><code class = "css ">p {
+  font-family: "Times New Roman ";
   font-family: serif;
-  font-family: "Arial", sans-serif;
+  font-family: "Arial ", sans-serif;
 }
 </code></pre>
-            <p>Specific font name</p>
-            <p>Generic name</p>
-            <p>Comma-separated list</p>
-          </section>
+        <p>Specific font name</p>
+        <p>Generic name</p>
+        <p>Comma-separated list</p>
+      </section>
 
-          <!-- Font size -->
-          <section>
-            <h3>Property: Font-size</h3>
-            <p>The font-size property specifies the size of the font.</p>
-<pre><code class = "css">p {
+      <!-- Font size -->
+      <section>
+        <h3>Property: Font-size</h3>
+        <p>The font-size property specifies the size of the font.</p>
+        <pre><code class = "css ">p {
   font-size: 12px;
   font-size: 1.5em;
   font-size: 100%;
 }
 </code></pre>
-            <p>Pixels</p>
-            <p>"em"</p>
-            <p>Percentage</p>
-          </section>
+        <p>Pixels</p>
+        <p>"em "</p>
+        <p>Percentage</p>
+      </section>
 
-          <!-- Fonts-->
-          <section>
-          <h3>Property: Fonts (shorthand)</h3>
-<pre><code class = "css">p {
+      <!-- Fonts-->
+      <section>
+        <h3>Property: Fonts (shorthand)</h3>
+        <pre><code class = "css ">p {
   font-style: italic;
   font-weight: bold;
   font-size: 10px;
   font-family: sans-serif;
 }
-</code></pre>
-          OR
-<pre><code class = "css">p {
+</code></pre> OR
+        <pre><code class = "css ">p {
   font: italic bold 10px sans-serif;
 }
 </code></pre>
-          </section>
+      </section>
 
-          <!-- Exercise-->
-          <section>
-            <h3>Let's develop it</h3>
-            <ul>
-              <li>Change the fonts of your page</li>
-              <li>Try changing the font sizes and styles for different elements</li>
-            </ul>
-          </section>
+      <!-- Exercise-->
+      <section>
+        <h3>Let's develop it</h3>
+        <ul>
+          <li>Change the fonts of your page</li>
+          <li>Try changing the font sizes and styles for different elements</li>
+        </ul>
+      </section>
 
-          <!-- Selector position-->
-          <section>
-            <h3>Selector: Position</h3>
-<pre><code class = "css">p em {
-  color: yellow;
-}
-</code></pre>
-            <p>Selects all em elements that are within a paragraph</p>
-<pre><code class = "html">&lt;p&gt;This is &lt;em&gt;important.&lt;/em&gt;&lt;/p&gt;
-</code></pre>
-            <p>The associated HTML.</p>
-          </section>
-          <section>
-            <h3>Selector: Position</h3>
-            <ul>
-              <li>Position selectors are more specific</li>
-              <li>They look for elements <em>inside</em> other elements</li>
-              <li>We seperate nested elements with a space</li>
-            </ul>
-          </section>
-          <section>
-            <h3>Selector: Position</h3>
-            <p>So this code:</p>
-<pre><code class = "css">ul li a strong{
-  color: purple;
-}
-</code></pre>
-            <p>Means "find a strong tag inside a link inside a list item in an unordered list"</p>
-<pre><code class = "html">&lt;ul&gt;
-  &lt;li&gt;&lt;a href="programs.html"&gt;Our &lt;strong&gt;program&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</code></pre>
-          </section>
-          <section>
-            <h3>Let's develop it</h3>
-            <ul>
-              <li>In your CSS file, try a position selector</li>
-              <li>Remember, you need to look for an element <em>inside</em> another element</li>
-            </ul>
-          </section>
 
-          <!-- IDs and Classes-->
-          <section>
-            <h3>Reusing code</h3>
-            <p>As a general coding principle, <strong>D</strong>on't <strong>R</strong>epeat <strong>Y</strong>ourself.
-            <p>To reuse CSS, we use IDs and classes.</p>
-            <img src="img/recycle.jpg" alt="Recycle symbol"/>
-            <p><small>Photo credit:  <a href="http://www.flickr.com/photos/yomostro/2502577270/">Yo Mostro</a> <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a></small></p>
-          </section>
-          <section>
-            <h3>IDs vs. Classes</h3>
-            <p><strong>ID</strong> -- Should only apply to one element on a webpage, i.e., a webpage only has one footer.<br />
-            The "#" is how you tell CSS "this is an id."</p>
-            <p><strong>Class</strong> -- Lots of elements can have the same class, i.e., There can be many warnings on one webpage.<br />
-            The "." is how you tell CSS "this is a class name."</p>
-          </section>
-          <section>
-            <h3>Selector: ID</h3>
-<pre><code class = "css">#footer {
+
+      <section>
+        <h3>Let's develop it</h3>
+        <ul>
+          <li>In your CSS file, try a position selector</li>
+          <li>Remember, you need to look for an element
+            <em>inside</em> another element</li>
+        </ul>
+      </section>
+
+      <!-- IDs and Classes-->
+      <section>
+        <h3>Reusing code</h3>
+        <p>As a general coding principle,
+          <strong>D</strong>on't
+          <strong>R</strong>epeat
+          <strong>Y</strong>ourself.
+          <p>To reuse CSS, we use IDs and classes.</p>
+          <img src="img/recycle.jpg " alt="Recycle symbol " />
+          <p>
+            <small>Photo credit:
+              <a href="http://www.flickr.com/photos/yomostro/2502577270/ ">Yo Mostro</a>
+              <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/ ">cc</a>
+            </small>
+          </p>
+      </section>
+      <section>
+        <h3>IDs vs. Classes</h3>
+        <p>
+          <strong>ID</strong> -- Should only apply to one element on a webpage, i.e., a webpage only has one footer.
+          <br /> The "# " is how you tell CSS "this is an id. "</p>
+        <p>
+          <strong>Class</strong> -- Lots of elements can have the same class, i.e., There can be many warnings on one webpage.
+          <br /> The ". " is how you tell CSS "this is a class name. "</p>
+      </section>
+      <section>
+        <h3>Selector: ID</h3>
+        <pre><code class = "css ">#footer {
   property: value;
 }
 </code></pre>
-            <p>Selects all elements with an id of "footer".</p>
+        <p>Selects all elements with an id of "footer ".</p>
 
-<pre><code class="html">&lt;p id="footer"&gt;Copyright 2011&lt;/p&gt;
+        <pre><code class="html ">&lt;p id="footer "&gt;Copyright 2011&lt;/p&gt;
 </code></pre>
-            <p>The associated HTML.</p>
-          </section>
+        <p>The associated HTML.</p>
+      </section>
 
-          <!-- Selectors Class-->
-          <section>
-            <h3>Selector: Class</h3>
-<pre><code class = "css">.warning {
+      <!-- Selectors Class-->
+      <section>
+        <h3>Selector: Class</h3>
+        <pre><code class = "css ">.warning {
   color: red;
 }
 </code></pre>
-            <p>Selects all elements with a class of "warning".</p>
+        <p>Selects all elements with a class of "warning ".</p>
 
-<pre><code class = "html">&lt;p class="warning"&gt;Run away!&lt;/p&gt;
+        <pre><code class = "html ">&lt;p class="warning "&gt;Run away!&lt;/p&gt;
 </code></pre>
-            <p>The associated HTML.</p>
-          </section>
+        <p>The associated HTML.</p>
+      </section>
 
-          <!-- Exercise-->
-          <section>
-            <h3>Let's develop it</h3>
-            <ul>
-              <li>Add an ID and class to a your HTML</li>
-              <li>Add CSS rules to target these elements</li>
-            </ul>
-          </section>
+      <!-- Exercise-->
+      <section>
+        <h3>Let's develop it</h3>
+        <ul>
+          <li>Add an ID and class to a your HTML</li>
+          <li>Add CSS rules to target these elements</li>
+        </ul>
+      </section>
 
-          <!-- Cascading-->
-          <section>
-            <h3>Cascading</h3>
-            <p>Styles "cascade" down until changed</p>
-<pre><code class = "css">p{
+      <!-- Cascading-->
+      <section>
+        <h3>Cascading</h3>
+        <p>Styles "cascade " down until changed</p>
+        <pre><code class = "css ">p{
   color:blue;
   font-family: 'Helvetica';
 }
@@ -465,26 +770,32 @@
   font-family: Arial;
 }
 </code></pre>
-<pre><code class = "html">&lt;p&gt;Paragraph&lt;/p&gt;
-&lt;p class ="red"&gt;Paragraph&lt;/p&gt;
-&lt;p class = "red" id ="special"&gt;Paragraph&lt;/p&gt;
+        <pre><code class = "html ">&lt;p&gt;Paragraph&lt;/p&gt;
+&lt;p class ="red "&gt;Paragraph&lt;/p&gt;
+&lt;p class = "red " id ="special "&gt;Paragraph&lt;/p&gt;
 </code></pre>
-          </section>
-          <section>
-            <h3>Cascading priority</h3>
-            <p>Your browser assigns different priorities to CSS depending on the type of selector.</p>
-            <ol>
-              <li>Important! - <strong>Most Important</strong></li>
-              <li>In line CSS</li>
-              <li>ID</li>
-              <li>Class</li>
-              <li>Element - <strong>Least Important</strong></li>
-            </ol>
-          </section>
-          <section>
-            <h3>Cascading priority</h3>
-            <p>Your browser also assigns priority based on the specificity of the selection. More specific selectors have higher priority.</p>
-<pre><code class = "css">.main .sale .clearance p{ //Most specific
+      </section>
+      <section>
+        <h3>Cascading priority</h3>
+        <p>Your browser assigns different priorities to CSS depending on the type of selector.</p>
+        <ol>
+          <li>Important! -
+            <strong>Most Important</strong>
+          </li>
+          <li>In line CSS</li>
+          <li>ID</li>
+          <li>Class</li>
+          <li>Element -
+            <strong>Least Important</strong>
+          </li>
+        </ol>
+      </section>
+      <section>
+        <h3>Cascading priority</h3>
+        <p>Your browser also assigns priority based on the specificity of the selection. More specific selectors have higher
+          priority.
+        </p>
+        <pre><code class = "css ">.main .sale .clearance p{ //Most specific
   color: red;
 }
 .header .title p{
@@ -494,11 +805,11 @@
   color: blue;
 }
 </code></pre>
-          </section>
-          <section>
-            <h3>Cascading priority</h3>
-            <p>The tie-breaker is position. Rules lower in the file overwrite rules higher in the file</p>
-<pre><code class = "css">a{
+      </section>
+      <section>
+        <h3>Cascading priority</h3>
+        <p>The tie-breaker is position. Rules lower in the file overwrite rules higher in the file</p>
+        <pre><code class = "css ">a{
   background-color: yellow;
 }
 a{
@@ -508,67 +819,74 @@ a{ //This rule wins
   background-color: black;
 }
 </code></pre>
-          </section>
+      </section>
 
-          <!-- Properties-->
-          <section>
-            <h3>CSS Properties</h3>
-            <p>Many CSS properties have self-explanatory names:</p>
-            <ul>
-              <li>background-color</li>
-              <li>font-family</li>
-              <li>font-size</li>
-              <li>color</li>
-              <li>width</li>
-              <li>height</li>
-            </ul>
-            <p><a href = "https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference">Comprehensive list of all CSS properties</a></p>
-          </section>
+      <!-- Properties-->
+      <section>
+        <h3>CSS Properties</h3>
+        <p>Many CSS properties have self-explanatory names:</p>
+        <ul>
+          <li>background-color</li>
+          <li>font-family</li>
+          <li>font-size</li>
+          <li>color</li>
+          <li>width</li>
+          <li>height</li>
+        </ul>
+        <p>
+          <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference ">Comprehensive list of all CSS properties</a>
+        </p>
+      </section>
 
-          <section>
-            <h2>Questions?</h2>
-          </section>
-</div><!-- Close slides -->
+      <section>
+        <h2>Questions?</h2>
+      </section>
+    </div>
+    <!-- Close slides -->
 
     <div>
       <footer>
-        <div class="copyright">
+        <div class="copyright ">
           HTML/CSS ~ Girl Develop It
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+          <a rel="license " href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US ">
+            <img alt="Creative Commons License " style="border-width:0 " src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png " />
+          </a>
         </div>
       </footer>
     </div>
-</div><!-- Closes Reveal -->
+  </div>
+  <!-- Closes Reveal -->
 
 
-    <script src="lib/js/head.min.js"></script>
-    <script src="js/reveal.min.js"></script>
+  <script src="lib/js/head.min.js "></script>
+  <script src="js/reveal.min.js "></script>
 
-    <script>
+  <script>
 
-      // Full list of configuration options available here:
-      // https://github.com/hakimel/reveal.js#configuration
-            Reveal.initialize({
-        controls: true,
-        progress: true,
-        history: true,
-        center: true,
+    // Full list of configuration options available here:
+    // https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      history: true,
+      center: true,
 
-        transition: 'slide', // none/fade/slide/convex/concave/zoom
+      transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-        // Optional reveal.js plugins
-        dependencies: [
-          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-          { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-          { src: 'plugin/zoom-js/zoom.js', async: true },
-          { src: 'plugin/notes/notes.js', async: true },
-                    { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function() { return !!document.body.classList; } }
-        ]
-      });
+      // Optional reveal.js plugins
+      dependencies: [
+        { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+        { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+        { src: 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+        { src: 'plugin/zoom-js/zoom.js', async: true },
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function () { return !!document.body.classList; } }
+      ]
+    });
 
-    </script>
+  </script>
 
-  </body>
+</body>
+
 </html>
