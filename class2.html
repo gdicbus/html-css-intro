@@ -56,51 +56,58 @@
 
       <!-- Quiz 1-->
       <section>
-        <h3>Quiz Part 1</h3>
-        <p>Which tag is used to create a hyperlink element?</p>
-        <ol>
-          <li>
-            <code>&lt;p&gt;</code>
-          </li>
-          <li>
-            <code>&lt;link&gt;</code>
-          </li>
-          <li>
+        <section>
+          <h2>Quiz!</h2>
+          <p>Use your down key to see the quiz.</p>
+          <p>Use your right key to skip it.</p>
+        </section>
+
+        <section>
+          <h3>Quiz Part 1</h3>
+          <p>Which tag is used to create a hyperlink element?</p>
+          <ol>
+            <li>
+              <code>&lt;p&gt;</code>
+            </li>
+            <li>
+              <code>&lt;link&gt;</code>
+            </li>
+            <li>
+              <code>&lt;a&gt;</code>
+            </li>
+            <li>
+              <code>&lt;href&gt;</code>
+            </li>
+          </ol>
+          <div class="fragment blue">Answer:
             <code>&lt;a&gt;</code>
-          </li>
-          <li>
-            <code>&lt;href&gt;</code>
-          </li>
-        </ol>
-        <div class="fragment blue">Answer:
-          <code>&lt;a&gt;</code>
-        </div>
-      </section>
+          </div>
+        </section>
 
-      <!-- Quiz 2-->
-      <section>
-        <h3>Quiz Part 2</h3>
-        <p>Which two elements are nested
-          <strong>directly</strong> within the
-          <code>&lt;html&gt;</code> tags?</p>
-        <div class="fragment blue">Answer:
-          <code>&lt;head&gt;</code> and
-          <code>&lt;body&gt;</code>
-        </div>
-      </section>
+        <!-- Quiz 2-->
+        <section>
+          <h3>Quiz Part 2</h3>
+          <p>Which two elements are nested
+            <strong>directly</strong> within the
+            <code>&lt;html&gt;</code> tags?</p>
+          <div class="fragment blue">Answer:
+            <code>&lt;head&gt;</code> and
+            <code>&lt;body&gt;</code>
+          </div>
+        </section>
 
-      <!-- Quiz 3-->
-      <section>
-        <h3>Quiz Part 3</h3>
-        <p>
-          <strong>True or False</strong>
-          <br/> The following code is the correct way to display an image:</p>
-        <pre><code class="html" style="text-align: center;">&lt;img&gt;"cat.png"&lt;/img&gt;</code></pre>
-        <div class="fragment blue">
-          <strong>False.</strong> This is the correct way:
-          <pre><code class="html" style="text-align: center;">&lt;img src="cat.png" /&gt;</code></pre>
-
-        </div>
+        <!-- Quiz 3-->
+        <section>
+          <h3>Quiz Part 3</h3>
+          <p>
+            <strong>True or False</strong>
+            <br/> The following code is the correct way to display an image:</p>
+          <pre><code class="html" style="text-align: center;">&lt;img&gt;"cat.png"&lt;/img&gt;</code></pre>
+          <div class="fragment blue">
+            <strong>False.</strong> This is the correct way:
+            <pre><code class="html" style="text-align: center;">&lt;img src="cat.png" /&gt;</code></pre>
+          </div>
+        </section>
       </section>
 
       <!-- Review: Role of HTML v. CSS-->
@@ -147,7 +154,7 @@
       </section>
 
       <!-- Connecting HTML to CSS-->
-      <section>
+      <section id="connecting">
         <h3>Connecting CSS to HTML</h3>
         <p>There are three ways to connect CSS to HTML. Each is useful in certain situations.</p>
         <ul>
@@ -341,7 +348,7 @@
         <p>The typical CSS file contains many rules.</p>
         <div>
           <div class="halfblock ">
-            <pre><code class="css ">h1 {
+            <pre style="width: 100%"><code class="css">h1 {
   display: block;
   text-align: center;
 }
@@ -351,7 +358,7 @@ main {
 }
 
 footer {
-  background-color: thistle;
+  background-color: red;
   color: black;
 }
 </code></pre>
@@ -379,7 +386,7 @@ footer {
       <section>
         <h3>Anatomy of the CSS Declaration</h3>
         <p>A
-          <code class="yellow">property</code>-
+          <code class="yellow">property</code> -
           <code class="green">value</code> pair is called a
           <strong>declaration</strong>.</p>
         <pre><code class="css">nav {
@@ -532,7 +539,7 @@ background-color: hsl(300, 24%, 80%);</code></pre>
         <pre><code class="css">ul li a {
   background-color: lightblue;
 }</code></pre>
-        <p>The style is always applied to the last item in the selector list.</p>
+        <p>The style is always applied to the right-most item in the selector list.</p>
       </section>
 
       <section>
@@ -608,6 +615,7 @@ background-color: hsl(300, 24%, 80%);</code></pre>
           <code>classes</code> can be added to a single element. Just make sure there are spaces between them!</p>
         <div>
           <div class="halfblock">
+            <h4>CSS:</h4>
             <pre><code class="css">.bold {
   font-weight: bold;
 }
@@ -617,8 +625,9 @@ background-color: hsl(300, 24%, 80%);</code></pre>
 }</code></pre>
           </div>
           <div class="halfblock">
+            <h4>HTML:</h4>
             <pre style="width: 100%"><code class="xml">&lt;p class="bold italic"&gt;
-  It is very important.
+  Bold &amp; italic text.
 &lt;/p&gt;
 
 &lt;p class="bolditalic"&gt;
@@ -628,48 +637,511 @@ background-color: hsl(300, 24%, 80%);</code></pre>
         </div>
       </section>
 
-      <!-- Fonts-->
       <section>
-        <h3>Property: Font-family</h3>
-        <p>The font-family property defines which font is used.</p>
-        <pre><code class = "css ">p {
-  font-family: "Times New Roman ";
-  font-family: serif;
-  font-family: "Arial ", sans-serif;
+        <h3>ID Selectors</h3>
+        <p>All HTML elements accept one
+          <code>id</code> attribute. As the developer, you decide what any given
+          <code>id</code> does, how it's named, and which element to apply it to.
+        </p>
+        <div>
+          <div class="halfblock">
+            <h4>CSS:</h4>
+            <p>Create a rule for your
+              <code>id</code>, signified by a
+              <code>#</code> (pound, hashtag) followed by the
+              <code>id</code> name.</p>
+            <pre style="width: 100%"><code class="css">#logo {
+  color: darkred;
+  letter-spacing: 2px;
+  font-weight: bold;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <h4>HTML:</h4>
+            <p>Add the
+              <code>id</code> attribute to your element and assign the value (the
+              <code>id</code> name).
+            </p>
+            <pre style="width: 100%"><code class="xml">&lt;h1 id="logo"&gt;
+  Netflix
+&lt;/h1&gt;</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>ID Selectors</h3>
+        <p>Unlike
+          <code>class</code> selectors,
+          <code>id</code> selectors <strong class="blue">must be unique</strong>: an
+          <code>id</code> should only appear once per HTML page. Elements can only be assigned
+          <strong class="blue">one</strong>
+          <code>id</code> at a time.</p>
+        <br/>
+        <p>
+          <code>Id</code>s can also be used for navigation linking within an HTML page:</p>
+        <pre><code class="html">&lt;a href="#party"&gt;Clicking this link...&lt;/a&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;br/&gt;
+&lt;h3 id="#party"&gt;...would jump to here.&lt;/h3&gt;</code></pre>
+      </section>
+
+      <section>
+        <h3>Let's Develop It!</h3>
+        <ol style="margin-bottom: 25px">
+          <li style="margin-bottom: 20px">Find (or create) a nested element on your page and style it using the
+            <strong>Descendant Selector</strong> method.</li>
+          <li style="margin-bottom: 20px">Create a
+            <code>class</code> in your CSS and assign it to at least two elements in your HTML to see how it interacts.</li>
+          <li>Create an
+            <code>id</code> in your CSS and assign it to an element in your HTML. Try adding an
+            <code>anchor</code> that links to the
+            <code>id</code>.</li>
+        </ol>
+        <h4>Try some new CSS properties:</h4>
+        <div>
+          <div class="halfblock">
+            <pre><code class="css">font-weight: bold;</code></pre>
+            <pre><code class="css">font-style: italic;</code></pre>
+          </div>
+          <div class="halfblock">
+            <pre><code class="css">letter-spacing: 2px;</code></pre>
+            <small class="center">
+              <code>2px</code> stands for "2 pixels", try increasing/decreasing the number!</small>
+          </div>
+        </div>
+      </section>
+
+      <!-- The Cascade -->
+      <section>
+        <h2>
+          <em>Cascading</em> Style Sheets</h2>
+        <img width="512" alt="Cascade artificielle du parc de l&#039;Orangerie, Strasbourg" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Cascade_artificielle_du_parc_de_l%27Orangerie%2C_Strasbourg.jpg/512px-Cascade_artificielle_du_parc_de_l%27Orangerie%2C_Strasbourg.jpg"
+        />
+        <p>
+          <small>
+            <a title="By Tristan Schmurr from Luxembourg, Luxembourg (Waterfall) [CC BY 2.0
+        (https://creativecommons.org/licenses/by/2.0
+       )], via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:Cascade_artificielle_du_parc_de_l%27Orangerie,_Strasbourg.jpg">Photo credit: Tristan Schmurr</a>
+          </small>
+        </p>
+      </section>
+
+      <section>
+        <h3>The Cascade</h3>
+        <p>The styles applied to an element can come from many different sources. It is common to have multiple styles conflict.</p>
+        <p>How does the browser know which one to display?</p>
+        <blockquote>CSS resolves these conflicts by assigning a weight to each style rule and when several rules apply, choosing the
+          one with the greatest weight.
+        </blockquote>
+        <p>-
+          <a href="https://www.w3.org/TR/WD-css2-971104/cascade.html" title="Navigate to the W3C documentation regarding the cascade.">W3C cascade documentation</a>
+        </p>
+      </section>
+
+      <section>
+        <h3>The Cascade</h3>
+        <h4>Within a CSS Rule: Last Wins</h4>
+        <p>If an element is assigned the same style value twice (or more) within a rule, the last value will be the one applied
+          by the browser.</p>
+        <div>
+          <div class="halfblock">
+            <pre><code class="css">p {
+  color: blue;
+  font-weight: bold;
+  font-style: italic;
+  letter-spacing: 2px;
+  color: magenta;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <br/>
+            <p>In this example, the browser would display paragraph text's color as magenta.</p>
+          </div>
+        </div>
+        <p class="clear">
+          <strong>Pro Tip:</strong> organize the rules within CSS properties consistantly so as to reduce the chances of accidentally
+          repeating them.
+        </p>
+        <p>
+          <small>I recommend alphabetical order, personally.</small>
+        </p>
+      </section>
+
+      <section>
+        <h3>The Cascade</h3>
+        <h4>Within a Style Sheet: Last Wins</h4>
+        <p>If an element is assigned the same style value twice (or more) within one style sheet, the last value will be the
+          one applied by the browser.</p>
+        <div>
+          <div class="halfblock">
+            <pre><code class="css">p {
+  color: blue;
+}
+
+span {
+  letter-spacing: 2px;
+}
+
+p {
+  color: magenta;
 }
 </code></pre>
-        <p>Specific font name</p>
-        <p>Generic name</p>
-        <p>Comma-separated list</p>
+          </div>
+          <div class="halfblock">
+            <br/>
+            <br/>
+            <p>In this example, the paragraph text color would be magenta in the browser.</p>
+          </div>
+        </div>
       </section>
+
+      <section>
+        <h3>The Cascade</h3>
+        <h4>External CSS Import Order: Last Wins</h4>
+        <p>If more than one CSS file is linked to an HTML page, style conflicts will be resolved based on which file was imported
+          last.
+        </p>
+        <div>
+          <div class="halfblock">
+            <pre><code class="css">/* other-styles.css */
+p {
+  letter-spacing: 2px;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <pre><code class="css">/* some-styles.css */
+p {
+  letter-spacing: 5px;
+}</code></pre>
+          </div>
+        </div>
+        <br class="clear" />
+        <pre style="width: 100%;"><code class="html">&lt;!-- page.html --&gt;
+&lt;head&gt;
+  &lt;link rel="stylesheet" href="some-styles.css"&gt;
+  &lt;link rel="stylesheet" href="other-styles.css"&gt;
+&lt;/head&gt;</code></pre>
+        <p>In this case
+          <code>letter-spacing:2px;</code> would "win".</p>
+      </section>
+
+      <section>
+        <h3>The Cascade</h3>
+        <h4>CSS Closest to the HTML Wins</h4>
+        <p>Remember
+          <a href="#connecting" target="_blank">the three ways to connect styles</a>? There's an important "gotcha" to know about:
+        </p>
+        <p class="blue">Styles within an HTML file will win over external styles.</p>
+        <pre style="width: 100%;"><code class="html css">&lt;head&gt;
+  &lt;link rel="stylesheet" href="some-styles.css"&gt;
+  &lt;link rel="stylesheet" href="other-styles.css"&gt;
+
+  &lt;style&gt;
+    p {
+      letter-spacing: 100px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+        <p>In this case it doesn't matter what order the external files are linked,
+          <code>letter-spacing:100px;</code> would "win".</p>
+      </section>
+
+      <section>
+        <h3>The Cascade</h3>
+        <h4>Inline Styles Win</h4>
+        <p>And finally, styles that are written inline on an individual HTML element win over all of these other styling methods.</p>
+        <pre style="width: 100%;"><code class="xml css">&lt;head&gt;
+  &lt;link rel="stylesheet" href="styles.css"&gt;
+  &lt;style&gt;
+    p {
+      letter-spacing: 100px;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p style="letter-spacing: 1px;"&gt;
+    Inline styles win in this instance.
+  &lt;/p&gt;
+&lt;/body&gt;
+</code></pre>
+      </section>
+
+      <section>
+        <h3>Let's Develop It!</h3>
+        <ul>
+          <li style="margin-bottom: 20px">Duplicate
+                <strong>properties</strong> within a CSS rule. Change their values and see which gets applied.</li>
+          <li style="margin-bottom: 20px">Duplicate (and slightly change)
+            entire <strong>rules</strong> within your CSS file and see which gets applied.</li>
+          <li style="margin-bottom: 20px">Add an
+            <strong>inline style</strong> to an HTML element and use it to override existing styles.</li>
+          <li style="margin-bottom: 20px">Create a new CSS file and
+            <code>link</code> it in the
+            <code>head</code> of your HTML. Swap the order of the
+            <code>link</code>s.
+          </li>
+          <li>Try the
+              <code>letter-spacing</code> CSS property!
+              <pre><code class="css">span {
+  letter-spacing: 2px;
+}</code></pre></li>
+        </ul>
+      </section>
+
+      <!-- Specificity -->
+
+      <section>
+        <h2>The Cascade: Specificity</h2>
+        <p>The way in which CSS is connected to HTML isn't the only method CSS uses to determine what styles should be applied.
+          CSS also assigns "weight" to different types of selectors. The selector (or group of selectors) that is the "heaviest"
+          wins.
+        </p>
+        <br/>
+        <p>
+          <em class="blue">
+            From lightest to heaviest:</em>
+          <br/> element type selector
+          <br/>
+          <code>class</code>
+          <br/>
+          <code>id</code>
+          <br/> inline styles
+          <br/>
+          <code>!important</code>
+        </p>
+      </section>
+
+      <section>
+        <h3>Selector Specificity</h3>
+        <h4>Element Type Selectors</h4>
+        <p>Element type selectors are the lightest of the bunch, but they can override each other when they are combined.</p>
+        <div>
+          <br/>
+          <div class="halfblock">
+            <pre><code class="css">body p {
+  font-size: 28px;
+}
+
+p {
+  font-size: 18px;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <p>Because the first rule uses a descendant selector, it is more
+              <strong>specific</strong> than the second one, so it wins.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Selector Specificity</h3>
+        <h4>Class Selectors</h4>
+        <p>Adding a
+          <code>class</code> to an element and assigning styles to the
+          <code>class</code> will override any matching styles that are being applied via element type selectors.</p>
+        <pre style="text-align: center"><code class="xml">&lt;span class="my-span"&gt;Happy trees.&lt;/span&gt;</code></pre>
+        <div>
+          <div class="halfblock">
+            <pre><code class="css">.my-span {
+  font-size: 18px;
+}
+
+span {
+  font-size: 28px;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <p>Even though the
+              <code>class</code> comes first in this CSS example, it would win because CSS assigns more weight to a
+              <code>class</code> than an element type selector.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Selector Specificity</h3>
+        <h4>ID Selectors</h4>
+        <p>CSS gives more weight to
+          <code>id</code>s than
+          <code>class</code>es. When an element has both, the
+          <code>id</code> styles will win.</p>
+        <pre><code class="css">#span-id {
+  font-size: 18px;
+}
+
+.span-class {
+  font-size: 28px;
+}</code></pre>
+        <pre style="text-align: center; width: 100%;"><code class="xml">&lt;span class="span-class" id="span-id"&gt;Hello!&lt;/span&gt;</code></pre>
+        <p>The result here would be a paragraph with a
+          <code>font-size</code> of 18 pixels.</p>
+      </section>
+
+      <section>
+        <h3>Selector Specificity</h3>
+        <h4>Inline Styles</h4>
+        <p>CSS gives more weight to inline CSS than it does to
+          <code>id</code>s,
+          <code>class</code>es, or element type selectors. This "heaviness" is part of the reason why it's a best-practice not to use inline
+          styles.
+        </p>
+        <pre><code class="css">#span-id {
+  color: black;
+}</code></pre>
+        <pre style="text-align: center; width: 100%;"><code class="xml">&lt;span style="color: magenta;" id="span-id"&gt;Hi!&lt;/span&gt;</code></pre>
+        <p>The result:
+          <span style="color: magenta;" id="span-id">Hi!</span>
+        </p>
+      </section>
+
+      <section>
+        <h3>Selector Specificity</h3>
+        <h4>The Nuclear Option:
+          <code>!important</code>
+        </h4>
+        <p>The only way to override an inline style (without changing the inline style itself) is to use the
+          <code>!important</code> flag.
+        </p>
+        <p>If we take the previous example:</p>
+        <pre style="text-align: center; width: 100%;"><code class="xml">&lt;span style="color: magenta;" id="span-id"&gt;Hi!&lt;/span&gt;</code></pre>
+        <p>And append
+          <code>!important</code> to the color value in our CSS file, then it will win. Even if we use a "light" element type selector.</p>
+        <pre><code class="css">span {
+  color: black !important;
+}</code></pre>
+      </section>
+
+      <section>
+        <h3>Selector Specificity</h3>
+        <h4>The Nuclear Option:
+          <code>!important</code>
+        </h4>
+        <p>The
+          <code>!important</code> flag is very difficult to override once it's been used. For that reason, it should be used only as a last ditch
+          effort, when you have absolutely no other options.
+        </p>
+      </section>
+
+      <section>
+        <h3>Specificity</h3>
+        <p>Specificity is one of the trickiest concepts to master in CSS, so do not fret if you're confused. Time and practice (and asking for help!) will aid in conquering this concept!
+        </p>
+        <p class="blue" style="margin-top: 20px;">Resources:</p>
+        <ul>
+          <li>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#tree-proximity-ignorance" title="Navigate to the MDN Specificity Documentation" target="_blank">MDN Specificity Documentation</a>
+          </li>
+          <li>The W3C working draft on <a href="https://www.w3.org/TR/selectors/#specificity" title="Navigate to the W3C Working Draft, Specificity Calculation section" target="_blank">how selector specificity is calculated</a> by browsers.</li>
+          <li>A handy <a href="https://specificity.keegan.st/"title="Navigate to Keegan Street's Specificity Calculator app" target="_blank">Specificity Calculator</a> app.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>Let's Develop It!</h3>
+        <p>Play around with specificity!</p>
+        <ul>
+          <li style="margin-bottom: 20px">Override an existing style with a new <code>id</code>, <code>class</code>, or inline style.</li>
+          <li style="margin-bottom: 20px">Add an inline style to your HTML and then override it with an <code>!important</code> flag in your external CSS.</li>
+          <li>See if anything you've learned from this section explains any issues you might have had previously!</li>
+        </ul>
+      </section>
+
+      <!-- Fonts-->
+      <section>
+        <h3>CSS Property: Font-family</h3>
+        <p>This property allows us to set the font of our text.</p>
+        <p>We can set it to a generic category and let the browser pick a font that qualifies:
+        <div>
+          <div class="halfblock">
+              <pre style="width: 100%"><code class="css">body {
+  font-family: serif;
+}</code></pre>
+            <span style="font-family: serif">Serif fonts have the little nubbins (serifs) at the tips of each letter.</span>
+          </div>
+          <div class="halfblock">
+              <pre style="width: 100%"><code class="css">h1 {
+  font-family: sans-serif;
+}</code></pre>
+<span style="font-family: sans-serif">Sans-serif (literally "without serif") fonts have no little nubbins at the tips.</span>
+          </div>
+        </div>
+        <br class="clear"/>
+        <br/>
+        <p>Other generic font types include:<br/> <span style="font-family: cursive">cursive</span>, <span style="font-family: fantasy">fantasy</span>, and <span style="font-family: monospace">monospace</span>.</p>
+      </section>
+
+      <section>
+        <h3>CSS Property: Font-family</h3>
+        <p>We can also specify a named font. If the name has more than one word, it's safest to wrap it in quotes.</p>
+        <div>
+          <div class="halfblock">
+              <pre style="width: 100%"><code class="css">font-family: Georgia;</code></pre>
+            <span style="font-family: Georgia">Georgia</span>
+          </div>
+          <div class="halfblock">
+              <pre style="width: 100%"><code class="css">font-family: Arial;</code></pre>
+<span style="font-family: Arial">Arial</span>
+          </div>
+        </div>
+        <div>
+          <div class="halfblock">
+              <pre style="width: 100%"><code class="css">font-family: Courier;</code></pre>
+            <span style="font-family: Courier">Courier</span>
+          </div>
+          <div class="halfblock">
+              <pre style="width: 100%"><code class="css">font-family: Papyrus;</code></pre>
+              <span style="font-family: Papyrus">Papyrus</span>
+          </div>
+        </div>
+        <div>
+          <div class="halfblock">
+            <pre style="width: 100%"><code class="css">font-family: Impact;</code></pre>
+          <span style="font-family: Impact">Impact</span> <br/><small>(may not be available on PC)</small>
+        </div>
+        <div class="halfblock">
+            <pre style="width: 100%"><code class="css">font-family: "Comic Sans";</code></pre>
+            <span style="font-family: "Comic Sans"">Comic Sans</span> <br/><small>(may not be available on Mac)</small>
+        </div>
+      </div>
+        <p class="clear"><span class="blue">Note:</span> The browser can only display fonts that are on the device. Here's a <a href="https://www.cssfontstack.com/" title="Navigate to CSS Font Stack" target="_blank">helpful list</a> of fonts by platform.</p>
+      </section>
+
+      <section>
+          <h3>CSS Property: Font-family</h3>
+          <p>The safest route is to provide a list of fonts, separated by commas:</p>
+          <pre style="width: 100%"><code class="css">body {
+  font-family: "Big Caslon", Georgia, serif;
+}</code></pre>
+          <p>The browser will read through the list from left to right, apply the first font that it has access to, and will then ignore the rest.</p>
+        </section>
 
       <!-- Font size -->
       <section>
         <h3>Property: Font-size</h3>
         <p>The font-size property specifies the size of the font.</p>
-        <pre><code class = "css ">p {
-  font-size: 12px;
-  font-size: 1.5em;
-  font-size: 100%;
-}
-</code></pre>
-        <p>Pixels</p>
-        <p>"em "</p>
-        <p>Percentage</p>
+        <pre><code class="css">.very-large-text {
+  font-size: 100px;
+}</code></pre>
       </section>
 
       <!-- Fonts-->
       <section>
         <h3>Property: Fonts (shorthand)</h3>
         <pre><code class = "css ">p {
-  font-style: italic;
-  font-weight: bold;
-  font-size: 10px;
-  font-family: sans-serif;
+font-style: italic;
+font-weight: bold;
+font-size: 10px;
+font-family: sans-serif;
 }
 </code></pre> OR
         <pre><code class = "css ">p {
-  font: italic bold 10px sans-serif;
+font: italic bold 10px sans-serif;
 }
 </code></pre>
       </section>
@@ -681,144 +1153,6 @@ background-color: hsl(300, 24%, 80%);</code></pre>
           <li>Change the fonts of your page</li>
           <li>Try changing the font sizes and styles for different elements</li>
         </ul>
-      </section>
-
-
-
-      <section>
-        <h3>Let's develop it</h3>
-        <ul>
-          <li>In your CSS file, try a position selector</li>
-          <li>Remember, you need to look for an element
-            <em>inside</em> another element</li>
-        </ul>
-      </section>
-
-      <!-- IDs and Classes-->
-      <section>
-        <h3>Reusing code</h3>
-        <p>As a general coding principle,
-          <strong>D</strong>on't
-          <strong>R</strong>epeat
-          <strong>Y</strong>ourself.
-          <p>To reuse CSS, we use IDs and classes.</p>
-          <img src="img/recycle.jpg " alt="Recycle symbol " />
-          <p>
-            <small>Photo credit:
-              <a href="http://www.flickr.com/photos/yomostro/2502577270/ ">Yo Mostro</a>
-              <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/ ">cc</a>
-            </small>
-          </p>
-      </section>
-      <section>
-        <h3>IDs vs. Classes</h3>
-        <p>
-          <strong>ID</strong> -- Should only apply to one element on a webpage, i.e., a webpage only has one footer.
-          <br /> The "# " is how you tell CSS "this is an id. "</p>
-        <p>
-          <strong>Class</strong> -- Lots of elements can have the same class, i.e., There can be many warnings on one webpage.
-          <br /> The ". " is how you tell CSS "this is a class name. "</p>
-      </section>
-      <section>
-        <h3>Selector: ID</h3>
-        <pre><code class = "css ">#footer {
-  property: value;
-}
-</code></pre>
-        <p>Selects all elements with an id of "footer ".</p>
-
-        <pre><code class="html ">&lt;p id="footer "&gt;Copyright 2011&lt;/p&gt;
-</code></pre>
-        <p>The associated HTML.</p>
-      </section>
-
-      <!-- Selectors Class-->
-      <section>
-        <h3>Selector: Class</h3>
-        <pre><code class = "css ">.warning {
-  color: red;
-}
-</code></pre>
-        <p>Selects all elements with a class of "warning ".</p>
-
-        <pre><code class = "html ">&lt;p class="warning "&gt;Run away!&lt;/p&gt;
-</code></pre>
-        <p>The associated HTML.</p>
-      </section>
-
-      <!-- Exercise-->
-      <section>
-        <h3>Let's develop it</h3>
-        <ul>
-          <li>Add an ID and class to a your HTML</li>
-          <li>Add CSS rules to target these elements</li>
-        </ul>
-      </section>
-
-      <!-- Cascading-->
-      <section>
-        <h3>Cascading</h3>
-        <p>Styles "cascade " down until changed</p>
-        <pre><code class = "css ">p{
-  color:blue;
-  font-family: 'Helvetica';
-}
-.red {
-  color: red;
-}
-#special {
-  font-family: Arial;
-}
-</code></pre>
-        <pre><code class = "html ">&lt;p&gt;Paragraph&lt;/p&gt;
-&lt;p class ="red "&gt;Paragraph&lt;/p&gt;
-&lt;p class = "red " id ="special "&gt;Paragraph&lt;/p&gt;
-</code></pre>
-      </section>
-      <section>
-        <h3>Cascading priority</h3>
-        <p>Your browser assigns different priorities to CSS depending on the type of selector.</p>
-        <ol>
-          <li>Important! -
-            <strong>Most Important</strong>
-          </li>
-          <li>In line CSS</li>
-          <li>ID</li>
-          <li>Class</li>
-          <li>Element -
-            <strong>Least Important</strong>
-          </li>
-        </ol>
-      </section>
-      <section>
-        <h3>Cascading priority</h3>
-        <p>Your browser also assigns priority based on the specificity of the selection. More specific selectors have higher
-          priority.
-        </p>
-        <pre><code class = "css ">.main .sale .clearance p{ //Most specific
-  color: red;
-}
-.header .title p{
-  color: green;
-}
-.footer p{ //Least specific
-  color: blue;
-}
-</code></pre>
-      </section>
-      <section>
-        <h3>Cascading priority</h3>
-        <p>The tie-breaker is position. Rules lower in the file overwrite rules higher in the file</p>
-        <pre><code class = "css ">a{
-  background-color: yellow;
-}
-a{
-  background-color: teal;
-}
-a{ //This rule wins
-  background-color: black;
-}
-</code></pre>
       </section>
 
       <!-- Properties-->
