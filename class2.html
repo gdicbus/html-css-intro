@@ -1038,7 +1038,7 @@ span {
             <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity#tree-proximity-ignorance" title="Navigate to the MDN Specificity Documentation" target="_blank">MDN Specificity Documentation</a>
           </li>
           <li>The W3C working draft on <a href="https://www.w3.org/TR/selectors/#specificity" title="Navigate to the W3C Working Draft, Specificity Calculation section" target="_blank">how selector specificity is calculated</a> by browsers.</li>
-          <li>A handy <a href="https://specificity.keegan.st/"title="Navigate to Keegan Street's Specificity Calculator app" target="_blank">Specificity Calculator</a> app.</li>
+          <li>A handy <a href="https://specificity.keegan.st/" title="Navigate to Keegan Street's Specificity Calculator app" target="_blank">Specificity Calculator</a> app.</li>
         </ul>
       </section>
 
@@ -1106,7 +1106,7 @@ span {
         </div>
         <div class="halfblock">
             <pre style="width: 100%"><code class="css">font-family: "Comic Sans";</code></pre>
-            <span style="font-family: "Comic Sans"">Comic Sans</span> <br/><small>(may not be available on Mac)</small>
+            <span style="font-family: 'Comic Sans'">Comic Sans</span> <br/><small>(may not be available on Mac)</small>
         </div>
       </div>
         <p class="clear"><span class="blue">Note:</span> The browser can only display fonts that are on the device. Here's a <a href="https://www.cssfontstack.com/" title="Navigate to CSS Font Stack" target="_blank">helpful list</a> of fonts by platform.</p>
@@ -1124,52 +1124,79 @@ span {
       <!-- Font size -->
       <section>
         <h3>Property: Font-size</h3>
-        <p>The font-size property specifies the size of the font.</p>
-        <pre><code class="css">.very-large-text {
+        <p>The font-size property specifies the size of the font. In this example we are using the <code>px</code> unit (pixels) to calculate the font size. There are <a href="https://css-tricks.com/almanac/properties/f/font-size/" title="Navigate to the CSS Tricks font-size guide" target="_blank">lots of other ways to describe font-size</a>. We'll learn about other units later.</p>
+        <div>
+          <div class="halfblock"><pre><code class="css">.very-large-text {
   font-size: 100px;
 }</code></pre>
+          <p style="font-size: 70px; text-align: center;">Very Large Text</p>
+        </div>
+          <div class="halfblock"><pre><code class="css">.very-small-text {
+  font-size: 10px;
+}</code></pre></div>
+          <p style="font-size: 10px;">Very Small Text</p>
+        </div>
+
+
       </section>
 
-      <!-- Fonts-->
+      <!-- Font-->
       <section>
-        <h3>Property: Fonts (shorthand)</h3>
-        <pre><code class = "css ">p {
-font-style: italic;
-font-weight: bold;
-font-size: 10px;
-font-family: sans-serif;
+        <h3>Property: Font</h3>
+        <p>There are <em>a lot</em> of CSS properties relating to font. Luckily, CSS allows us to write them in "shorthand," that is put them all together with the <code>font</code> property.</p>
+        <pre><code class="css">p {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 10px;
+  font-family: Calibri, sans-serif;
 }
-</code></pre> OR
-        <pre><code class = "css ">p {
-font: italic bold 10px sans-serif;
+</code></pre>
+  <p>... can also be written as...</p>
+        <pre><code class="css">p {
+  font: italic bold 10px Calibri, sans-serif;
 }
 </code></pre>
       </section>
 
+      <section>
+          <h3>Property: Font</h3>
+          <p>
+            <span class="blue">Note:</span> there are some "gotchas" with this property. The <code>font-family</code> and <code>font-size</code> values are <strong>mandatory</strong>. Also, the <code>font-family</code> value must be last.
+          </p>
+          <p>The following code would be ignored by the browser because:</p>
+          <pre><code class="css">p {
+  font: Helvetica italic bold 18px;
+}</code></pre>
+    <p>The <code>font-family</code> isn't listed last.</p>
+          <pre><code class="css">p {
+  font: italic bold Helvetica;
+}</code></pre>
+<p>There's no <code>font-size</code> value.</p>
+        </section>
+
       <!-- Exercise-->
       <section>
-        <h3>Let's develop it</h3>
+        <h3>Let's Develop It!</h3>
         <ul>
-          <li>Change the fonts of your page</li>
-          <li>Try changing the font sizes and styles for different elements</li>
+          <li style="margin-bottom: 20px">Set the <code>font-family</code> on the <code>body</code> element to see how it effects the entire page.</li>
+          <li style="margin-bottom: 20px">Apply a different <code>font-family</code> and/or <code>font-size</code>s on specific elements on your page.</li>
+          <li>Try out <code>font-style</code> (<a href="https://css-tricks.com/almanac/properties/f/font-style/" title="Navigate to the CSS Tricks font-style resource" target="_blank">more info here</a>) and <code>font-weight</code> (<a href="https://css-tricks.com/almanac/properties/f/font-weight/" title="Navigate to the CSS Tricks font-weight resource" target="_blank">more info here</a>) properties.</li>
         </ul>
       </section>
 
       <!-- Properties-->
       <section>
         <h3>CSS Properties</h3>
-        <p>Many CSS properties have self-explanatory names:</p>
-        <ul>
-          <li>background-color</li>
-          <li>font-family</li>
-          <li>font-size</li>
-          <li>color</li>
-          <li>width</li>
-          <li>height</li>
-        </ul>
-        <p>
-          <a href="https://developer.mozilla.org/en-US/docs/CSS/CSS_Reference ">Comprehensive list of all CSS properties</a>
+        <p>We have <em>barely</em> scratched the surface when it comes to CSS properties. We will cover more of them in the last two classes, but we can't possibly cover them all. </p>
+        <br/>
+        <p class="blue">These excellent resources can help fill in the gaps:</p>
+        <p>The Mozilla Developer Network's<br/>
+          <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference#Keyword_index" target="_blank">comprehensive list of all CSS keywords</a>
         </p>
+        <hr/><p>CSS-Tricks.com<br/>
+          <a href="https://css-tricks.com/almanac/" target="_blank">CSS Almanac</a>
+        </p>
+
       </section>
 
       <section>
