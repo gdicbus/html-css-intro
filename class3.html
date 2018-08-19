@@ -136,8 +136,8 @@
 
       <section>
         <h2>Developer Tools</h2>
-        <p>In this class, we'll delve into some styling that can tough to see without a bit of help. Luckily your browser has
-          tools to make things easier!</p>
+        <p>In this class, we'll delve into some styling that can tough to see without a bit of help. Luckily your browser
+          has tools to make things easier!</p>
       </section>
 
       <!-- Inspector -->
@@ -158,7 +158,8 @@
           <li>F12</li>
           <li>Ctrl+Shift+I</li>
           <li>Right-click on the page and
-            <br/> select the "Inspect" option</li>
+            <br/> select the "Inspect" option
+          </li>
         </ul>
         <hr/>
         <p>
@@ -169,7 +170,8 @@
             ⌘ + ⌥ (option) + I</li>
           <li>
             Right-click on the page and
-            <br/> select the "Inspect" option</li>
+            <br/> select the "Inspect" option
+          </li>
         </ul>
       </section>
 
@@ -208,265 +210,321 @@
             <img src="img/chrome-element-picker.png" alt="Google Chrome's element picker icon" />
           </div>
         </div>
-        <p>This button, typically located in the top left corner of the Developer Tools window, allows you to hover over and
-          select elements on the page with your cursor.</p>
+        <p>This button, typically located in the top left corner of the Developer Tools window, allows you to hover over
+          and select elements on the page with your cursor.</p>
         <p>Clicking on an element will bring it's HTML and CSS into view in the Developer Tools.</p>
       </section>
 
       <section>
         <h3>Developer Tools</h3>
         <p>Selecting & changing the contents of an element.</p>
-        <img style="width: 70%; margin: 0;" src="img/example-devtools-change-html.gif" alt="Microsoft Edge's element picker icon" />
+        <img style="width: 70%; margin: 0;" src="img/example-devtools-change-html.gif" alt="Screen capture of using the Chrome Developer Tools to edit the text of a heading element."
+        />
         <p>
-          <small>(This is for viewing only, it won't change your actual code.)</small>
+          <small>(This is for viewing purposes only, it won't change your actual code.)</small>
         </p>
       </section>
 
       <section>
         <h3>Developer Tools</h3>
         <p>Selecting & changing the styles on an element.</p>
-        <img style="width: 70%; margin: 0;" src="img/example-devtools-change.gif" alt="Microsoft Edge's element picker icon" />
+        <img style="width: 70%; margin: 0;" src="img/example-devtools-change.gif" alt="Screen capture of using the Chrome Developer Tools to edit an existing style on an element." />
         <p>
-          <small>(This is for viewing only, it won't change your actual code.)</small>
+          <small>(This is for viewing purposes only, it won't change your actual code.)</small>
         </p>
       </section>
 
       <section>
         <h3>Developer Tools</h3>
-        <p>Editing the existing styles on an element.</p>
-        <img style="width: 100%; margin: 0;" src="img/example-devtools-edit.gif" alt="Microsoft Edge's element picker icon" />
+        <p>Toggling style declarations.</p>
+        <img style="margin: 0;" src="img/example-devtools-uncheck.gif" alt="Screen capture of using the Chrome Developer Tools to toggle the application of a style on an element." />
         <p>
-          <small>(This is for viewing only, it won't change your actual code.)</small>
+          <small>(This is for viewing purposes only, it won't change your actual code.)</small>
         </p>
       </section>
 
       <section>
         <h3>Developer Tools</h3>
         <p>Adding styles to an element.</p>
-        <img style="width: 70%; margin: 0;" src="img/example-devtools-add.gif" alt="Microsoft Edge's element picker icon" />
+        <img style="width: 70%; margin: 0;" src="img/example-devtools-add.gif" alt="Screen capture of using the Chrome Developer Tools to add a new style to an element." />
         <p>
-          <small>(This is for viewing only, it won't change your actual code.)</small>
+          <small>(This is for viewing purposes only, it won't change your actual code.)</small>
         </p>
       </section>
 
-
-      <!-- Divs -->
       <section>
-        <h3>Element: Div</h3>
+        <h3>Developer Tools</h3>
+        <p>None of the changes we make in the Developer Tools are permanent. Refreshing the browser will reset the page to reflect what's actually saved in the HTML & CSS files.</p>
+        <p>If you like a change you make in the Developer Tools, make sure to re-make the same change in your code!</p>
+      </section>
+
+      <!-- Develop It! -->
+      <section>
+        <h3>Let's "Develop" It!</h3>
+        <p>Play around with the Developer Tools in your browser.</p>
+        <br/>
         <ul>
-          <li>Block level element. Each new div is rendered on a new line.</li>
-          <li>A division, or section of content within an HTML page.</li>
-          <li>Used to group elements to format them with CSS.</li>
-          <li>Apply IDs and Classes to divs to control their styles with CSS.</li>
+          <li>Edit the text of an HTML element</li>
+          <li>Toggle some style declarations (especially useful to inspect the cascade!)</li>
+          <li>Add a new style declaration to an element in the styles panel of the Developer Tools.</li>
         </ul>
+        <br/><br/>
+        <p>If you like a change you've made, make sure to copy and paste it into your actual code!</p>
       </section>
+
+      <!-- Content Sectioning Elements -->
+
       <section>
-        <h3>Div Examples</h3>
-        <pre><code class="html">&lt;div&gt;
-   &lt;p&gt;Content&lt;p&gt;
-   &lt;p&gt;Content&lt;p&gt;
-&lt;/div&gt;
-</code></pre>
-        <pre><code class="html">&lt;div id="header"&gt;
-   &lt;h1&gt;Main Heading&lt;h1&gt;
-&lt;/div&gt;
-</code></pre>
-        <pre><code class="html">&lt;div class="sub-content"&gt;
-   &lt;p&gt;Some more content&lt;p&gt;
-&lt;/div&gt;
-</code></pre>
+        <h2>Content Sectioning Elements</h2>
+        <p>Right now our websites are just a bunch of content on a page.</p>
+        <p>As we get closer to our goal of a fully-styled website, we need to start thinking about how our content is organized.</p>
       </section>
 
       <section>
-        <h3>Grouping elements with div</h3>
-        <ul>
-          <li>The div tag is used everywhere to group elements together into sections.</li>
-          <li>You can wrap groups of elements in a div to style them differently.</li>
+        <h3>Content Sectioning Elements</h3>
+        <img src="img/content-sectioning-elements.jpg" alt="Screenshot of an example website with the content areas outlined" />
+      </section>
+
+      <!-- Header -->
+      <section>
+        <h3>Header</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;header&gt;&lt;/header&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Content sectioning</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Header-related elements like <code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>, logos, and author attributions.<dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <p>A page can have as many <code>&lt;header&gt;</code> elements as necessary.</p>
+            <p>While they're helpful for wrapping and styling headings (<code>&lt;h1&gt;</code> - <code>&lt;h6&gt;</code>), they are not required.</p>
+          </div>
+        </div>
+        <pre class="clear"><code class="xml">&lt;header&gt;
+  &lt;h1&gt;A Happy Lorem Ipsum&lt;/h1&gt;
+  &lt;h2&gt;Bob Ross quotes generator&lt;/h2&gt;
+&lt;/header&gt;</code></pre>
+      </section>
+
+      <!-- Main -->
+      <section>
+        <h3>Main</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;main&gt;&lt;/main&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Content sectioning</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Any content that is unique to that page.<dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <p>A document must not have more than one <code>&lt;main&gt;</code> element. Structures that repeat across the website (such as navigation or copyright footers) should not be inside the <code>&lt;main&gt;</code> element.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+          <h3>Main</h3>
+          <pre style="width: 100%"><code class="xml">&lt;main&gt;
+  &lt;h1&gt;In Life, You Need Colors&lt;/h1&gt;
+  &lt;p&gt;
+    I'm gonna start with a little Alizarin crimson
+    and a touch of Prussian blue. We’ll use
+    Permanent Red. Brown is such a nice color.
+  &lt;/p&gt;
+  &lt;h2&gt;Painting Should Do One Thing:&lt;/h2&gt;
+  &lt;ol&gt;
+    &lt;li&gt;It should put happiness in your heart.&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/main&gt;</code></pre>
+      </section>
+
+      <!-- Nav -->
+      <section>
+        <h3>Nav</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;nav&gt;&lt;/nav&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Content sectioning</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Navigational links<dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <p>This element is intended to mark the presence of navigational content, primarily within a site.</p>
+            <p>There can be multiple <code>&lt;nav&gt;</code> elements on a single page.</p>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Nav</h3>
+        <h4>Example: Global Navigation</h4>
+        <pre><code class="html">&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+      <p>With styles, could look like:</p>
+      <nav style="margin: 0 auto; background: papayawhip; width: auto; padding: .5em;">
+        <ul style="list-style-type: none; display: flex; margin: 0; justify-content: space-around;">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
         </ul>
+      </nav>
       </section>
 
       <section>
-        <h3>Grouping elements with div, cont.</h3>
-        <pre><code class="css">.align-right{
-  text-align:right;
-  color: purple;
-  font-weight: bold;
-}
-</code></pre>
-        <pre><code class="html">&lt;div class="align-right"&gt;
-  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit&lt;/p&gt;
-  &lt;p&gt;Sed do eiusmod tempor incididunt ut labore et dolore.&lt;/p&gt;
-&lt;/div&gt;
-&lt;p&gt;Magna aliqua. Ut enim ad minim veniam.&lt;/p&gt;
-&lt;p&gt;Quis nostrud exercitation ullamco.&lt;/p&gt;
-</code></pre>
-        <div style="text-align:right; font-weight:bold; font-size:70%; color:purple;">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-          <p>Sed do eiusmod tempor incididunt ut labore et dolore.</p>
-        </div>
-        <div style="font-size:70%;">
-          <p>Magna aliqua. Ut enim ad minim veniam.</p>
-          <p>Quis nostrud exercitation ullamco.</p>
-        </div>
+          <h3>Nav</h3>
+          <h4>Example: Breadcrumb Navigation</h4>
+          <pre style="width: 100%"><code class="html">&lt;nav&gt;
+  &lt;ol&gt;
+    &lt;li&gt;
+      &lt;a href="brand.html"&gt;Brands&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="brand/bobross.html"&gt;Bob Ross&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;
+      &lt;a href="brand/bobross/brushes.html"&gt;Brushes&lt;/a&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/nav&gt;</code></pre>
+        <p>With styles, could look like:</p>
+        <nav>
+          <ul style="list-style-type: none; display: flex; margin: 0;">
+              <li><a href="#">Brands</a> &raquo;&nbsp;</li>
+              <li><a href="#">Bob Ross</a> &raquo;&nbsp;</li>
+              <li>Brushes</li>
+          </ul>
+        </nav>
       </section>
 
+      <!-- Footer -->
       <section>
-        <h3>HTML5</h3>
-        <p class="left-align">HTML5 offers new elements for better document structure and semantics</p>
-        <p class="left-align">Some of the most commonly used new tags include:</p>
-        <pre><code class ="html">&lt;header&gt;&lt;/header&gt;
-&lt;nav&gt;&lt;/nav&gt;
-&lt;article&gt;&lt;/article&gt;
-&lt;section&gt;&lt;/section&gt;
-&lt;main&gt;&lt;/main&gt;
-&lt;footer&gt;&lt;/footer&gt;
-</code></pre>
-
-        <p>A full list can be found
-          <a href="http://www.tutorialspoint.com/html5/html5_new_tags.htm">here</a>.</p>
-      </section>
-
-      <section>
-        <h3>Let's Develop It</h3>
-        <p>Let's create a site using divs to separate content into different sections on our page.</p>
-        <p>Create a header, content area, sidebar, and a footer.</p>
-      </section>
-
-      <section>
-        <h3>Sample Code</h3>
-        <p>A page divided into divs might look like this:</p>
-        <pre><code class="html">&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Sample Page&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;div id="header"&gt;
-      &lt;h1&gt;My Page Title&lt;/h1&gt;
-    &lt;/div&gt;
-    &lt;div id="content"&gt;
-      &lt;p&gt;The main content&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div id="sidebar"&gt;
-      &lt;p&gt;Some stuff in a sidebar&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div id="footer"&gt;
-      &lt;p&gt;Copyright me&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-      </section>
-
-      <section>
-        <h3>Sample Code: HTML5</h3>
-        <p>A page divided using HTML 5 elements might look like this:</p>
-        <pre><code class="html">&lt;!doctype html&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;Sample Page&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;header&gt;
-      &lt;h1&gt;My Page Title&lt;/h1&gt;
-    &lt;/header&gt;
-    &lt;main&gt;
-      &lt;p&gt;The main content&lt;/p&gt;
-    &lt;/main&gt;
-    &lt;aside&gt;
-      &lt;p&gt;Some stuff in a sidebar&lt;/p&gt;
-    &lt;/aside&gt;
-    &lt;footer&gt;
-      &lt;p&gt;Copyright me&lt;/p&gt;
-    &lt;/footer&gt;
-  &lt;/body&gt;
-&lt;/html&gt;
-</code></pre>
-      </section>
-
-      <!-- Span -->
-      <section>
-        <h3>Element: Span</h3>
-        <ul>
-          <li>Inline element. Each new span is rendered next to each other &amp; only wraps when it reaches the edge of the containing
-            element.
-          </li>
-          <li>Can be used to apply styles to text inline so as not to break the flow of content.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Span</h3>
-        <p>Span is used to apply a specific style inline</p>
-
-        <pre><code class="css">.highlight{
-  color:teal;
-}
-</code></pre>
-        <pre><code class="html">&lt;p&gt;Paragraph with &lt;span class="highlight"&gt;teal&lt;/span&gt; text.&lt;/p&gt;
-</code></pre>
-        <p>Paragraph with
-          <span style="color:teal;">teal</span> text.</p>
-      </section>
-      <!-- Exercise-->
-      <section>
-        <h3>Let's Develop It</h3>
-        <p>Let's add some spans to our content to help highlight some text. </p>
-      </section>
-
-      <!-- Pseudo class-->
-      <section>
-        <h3>Pseudo-classess</h3>
-        <div class="halfblock">
-          <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
-          <p>CSS pseudo-classes are used to add special effects to some selectors.</p>
-        </div>
-
-        <div class="halfblock">
-          <p>Syntax:</p>
-          <pre><code class="css">selector:pseudo-class{
-  property:value;
-}
-</code></pre>
-          <p>Example:</p>
-          <pre><code class="css">a:link{
-  text-decoration: none;
-}
-</code></pre>
+        <h3>Footer</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;footer&gt;&lt;/footer&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Content sectioning</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Any except <code>&lt;header&gt;</code> and <code>&lt;footer&gt;</code><dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <p>Typically contains copyright and author information. Can also contain duplicate global navigation (helpful on long pages).</p>
+          </div>
         </div>
       </section>
 
-      <!-- Pseudo class-->
       <section>
-        <h3>Pseudo-classes</h3>
-        <pre><code class="css">a:link  {color:#FF0000;} /* unvisited link */
-a:visited {color:#00FF00;} /* visited link */
-a:hover, a:focus {color:#FF00FF;} /* mouse over or select with keyboard*/
-a:active {color:#0000FF;} /* selected link */
-</code></pre>
-        <p>a:hover
-          <strong>MUST</strong> come after a:link and a:visited in the CSS definition to be effective!</p>
-        <p>a:active
-          <strong>MUST</strong> come after a:hover in the CSS definition to be effective!</p>
+        <h3>Footer</h3>
+        <pre style="width: 100%"><code class="html">&lt;footer&gt;
+  &lt;nav&gt;
+    &lt;ul&gt;
+      &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/nav&gt;
+  &lt;p&gt;Copyright &copy; Grace Hopper&lt;/p&gt;
+&lt;/footer&gt;</code></pre>
       </section>
 
-      <!-- Exercise-->
       <section>
-        <h3>Let's Develop It</h3>
-        <p>Add pseudo classes to your links</p>
+        <h3>Content Sectioning Elements</h3>
+        <p>There are more! A full list can be found
+          <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element#Content_sectioning" target="_blank">here</a>.</p>
+      </section>
+
+      <section>
+        <h3>Let's Develop It!</h3>
+        <p>Organize the content on your page by wrapping content in the most appliccable sectioning elements.</p>
       </section>
 
       <!-- Box model-->
       <section>
         <h3>The Box Model</h3>
-        <img src="img/boxpadding.jpg" alt="Small box surrounded by packing peanuts in a larger box" />
-        <p class="credit">Photo credit:
-          <a href="http://www.flickr.com/photos/dchallender/76537016/">dchallender</a>
-          <a href="http://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
+        <p>Every element in HTML is a rectangle that has 3 built-in, default CSS properties: padding, border, & margin.</p>
+        <img style="width: 60%;" src="img/box-model-padding.png" alt="Graphic illustrating box model" />
       </section>
+
       <section>
-        <h3>Box Model</h3>
-        <img src="img/box-model.png" alt="Graphic illustrating box model" />
+        <h3>Border</h3>
+        <p>Applying a border to an element in CSS is akin to drawing a line around it.</p>
+        <p>There are several border-related properties:</p>
+        <p><code>border-color</code>, <code>border-style</code>, <code>border-width</code>, <code>border-radius</code>, and <code>border-image</code></p>
+        <p>We won't be covering <code>border-image</code> in this class, but you can <a href="https://css-tricks.com/almanac/properties/b/border-image/" title="CSS-Tricks border image documentation">learn about more about it here</a>.</p>
+      </section>
+
+      <section>
+        <h3>Border</h3>
+        <h4>Style and Width</h4>
+        <p>Elements must have the <code>border-style</code> and <code>border-width</code> properties defined in order for the border to be visible. In this example, each element's <code>border-width</code> is set to <code>10px</code> to demonstrate each <code>border-style</code>:</p>
+        <img style="width: 100%;" src="img/example-border-style.png"/>
+      </section>
+
+      <section>
+        <h3>Border</h3>
+        <h4>Color</h4>
+        <p>The <code>border-color</code> property sets the color of the border. It takes all of the same color values <a href="class2.html#/21" target="_blank">we covered in Class 2</a>.</p>
+        <img style="width: 100%;" src="img/example-border-colors.png"/>
+      </section>
+
+      <section>
+        <h3>Border</h3>
+        <h4>Radius</h4>
+        <p>CSS can handle rounded corners! Note how the corners are still round even when the <code>border-style</code> is set to <code>hidden</code> or <code>none</code>.</p>
+        <img style="width: 100%;" src="img/example-border-radius.png"/>
+        <p><small><span class="pink">Note:</span> both the radius and width are set to <code>10px</code> here. Setting the radius to a higher value than the width can cause certain border styles look wonky.</small></p>
+      </section>
+
+      <section>
+        <h3>Border</h3>
+        <h4>Shorthand</h4>
+        <div>
+          <div class="halfblock">
+            <p>The following styles...</p>
+            <pre style="width: 100%"><code class="css">p {
+  border-color: red;
+  border-style: dotted;
+  border-width: 9px;
+  border-radius: 5px;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <p>... can also be written (mostly) in shorthand.</p>
+            <pre style="width: 100%"><code class="css">p {
+  border: 9px solid red;
+  border-radius: 5px;
+}</code></pre>
+          </div>
+        </div>
+        <p class="clear"><strong class="pink">Note:</strong> order matters for border shorthand. Width, style, color; in that order. Radius is not included.</p>
       </section>
 
       <!-- Padding -->
@@ -523,7 +581,7 @@ a:active {color:#0000FF;} /* selected link */
         <pre><code class="css">border: 1px solid #ff0000;</code></pre>
         <p>A thick dotted black top border</p>
         <pre><code class="css">border-top: 4px dotted #000000;</code></pre>
-        <p>Two diﬀerent border styles</p>
+        <p>Two different border styles</p>
         <pre><code class="css">border-top: 1px solid #ff0000;
 border-bottom: 4px dotted #000000;
 </code></pre>
@@ -570,58 +628,52 @@ width: 300px;
       </section>
 
       <section>
-        <h3>Wrappers</h3>
-        <p>Wrappers are a good way to center content if the screen width is wider than your content.</p>
-        <pre><code class="css">div.wrapper{
-  width: 100%;
-  max-width: 1400px;
-  margin: 0 auto;
-}
-</code></pre>
+        <p>inline/block effects how box model is applied</p>
       </section>
 
-      <!-- Exercise -->
-      <section>
-        <h3>Let's Develop it!</h3>
-        <p>Let's add some padding, borders, and margins to our divs.</p>
-        <p>Let's center our entire document in the browser.</p>
-      </section>
 
-      <!-- Sizing -->
-      <!-- Width-->
+      <!-- Pseudo class-->
       <section>
-        <h3>Property: Width</h3>
-        <p>Sets the width of an element.</p>
-        <p>Does not include padding or borders. Remember to add these to the width.</p>
-        <pre><code class="css">div#sidebar{
-  width: 31%;
-  padding: 1%;
-  border: none; //Total width is 33%
-}
-</code></pre>
-      </section>
+          <h3>Pseudo-classess</h3>
+          <div class="halfblock">
+            <p>Changing the format of a link when you hover over it is accomplished by using pseudo-classes.</p>
+            <p>CSS pseudo-classes are used to add special effects to some selectors.</p>
+          </div>
 
-      <!-- height-->
-      <section>
-        <h3>Property: Height</h3>
-        <p>Sets the height of an element.</p>
-        <p>Does not include padding or borders. Remember to add these to the height.</p>
-        <pre><code class="css">p.alert{
-  height: 50px;
-  padding: 5px;
-  border: 2px solid red; //Total height is 64px
-}
-</code></pre>
-      </section>
+          <div class="halfblock">
+            <p>Syntax:</p>
+            <pre><code class="css">selector:pseudo-class{
+    property:value;
+  }
+  </code></pre>
+            <p>Example:</p>
+            <pre><code class="css">a:link{
+    text-decoration: none;
+  }
+  </code></pre>
+          </div>
+        </section>
 
-      <!-- Exercise -->
-      <section>
-        <h3>Let's develop it!</h3>
-        <div>
-          <p>Add a width &amp; height to our divs.</p>
-          <p>Use IDs to target each div with CSS</p>
-        </div>
-      </section>
+        <!-- Pseudo class-->
+        <section>
+          <h3>Pseudo-classes</h3>
+          <pre><code class="css">a:link  {color:#FF0000;} /* unvisited link */
+  a:visited {color:#00FF00;} /* visited link */
+  a:hover, a:focus {color:#FF00FF;} /* mouse over or select with keyboard*/
+  a:active {color:#0000FF;} /* selected link */
+  </code></pre>
+          <p>a:hover
+            <strong>MUST</strong> come after a:link and a:visited in the CSS definition to be effective!</p>
+          <p>a:active
+            <strong>MUST</strong> come after a:hover in the CSS definition to be effective!</p>
+        </section>
+
+        <!-- Exercise-->
+        <section>
+          <h3>Let's Develop It</h3>
+          <p>Add pseudo classes to your links</p>
+        </section>
+
 
       <section>
         <h2>Questions?</h2>
