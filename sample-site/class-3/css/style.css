@@ -1,0 +1,77 @@
+/*
+--------------------------------------
+Table of contents
+1. Overall Design/layout
+2. Sidebar Styles
+3. Text and image alignment classes
+--------------------------------------
+*/
+
+/*Overall Design*/
+
+body {
+  font-family: sans-serif;
+  font-size: 20px;
+}
+
+header {
+  background-color: #ce5b64;
+  margin: 0;
+}
+
+header h1 {
+  display: block;
+  font-size: 3.75em;
+  padding: 0.5em 0;
+  margin: 0;
+  text-align: center;
+  color: #fff;
+}
+
+main {
+  background-color: #fff;
+  padding: 1em;
+}
+
+footer {
+  background-color: #2f4186;
+  margin: 0;
+  padding: 1em;
+  color: #fff;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h5 {
+  font-family: cursive;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  font-size: 2.5em;
+}
+
+/*Sidebar links*/
+nav {
+  background: #fad186;
+}
+
+nav a {
+  background-color: #fad186;
+  display: block;
+  text-decoration: none;
+  color: #2f4186;
+  font-weight: 800;
+}
+
+nav a:hover {
+  color: limegreen;
+}
