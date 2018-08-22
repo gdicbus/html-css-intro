@@ -473,6 +473,7 @@
       <section>
         <h3>Let's Develop It!</h3>
         <p>Organize the content on your page by wrapping content in the most appliccable sectioning elements.</p>
+        <p>You can style them using the element name or by adding <code>class</code>es and <code>id</code>s!</p>
       </section>
 
       <!-- Borders -->
@@ -902,6 +903,145 @@ a: hover {
           </small></p>
       </section>
 
+      <section>
+        <h3>Text-Align</h3>
+        <p>In block elements (<code>h1</code>, <code>p</code>, etc.) we can set the alignment of the text within the element.</p>
+        <pre><code class="css">h1 {
+  text-align: right;
+}
+
+p {
+  text-align: center;
+}
+
+p.justify {
+  text-align: justify;
+}</code></pre>
+      </section>
+
+      <section>
+        <h3>Comments</h3>
+        <p>We can comment out lines of code in CSS, too!</p>
+        <pre><code class="css">/* Hello, I am a comment. */
+a:hover {
+  color: limegreen;
+}
+
+/* a:hover {
+  color: limegreen;
+} */
+
+a:hover {
+  color: thistle;
+  /* text-decoration: underline; */
+}
+</code></pre>
+      </section>
+
+      <!-- Float-->
+      <section>
+        <h3>Float</h3>
+        <p>"Floating" in CSS is akin applying "word wrap" in a word processer. When an element has <code>float</code> applied, it moves as far to one side of it's parent element as possible.</p>
+      </section>
+
+      <!--example float-->
+      <section>
+        <h3>Float: Example</h3>
+        <p>Below, a <code>&lt;blockquote&gt;</code> element is floated to the left, allowing text to wrap around it on the right.</p>
+        <img src="img/example-floatbq.png" alt="example float" />
+        <p><small>You can <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote" target="_blank" title="Navigate to MDN's documentation on the blockquote element">learn more about <code>&lt;blockquote&gt;</code> here</a>.</small></p>
+      </section>
+
+      <section>
+        <h3>Float</h3>
+        <pre><code class="css">img {
+  float:left;
+  margin: 0 20px 20px 0;
+}</code></pre>
+        <div style="width: 80%; margin: 0 auto;">
+        <img style="float:left; margin: 0 20px 20px 0; width: 200px;" src="img/bob-ross.jpg">
+        <p style="text-align: left;">Maybe there's a happy little waterfall happening over here. If we're going to have animals around we all have to be concerned about them and take care of them. Clouds are free. They just float around the sky all day and have fun. I really believe that if you practice enough you could paint the 'Mona Lisa' with a two-inch brush.</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Clear</h3>
+        <p>The <code>clear</code> property is useful in the instances when you want to keep content from wrapping around a <code>float</code>ed element.</p>
+      </section>
+
+      <!-- Clear-->
+      <section>
+        <h3>Clear</h3>
+        <p>In the following example, imagine that we would rather not have the header wrap around the image.</p>
+        <hr/>
+        <div style="width: 80%; margin: 0 auto;">
+          <img style="float:left; margin: 0 20px 20px 0;" src="img/bob-ross.jpg">
+          <p style="text-align: left;">Maybe there's a happy little waterfall happening over here. If we're going to have animals around we all have to be concerned about them and take care of them.</p>
+          <h5 style="text-align: left;">Clouds Are Free</h5>
+          <p style="text-align: left;">They just float around the sky all day and have fun. Happy little clouds.</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Clear</h3>
+        <div>
+          <div class="halfblock" style="width: 64%;">
+            <p>Adding <code>clear</code> forces the header to start below the left-floated <code>img</code>.</p></div>
+          <div class="halfblock" style="width: 32%;">
+<pre><code class="css">h2 {
+clear: left;
+}</code></pre>
+          </div>
+        </div>
+<hr class="clear"/>
+        <div style="width: 80%; margin: 0 auto;">
+          <img style="float:left; margin: 0 20px 20px 0;" src="img/bob-ross.jpg">
+          <p style="text-align: left;">Maybe there's a happy little waterfall happening over here. If we're going to have animals around we all have to be concerned about them and take care of them.</p>
+          <h5 style="text-align: left; clear: left;">Clouds Are Free</h5>
+          <p style="text-align: left;">They just float around the sky all day and have fun. Happy little clouds.</p>
+        </div>
+      </section>
+
+      <section>
+          <h3>Clear</h3>
+          <div>
+            <div class="halfblock" style="width: 64%;">
+              <p>The same concept applies for right-floated elements.</p></div>
+            <div class="halfblock" style="width: 32%;">
+  <pre><code class="css">h2 {
+  clear: right;
+}</code></pre>
+            </div>
+          </div>
+  <hr class="clear"/>
+          <div style="width: 80%; margin: 0 auto;">
+            <img style="float:right; margin: 0 20px 20px 0;" src="img/bob-ross.jpg">
+            <p style="text-align: left;">Maybe there's a happy little waterfall happening over here. If we're going to have animals around we all have to be concerned about them and take care of them.</p>
+            <h5 style="text-align: left; clear: right;">Clouds Are Free</h5>
+            <p style="text-align: left;">They just float around the sky all day and have fun. Happy little clouds.</p>
+          </div>
+        </section>
+
+        <section>
+            <h3>Clear</h3>
+            <div>
+              <div class="halfblock" style="width: 64%;">
+                <p>And in the cases where you need to deal with left and right floats, you can use <code>clear: both;</code></p></div>
+              <div class="halfblock" style="width: 32%;">
+    <pre><code class="css">h2 {
+  clear: both;
+}</code></pre>
+              </div>
+            </div>
+    <hr class="clear"/>
+            <div>
+              <img style="float:left; margin: 0 20px 20px 0;" src="img/bob-ross.jpg">
+              <img style="float:right; margin: 0 20px 20px 0;" src="img/bob-ross.jpg">
+              <p style="text-align: left;">Maybe there's a happy little waterfall happening over here. If we're going to have animals around we all have to be concerned about them and take care of them.</p>
+              <h5 style="text-align: left; clear: both;">Clouds Are Free</h5>
+              <p style="text-align: left;">They just float around the sky all day and have fun. Happy little clouds.</p>
+            </div>
+          </section>
 
       <section>
         <h2>Questions?</h2>
