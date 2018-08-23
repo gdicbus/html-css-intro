@@ -106,7 +106,142 @@
       </section>
 
       <section>
-        <h3>Semantic</h3>
+        <h3>Units</h3>
+        <p>px, but also % and em</p>
+      </section>
+
+      <section>
+        <h3>Units</h3>
+        <p>% is usually relative to the width of the parent container</p>
+      </section>
+
+      <section>
+        <h3>Units</h3>
+        <p>em is based on the font size set on the page body (should be set in px)</p>
+      </section>
+
+      <section>
+        <h3>Width/Height</h3>
+        <p>Can use units to set specific heights/widths on things. Can use % units so that the result is responsive</p>
+        <p>We won't cover responsive in this class, but one of the key tenants is to use sizings that will respond to the
+          size of the screen</p>
+      </section>
+
+      <section>
+        <p>Max and min width are also a thing</p>
+      </section>
+
+      <section>
+        <h3>Width</h3>
+        <p>An element's width describes the width of the content. Padding and border are additional measurements.</p>
+        <pre><code class="css">header {
+  width: 100%;
+  padding: 1%;
+}</code></pre>
+        <p>The overall width of this <code>header</code> would be 102%.</p>
+      </section>
+
+      <section>
+        <h3>Width</h3>
+        <h4>Example</h4>
+        <p>Use your Developer Tools on the element below. Open the "Computed" tab in the CSS panel to see how <code>padding</code>          and
+          <code>border</code> are calculated separately from the <code>width</code>.</p>
+        <p style="width: 300px; padding: 50px; background: thistle; border: 2px solid purple; margin: 0 auto;">I am <code>300px</code>          wide.
+          But my padding is <code>50px</code> and I have a <code>2px</code> border.</p>
+      </section>
+
+
+      <section>
+        <h3>Width</h3>
+        <h4>Example</h4>
+        <p>This additive effect can cause elements to expand past their parent container's boundries.</p>
+        <div style="width:500px; border: 5px solid teal; background: #eee; margin: 0 auto;">
+          <p>This container is <code>500px</code> wide.</p>
+          <p style="width: 100%; padding: 50px; background: thistle; border: 2px solid purple;">I am <code>100%</code> wide.
+            But my padding is <code>50px</code> and I have a <code>2px</code> border.</p>
+        </div>
+      </section>
+
+      <section>
+        <h3>Box-Sizing</h3>
+        <h4><code>content-box</code></h4>
+        <p>This additive effect is caused by a CSS property called <code>box-sizing</code>, whose default value is <code>content-box</code>.
+          This means that the size of the box (in this case, the <code>width</code>) is going to be applied to the <em>content</em>.</p>
+
+      </section>
+
+      <section>
+        <h3>Box-Sizing</h3>
+        <h4><code>content-box</code></h4>
+        <p>There are two ways to deal with calculating an element's width and padding. You can either do the mental math
+          and apply the width and padding accordingly...</p>
+        <pre><code class="css">header {
+  width: 80%;
+  padding: 10%;
+}</code></pre>
+        <p><code>80%</code> + <code>10%</code> + <code>10%</code> = <code>100%</code></p>
+      </section>
+
+      <section>
+        <h3>Box-Sizing</h3>
+        <h4><code>border-box</code></h4>
+        <p>Or you can reset the <code>box-sizing</code> property altogether! The <code>border-box</code> value tells the
+          browser to apply the width to the <em>combination</em> of the border, padding, and the width.</p>
+        <pre><code class="css">header {
+  box-sizing: border-box;
+  width: 80%;
+  padding: 10%;
+}</code></pre>
+        <p><code>80%</code> + <code>10%</code> + <code>10%</code> = <code>100%</code></p>
+      </section>
+
+      <!-- height-->
+      <section>
+        <h3>Property: Height</h3>
+        <p>Sets the height of an element.</p>
+        <p>Does not include padding or borders. Remember to add these to the height.</p>
+        <pre><code class="css">p.alert{
+      height: 50px;
+      padding: 5px;
+      border: 2px solid red; //Total height is 64px
+    }
+    </code></pre>
+      </section>
+
+      <!-- Exercise -->
+      <section>
+        <h3>Let's develop it!</h3>
+        <div>
+          <p>Develop it add width/height to a image?</p>
+      </section>
+
+      <section>
+        <h3>Generic Elements</h3>
+        <p>We've learned about lots of elements that were created for very specific purposes (eg. <code>&lt;ul&gt;</code>,
+          <code>&lt;footer&gt;, <code>&lt;p&gt;</code></code>). There are also generic elements that don't represent any
+          specific type of content.</p>
+      </section>
+
+      <!-- Span -->
+      <section>
+        <h3>Span</h3>
+        <div>
+          <div class="halfblock">
+            <dl>
+              <dt>Tag(s):</dt>
+              <dd>
+                <pre><code>&lt;span&gt;&lt;/span&gt;</code></pre>
+              </dd>
+              <dt>Category:</dt>
+              <dd>Inline</dd>
+              <dt>Acceptable content:</dt>
+              <dd>Text and inline elements</dd>
+            </dl>
+          </div>
+          <div class="halfblock">
+            <p><code>Span</code> does not inherently represent anything. It can be used to group elements for styling purposes (using the <code>class</code> or <code>id</code> attributes). It should be used only when no other element is appropriate.</p>
+          </div>
+        </div>
       </section>
 
       <!-- Div -->
@@ -120,71 +255,169 @@
                 <pre><code>&lt;div&gt;&lt;/div&gt;</code></pre>
               </dd>
               <dt>Category:</dt>
-              <dd>Flow content</dd>
+              <dd>Block</dd>
               <dt>Acceptable content:</dt>
-              <dd>Everything.
-                <dd>
+              <dd>Everything.</dd>
             </dl>
           </div>
           <div class="halfblock">
-            <p>///</p>
+            <p>Short for the word "division", <code>div</code>s are used to group content so it can be easily styled using the <code>class</code> or <code>id</code> attributes. It should only be used when other elements do not apply.</p>
           </div>
         </div>
+      </section>
+
+      <section>
+        <h3>Generic Elements</h3>
+        <p>If you can put content in an element that describes its own purpose, that should be your first choice. But if
+          you need an element purely for the sake of styling (presentation) then <code>div</code>s and <code>span</code>s are great tools.</p>
       </section>
 
       <section>
         <h3>Wrappers</h3>
+        <p>Using a <code>div</code> as a wrapper to which styles are added is a great example of this. The site would still function without
+          the <code>div</code> element, it just wouldn't look as nice.</p>
         <p>Wrappers are a good way to center content if the screen width is wider than your content.</p>
-        <pre><code class="css">div.wrapper{
-      width: 100%;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-    </code></pre>
+        <pre><code class="css">div.wrapper {
+  width: 100%;
+  max-width: 80%;
+  margin: 0 auto;
+}</code></pre>
       </section>
 
-      <!-- Exercise -->
       <section>
-        <h3>Let's Develop it!</h3>
-        <p>Let's add some padding, borders, and margins to our divs.</p>
-        <p>Let's center our entire document in the browser.</p>
+        <h3>Let's Develop It!</h3>
+        <p>Wrap everything inside your page's <code>body</code> tags in a <code>div</code> and give it some <code>width</code>.</p>
       </section>
 
-      <!-- Sizing -->
-      <!-- Width-->
       <section>
-        <h3>Property: Width</h3>
-        <p>Sets the width of an element.</p>
-        <p>Does not include padding or borders. Remember to add these to the width.</p>
-        <pre><code class="css">div#sidebar{
-    width: 31%;
-    padding: 1%;
-    border: none; //Total width is 33%
-  }
-  </code></pre>
+        <h3>Flex</h3>
+        <p>So far we've added all sorts of styles to our page, but it still doesn't look like a real website. Positioning
+          will help.</p>
       </section>
 
-      <!-- height-->
       <section>
-        <h3>Property: Height</h3>
-        <p>Sets the height of an element.</p>
-        <p>Does not include padding or borders. Remember to add these to the height.</p>
-        <pre><code class="css">p.alert{
-    height: 50px;
-    padding: 5px;
-    border: 2px solid red; //Total height is 64px
-  }
-  </code></pre>
+        <h3>Flex</h3>
+        <p>Allows us to position elements easily via CSS.</p>
+        <p>The default flow of an HTML page is downward, like a column in a table.</p>
       </section>
 
-      <!-- Exercise -->
       <section>
-        <h3>Let's develop it!</h3>
+        <h3>Flex</h3>
+        <p>With Flex, we can position things in either columns or rows and control the spacing of those elements.</p>
+      </section>
+
+      <section>
+        <h3>CSS Grid</h3>
+        <p>It's a thing. The entire layout is described in CSS, no wrappers necessary. We're not going to cover it, but now
+          you know it's a thing!</p>
+      </section>
+
+      <section>
+        <h3>Fun fancy stuff</h3>
+      </section>
+
+      <section>
+        <h3>Backgrounds</h3>
+      </section>
+
+      <section>
+        <h3>Backgrounds</h3>
+        <h4>Images</h4>
+      </section>
+
+      <section>
+        <h3>Backgrounds</h3>
+        <h4>Repeating Images</h4>
+      </section>
+
+      <section>
+        <h3>Backgrounds</h3>
+        <h4>Gradients</h4>
+      </section>
+
+      <section>
+        <h3>Un-styling Lists</h3>
+        <p>Lists are great for organizing navigation links from a semantic perspective, but they don't look great straight out of the box. CSS to the rescue!</p>
+      </section>
+
+      <section>
+        <h3>Un-styling Lists</h3>
         <div>
-          <p>Add a width &amp; height to our divs.</p>
-          <p>Use IDs to target each div with CSS</p>
+          <div class="halfblock"><p>Aside from the list item bullets, lists (both ordered and unordered) come equipped with <code>margin</code> and <code>padding</code>.</p></div>
+          <div class="halfblock"><img src="img/unstyled-list.png" alt="Screenshot of an unordered list highlighted using the Developer Tools to visualize the padding and margin applied."/></div>
         </div>
+        <p>We can get rid of all three of these properties like so:</p>
+        <pre><code class="css">ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}</code></pre>
       </section>
+
+      <section>
+        <h3>Un-styling Lists</h3>
+        <p>From there, the possibilities are endless. You could use <code>flex</code> to line them up horizontally:</p>
+            <pre style="width: 100%;"><code class="css">ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  justify-items: space-around;
+  background: mistyrose;
+}</code></pre>
+<ul style="margin: 0;
+            padding: 0;
+            list-style-type: none;
+            display: flex;
+            justify-content: space-around;
+            background: mistyrose;">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Shop</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+      </section>
+
+      <section>
+          <h3>Un-styling Lists</h3>
+          <p>From there, the possibilities are endless. You could leave them vertically stacked and use width, padding, and borders to bulk the anchors up</p>
+              <pre style="width: 100%;"><code class="css">ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-items: space-around;
+    background: mistyrose;
+  }</code></pre>
+  <ul style="font-size: .75em; margin: 0;
+              padding: 0;
+              list-style-type: none;
+              display: flex;
+              justify-content: space-around;
+              background: mistyrose;">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">News</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+        </section>
+
+      <section>
+        <h3>Google Fonts</h3>
+      </section>
+
+      <section>
+        <h3>Google Fonts</h3>
+        <h4>How to use the website</h4>
+      </section>
+
+      <section>
+        <h3>Google Fonts</h3>
+        <h4>How to add the code</h4>
+      </section>
+
       <section>
         <h3>Static Positioning</h3>
         <ul>
@@ -340,48 +573,48 @@
       <section>
         <h2>Questions?</h2>
       </section>
-    </div><!-- Close slides -->
+      </div><!-- Close slides -->
 
-    <div>
-      <footer>
-        <div class="copyright">
-          HTML/CSS ~ Girl Develop It
-          <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License"
-              style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
-        </div>
-      </footer>
-    </div>
-  </div><!-- Closes Reveal -->
+      <div>
+        <footer>
+          <div class="copyright">
+            HTML/CSS ~ Girl Develop It
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/3.0/deed.en_US"><img alt="Creative Commons License"
+                style="border-width:0" src="http://i.creativecommons.org/l/by-nc/3.0/80x15.png" /></a>
+          </div>
+        </footer>
+      </div>
+    </div><!-- Closes Reveal -->
 
 
-  <script src="lib/js/head.min.js"></script>
-  <script src="js/reveal.min.js"></script>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.min.js"></script>
 
-  <script>
+    <script>
 
-    // Full list of configuration options available here:
-    // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-      controls: true,
-      progress: true,
-      history: true,
-      center: true,
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
 
-      transition: 'slide', // none/fade/slide/convex/concave/zoom
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
 
-      // Optional reveal.js plugins
-      dependencies: [
-        { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
-        { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-        { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
-        { src: 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
-        { src: 'plugin/zoom-js/zoom.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function () { return !!document.body.classList; } }
-      ]
-    });
+        // Optional reveal.js plugins
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+          { src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+          { src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function () { return !!document.querySelector('pre code'); }, callback: function () { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/accessibility-helper/js/accessibility-helper.js', async: true, condition: function () { return !!document.body.classList; } }
+        ]
+      });
 
-  </script>
+    </script>
 
 </body>
 
