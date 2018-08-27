@@ -106,34 +106,82 @@
       </section>
 
       <section>
-        <h3>Units</h3>
-        <p>px, but also % and em</p>
+        <h3>Measurement Units</h3>
+        <p>So far in this course, we have used pixels (<code>px</code>) for most of our measurements. Pixels are what the browser calculates when it renders elements on the screen. But we have access to different units that provide more expressive ways to tell the browser how many pixels to draw.</p>
+        <p>Let's learn about a few of them.</p>
       </section>
 
       <section>
-        <h3>Units</h3>
-        <p>% is usually relative to the width of the parent container</p>
+        <h3>Measurement Units</h3>
+        <h4><code>em</code></h4>
+        <p>The <code>em</code> unit is based on the <code>font-size</code> set on the <code>body</code>. By default (in most browsers) that value is <code>16px</code>, thus:<br/>
+          <code>1em</code> = <code>16px</code><br/>
+          <code>1.25em</code> = <code>20px</code><br/>
+          <code>1.5em</code> = <code>24px</code><br/>
+          <code>2em</code> = <code>32px</code><br/>
+          <code>2.5em</code> = <code>40px</code><br/>
+          etc.
+        </p>
       </section>
 
       <section>
-        <h3>Units</h3>
-        <p>em is based on the font size set on the page body (should be set in px)</p>
+        <h3>Measurement Units</h3>
+        <h4><code>em</code></h4>
+        <p>If, in our CSS we <em>change</em> the <code>font-size</code> value set on the <code>body</code>, then the math changes accordingly.<br/>
+          <pre><code class="css">body {
+  font-size: 20px;
+}</code></pre>
+          <code>1em</code> = <code>20px</code><br/>
+          <code>1.25em</code> = <code>25px</code><br/>
+          <code>1.5em</code> = <code>30px</code><br/>
+          <code>2em</code> = <code>40px</code><br/>
+          <code>2.5em</code> = <code>50px</code><br/>
+        </p>
       </section>
 
       <section>
-        <h3>Width/Height</h3>
-        <p>Can use units to set specific heights/widths on things. Can use % units so that the result is responsive</p>
-        <p>We won't cover responsive in this class, but one of the key tenants is to use sizings that will respond to the
-          size of the screen</p>
+        <h3>Measurement Units</h3>
+        <h4>Percentages</h4>
+        <p>When we use a percentage as a value, the resulting calculation is based on the parent element. They allow us to leave the measurement math up to the browser.</p>
       </section>
 
       <section>
-        <p>Max and min width are also a thing</p>
+        <h3>Measurement Units</h3>
+        <h4>Percentages</h4>
+        <p>The browser finds the size of the parent, regards that size as 100% and calculates the size of the child accordingly.</p>
+        <div>
+          <div class="halfblock">
+<pre style="width: 100%;"><code class="css">main {
+  width: 1080px;
+}
+
+p {
+  width: 80%;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+<pre style="width: 100%;"><code class="html">&lt;main&gt;
+  &lt;p&gt;Hello world!&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+          </div>
+        </div>
+        <p class="clear">The <code>paragraph</code>'s width would be <code>864px</code>.</p>
+      </section>
+
+      <section>
+        <h3>Measurement Units</h3>
+        <p>Inches, <code>rem</code>s, <code>pica</code>s, viewport width/height... there are so many more!</p>
+        <p><a href="https://css-tricks.com/the-lengths-of-css/" target="_blank" title="Navigate to the CSS Tricks article about CSS measurement units">Check them out here</a>.</p>
+      </section>
+
+      <section>
+        <h3>Width & Height</h3>
+        <p>We can use our new measurement units to set specific heights and widths on block elements.</p>
       </section>
 
       <section>
         <h3>Width</h3>
-        <p>An element's width describes the width of the content. Padding and border are additional measurements.</p>
+        <p>An element's <code>width</code> describes the horizontal measurement of its content. Padding and border are additional.</p>
         <pre><code class="css">header {
   width: 100%;
   padding: 1%;
@@ -147,9 +195,8 @@
         <p>Use your Developer Tools on the element below. Open the "Computed" tab in the CSS panel to see how <code>padding</code>          and
           <code>border</code> are calculated separately from the <code>width</code>.</p>
         <p style="width: 300px; padding: 50px; background: thistle; border: 2px solid purple; margin: 0 auto;">I am <code>300px</code>          wide.
-          But my padding is <code>50px</code> and I have a <code>2px</code> border.</p>
+          My padding is <code>50px</code> and I have a <code>2px</code> border.</p>
       </section>
-
 
       <section>
         <h3>Width</h3>
@@ -173,13 +220,25 @@
       <section>
         <h3>Box-Sizing</h3>
         <h4><code>content-box</code></h4>
-        <p>There are two ways to deal with calculating an element's width and padding. You can either do the mental math
-          and apply the width and padding accordingly...</p>
-        <pre><code class="css">header {
-  width: 80%;
-  padding: 10%;
+        <p>There are two ways to deal with calculating an element's width and padding. You can do the mental math
+          and apply the width and padding accordingly.</p>
+        <div>
+            <p>Ex: if you want a 100px wide paragraph with padding and a border...</p>
+          <div class="halfblock">
+          <pre style="width: 100%;"><code class="css">p {
+  border: 2px solid blue;
+  padding: 10px;
+  width: 76px;
 }</code></pre>
-        <p><code>80%</code> + <code>10%</code> + <code>10%</code> = <code>100%</code></p>
+          </div>
+          <div class="halfblock">
+              <p style="text-align: center;">
+                Width (content) (<code>76px</code>)<br/>
+                <span class="pink">+</span> padding (<code>20px</code>)<br/>
+                <span class="pink">+</span> border (<code>4px</code>)<br/>
+                <span class="pink">=</span> <code>100px</code></p>
+          </div>
+        </div>
       </section>
 
       <section>
@@ -187,32 +246,107 @@
         <h4><code>border-box</code></h4>
         <p>Or you can reset the <code>box-sizing</code> property altogether! The <code>border-box</code> value tells the
           browser to apply the width to the <em>combination</em> of the border, padding, and the width.</p>
-        <pre><code class="css">header {
+          <div>
+            <div class="halfblock"><pre style="width: 100%;"><code class="css">header {
   box-sizing: border-box;
-  width: 80%;
-  padding: 10%;
-}</code></pre>
-        <p><code>80%</code> + <code>10%</code> + <code>10%</code> = <code>100%</code></p>
+  width: 100px;
+  border: 2px solid blue;
+  padding: 10px;
+}</code></pre></div>
+            <div class="halfblock">
+              <p style="text-align: center; width: 100%;">
+                Width (<code>100px</code>)<br/>
+                <span class="pink">-</span> padding (<code>20px</code>)<br/>
+                <span class="pink">-</span> border (<code>4px</code>)<br/>
+                <span class="pink">=</span> content (<code>76px</code>)</p>
+            </div>
+          </div>
+      </section>
+
+      <section>
+        <h3>Box-Sizing</h3>
+        <h4>Border-Box Example</h4>
+        <p>Use your Developer Tools on the element below. Open the "Computed" tab in the CSS panel to see how <code>padding</code>          and
+          <code>border</code> are subtracted from the <code>width</code>.</p>
+        <p style="box-sizing: border-box; width: 300px; padding: 50px; background: thistle; border: 2px solid purple; margin: 0 auto;">I am <code>300px</code>          wide.
+          My padding is <code>50px</code> and I have a <code>2px</code> border.</p>
       </section>
 
       <!-- height-->
       <section>
-        <h3>Property: Height</h3>
-        <p>Sets the height of an element.</p>
-        <p>Does not include padding or borders. Remember to add these to the height.</p>
-        <pre><code class="css">p.alert{
-      height: 50px;
-      padding: 5px;
-      border: 2px solid red; //Total height is 64px
-    }
-    </code></pre>
+        <h3>Height</h3>
+        <p>An element's <code>height</code> describes the vertical measurement of its content (unless <code>box-sizing</code> is set to <code>border-box</code> as we just discussed). By default, an element will expand to be as tall as necessary for its content (the default <code>height</code> value is <code>auto</code>).</p>
+      </section>
+
+      <section>
+        <h3>Height</h3>
+        <p>But we can also set a specific <code>height</code> on an element. If the contents of an element exceed its given <code>height</code>, they will overflow.</p>
+        <div>
+          <div class="halfblock">
+            <pre style="width: 100%;"><code class="css">div {
+  height: 200px;
+  border: 1px solid red;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <div style="height: 200px; border: 1px solid red;">
+              <p>I'm a <code>paragraph</code> inside a <code>div</code> that is 200px tall but I have so much more to say! So I'm just going to keep talking. Blah blah blah blah blah blah blah blah blah...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Overflow</h3>
+        <p>When an element's content overflows its boundries, we can set the <code>overflow</code> property to handle it.</p>
+        <div>
+            <div class="halfblock">
+              <pre style="width: 100%;"><code class="css">div {
+  height: 100px;
+  border: 1px solid red;
+  overflow: visible;
+}</code></pre>
+            </div>
+            <div class="halfblock">
+              <div style="height: 100px; border: 1px solid red;">
+                <p>I'm a <code>paragraph</code> inside a <code>div</code> that is too small but I have so much more to say!</p>
+              </div>
+            </div>
+          </div>
+          <hr class="clear"/>
+          <div>
+              <div class="halfblock">
+                <pre style="width: 100%;"><code class="css">div {
+  overflow: hidden;
+}</code></pre>
+              </div>
+              <div class="halfblock">
+                <div style="height: 100px; border: 1px solid red; overflow: hidden;">
+                  <p>I'm a <code>paragraph</code> inside a <code>div</code> that is too small but I have so much more to say!</p>
+                </div>
+              </div>
+            </div>
+            <hr class="clear"/>
+          <div>
+              <div class="halfblock">
+                <pre style="width: 100%;"><code class="css">div {
+  overflow: scroll;
+}</code></pre>
+              </div>
+              <div class="halfblock">
+                <div style="height: 100px; border: 1px solid red; overflow: scroll;">
+                  <p>I'm a <code>paragraph</code> inside a <code>div</code> that is too small but I have so much more to say!</p>
+                </div>
+              </div>
+            </div>
       </section>
 
       <!-- Exercise -->
       <section>
-        <h3>Let's develop it!</h3>
+        <h3>Let's Develop It!</h3>
         <div>
-          <p>Develop it add width/height to a image?</p>
+          <p>Add <code>height</code>s and <code>width</code>s to elements on your page. Try them out on images!</p>
+        </div>
       </section>
 
       <section>
@@ -290,49 +424,249 @@
       </section>
 
       <section>
-        <h3>Flex</h3>
-        <p>So far we've added all sorts of styles to our page, but it still doesn't look like a real website. Positioning
-          will help.</p>
+        <h3>Display</h3>
+        <p>By default, elements are either <code>block</code> or <code>inline</code>. But those defaults are not permanent! We can change them via the CSS property <code>display</code>.</p>
       </section>
 
+      <section>
+        <h3>Display</h3>
+        <p>Anchors default to <code>inline</code>, which is how they can flow with other text.</p>
+        <div>
+          <div class="halfblock"><p>But we can <a href="#" style="background: lightblue; display: block">reset the display</a> and they'll take up a whole line, just like that.</p></div>
+          <div class="halfblock">
+            <pre style="width: 100%"><code class="css">a {
+  display: block;
+  background: lightblue;
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Display</h3>
+        <p>The same holds true for <code>block</code> elements.</p>
+        <div>
+          <div class="halfblock"><span>Hola, I am a span. </span><p style="display: inline; background: lightblue;">Hello, I'm a paragraph. </p><span>Ciao, I am a span. </span><span>Guten tag, I am a span. </span></div>
+          <div class="halfblock">
+              <pre style="width: 100%"><code class="css">p {
+  display: inline;
+  background: lightblue;
+}</code></pre>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h3>Display</h3>
+        <p>Display also accepts the following values:</p>
+        <ul>
+          <li style="margin-bottom: 20px;"><code>inline-block</code>: keeps the flow of an <code>inline</code> element and adds the Box Model functionality you'd expect from a <code>block</code> (including <code>width</code> and <code>height</code>).</li>
+          <li style="margin-bottom: 20px;"><code>none</code>: hides the content of an element without removing the underlying HTML.</li>
+          <li><code>grid</code>: this inconspicuous value opens a door into the bright, shining future of web development. We don't have time to cover it, but you should <a href="https://gridbyexample.com/learn/" target="_blank" title="Navigate to Grid by Example, an excellent reference on CSS Grid.">definitely check it out</a>.</li>
+        </ul>
+        <p>and...</p>
+      </section>
+
+      <!-- Flex -->
       <section>
         <h3>Flex</h3>
-        <p>Allows us to position elements easily via CSS.</p>
-        <p>The default flow of an HTML page is downward, like a column in a table.</p>
+        <p>Setting an element to <code>display: flex;</code> gives it the ability to alter the width, height, spacing, and order of the items it contains.</p>
+        <p>You may hear this concept referred to as "flexbox," which is short for Flexible Box Layout.</p>
       </section>
 
       <section>
         <h3>Flex</h3>
-        <p>With Flex, we can position things in either columns or rows and control the spacing of those elements.</p>
+        <p>When we apply <code>flex</code> to an element, the default behavior is to arrange its children into a row.</p>
+        <div>
+          <div class="halfblock">
+            <pre style="width: 100%"><code class="css">.wrapper {
+  border: 5px dotted red;
+}
+p {
+  border: 1px solid blue;
+}</code></pre>
+            </div>
+            <div class="halfblock">
+              <br/>
+              <div style="border: 5px dotted red;">
+                <p style="border: 1px solid blue;">Hello</p>
+                <p style="border: 1px solid blue;">World</p>
+              </div>
+            </div>
+          </div>
+          <hr class="clear"/>
+          <div>
+          <div class="halfblock">
+            <pre style="width: 100%"><code class="css">.wrapper {
+  border: 5px dotted red;
+  display: flex;
+}
+p {
+  border: 1px solid blue;
+}</code></pre>
+          </div>
+          <div class="halfblock">
+            <br/>
+            <div style="display: flex;border: 5px dotted red;">
+              <p style="border: 1px solid blue;">Hello</p>
+              <p style="border: 1px solid blue;">World</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>CSS Grid</h3>
-        <p>It's a thing. The entire layout is described in CSS, no wrappers necessary. We're not going to cover it, but now
-          you know it's a thing!</p>
+        <h3>Flex</h3>
+        <p>Once <code>flex</code> is applied, the direction in which the children are displayed can be changed using the <code>flex-direction</code>. No HTML editing required!</p>
+        <div>
+          <div class="halfblock">
+            <h4>Row</h4>
+            <pre style="width: 100%"><code class="css">flex-direction: row;</code></pre>
+            <div style="border: 5px dotted #999; display: flex;flex-direction: row">
+              <p style="border: 1px solid blue;">Hello</p>
+              <p style="border: 1px solid blue;">World</p>
+            </div>
+            </div>
+            <div class="halfblock">
+              <h4>Row-reverse</h4>
+              <pre style="width: 100%"><code class="css">flex-direction: row-reverse;</code></pre>
+              <div style="border: 5px dotted #999; display: flex;flex-direction: row-reverse;">
+                <p style="border: 1px solid blue;">Hello</p>
+                <p style="border: 1px solid blue;">World</p>
+              </div>
+            </div>
+          </div>
+          <br class="clear"/>
+          <hr/>
+          <div>
+          <div class="halfblock">
+            <h4>Column</h4>
+            <pre style="width: 100%"><code class="css">flex-direction: column;</code></pre>
+            <div style="border: 5px dotted #999; display: flex;flex-direction: column;">
+              <p style="border: 1px solid blue;">Hello</p>
+              <p style="border: 1px solid blue;">World</p>
+            </div>
+          </div>
+          <div class="halfblock">
+            <h4>Column-reverse</h4>
+            <pre style="width: 100%"><code class="css">flex-direction: column-reverse;</code></pre>
+            <div style="border: 5px dotted #999; display: flex;flex-direction: column-reverse;">
+              <p style="border: 1px solid blue;">Hello</p>
+              <p style="border: 1px solid blue;">World</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
-        <h3>Fun fancy stuff</h3>
+        <h3>Flex</h3>
+        <p>We can use the <code>justify-content</code> property on the parent element to align the children along.</p>
+        <div>
+          <div class="halfblock">
+            <h4>Space-around</h4>
+            <pre style="width: 100%;"><code class="css" style="text-align: center;">justify-content: space-around;</code></pre>
+            <div style="border: 5px dotted #999; display: flex; justify-content:space-around;">
+              <p style="border: 1px solid blue;">Hello</p>
+              <p style="border: 1px solid blue;">World</p>
+            </div>
+          </div>
+          <div class="halfblock">
+            <h4>Space-between</h4>
+            <pre style="width: 100%;"><code class="css" style="text-align: center;">justify-content: space-between;</code></pre>
+            <div style="border: 5px dotted #999; display: flex; justify-content:space-between;">
+              <p style="border: 1px solid blue;">Hello</p>
+              <p style="border: 1px solid blue;">World</p>
+            </div>
+          </div>
+        </div>
+        <br class="clear">
+        <br>
+        <div>
+          <div class="halfblock">
+            <h4>Space-evenly</h4>
+            <pre style="width: 100%;"><code class="css" style="text-align: center;">justify-content: space-evenly;</code></pre>
+            <div style="border: 5px dotted #999; display: flex; justify-content:space-evenly;">
+              <p style="border: 1px solid blue;">Hello</p>
+              <p style="border: 1px solid blue;">World</p>
+            </div>
+          </div>
+          <div class="halfblock">
+            <h4>Flex-end</h4>
+            <pre style="width: 100%;"><code class="css" style="text-align: center;">justify-content: flex-end;</code></pre>
+            <div style="border: 5px dotted #999; display: flex; justify-content:flex-end;">
+              <p style="border: 1px solid blue;">Hello</p>
+              <p style="border: 1px solid blue;">World</p>
+            </div>
+          </div>
+        </div>
+        <br class="clear"/>
+        <br/>
+        <p>
+          Other values include: <code>center</code> and <code>flex-start</code>.
+        </p>
       </section>
 
       <section>
-        <h3>Backgrounds</h3>
+        <h3>Flex</h3>
+        <p>So far we've talked about <code>flex</code> properties that are available on the parent container. There are also properties that are applied to the child elements as needed.</p>
       </section>
 
       <section>
-        <h3>Backgrounds</h3>
-        <h4>Images</h4>
+        <h3>Flex</h3>
+        <p>Flex children only take up the space they need by default. Applying <code>flex-grow</code> tells an element how much of it's parent's extra space to take up. It accepts a unitless value that serves as a proportion.</p>
+        <br>
+        <div style="border: 5px dotted #999; display: flex;flex-direction: row">
+          <p style="border: 1px solid blue;">No <code>flex-grow</code> set.</p>
+          <p style="border: 1px solid blue;">No <code>flex-grow</code> set.</p>
+        </div>
+        <br>
+        <div style="border: 5px dotted #999; display: flex;flex-direction: row">
+          <p style="border: 1px solid blue;">No <code>flex-grow</code> set.</p>
+          <p style="border: 1px solid blue; flex-grow: 1;"><code>flex-grow: 1;</code></p>
+        </div>
+        <br>
+        <div style="border: 5px dotted #999; display: flex;flex-direction: row">
+          <p style="border: 1px solid blue; flex-grow: 1;"><code>flex-grow: 1;</code></p>
+          <p style="border: 1px solid blue; flex-grow: 1;"><code>flex-grow: 1;</code></p>
+        </div>
       </section>
 
       <section>
-        <h3>Backgrounds</h3>
-        <h4>Repeating Images</h4>
+        <h3>Flex</h3>
+        <p>Flex children can also reorder themselves using the <code>order</code> property. The default value is <code>0</code>, and elements display in the order they're written in the HTML.</p>
+        <br>
+        <div style="border: 5px dotted #999; display: flex;flex-direction: row; justify-content: space-around;">
+          <p style="border: 1px solid blue;">let's</p>
+          <p style="border: 1px solid blue;">paint</p>
+          <p style="border: 1px solid blue;">a</p>
+          <p style="border: 1px solid blue;">happy</p>
+          <p style="border: 1px solid blue;">tree</p>
+        </div>
+        <p><br>But if we set <code>order: -1;</code> on the "happy" element, it jumps to the front.</p>
+        <div style="border: 5px dotted #999; display: flex;flex-direction: row;justify-content: space-around;">
+            <p style="border: 1px solid blue;">let's</p>
+            <p style="border: 1px solid blue;">paint</p>
+            <p style="border: 1px solid blue;">a</p>
+            <p style="border: 1px solid blue; order:-1;">happy</p>
+            <p style="border: 1px solid blue;">tree</p>
+        </div>
       </section>
 
       <section>
-        <h3>Backgrounds</h3>
-        <h4>Gradients</h4>
+        <h3>Flex</h3>
+        <p>The Flexible Box Layout is a powerful tool in CSS, and we've only touched on a few of its properties. It can be challenging and confusing, so take advantage of all the helpful guides out there!</p><br>
+        <h4><a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" target="_blank">CSS-Tricks: A Complete Guide to Flexbox</a></h4>
+        <hr/>
+        <h4><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox" target="_blank">MDN: Basic concepts of flexbox</a></h4>
+        <hr/>
+        <h4><a href="https://drafts.csswg.org/css-flexbox/" target="_blank">W3C: CSS Flexible Box Layout Module</a></h4>
+<br>
+        <p>Also, check out <a href="https://flexboxfroggy.com/" target="_blank">Flexbox Froggy</a> and <a href="http://www.flexboxdefense.com/" target="_blank">Flexbox Defense</a>; games that make learning flex more enjoyable!</p>
+      </section>
+
+      <section>
+        <h3>Let's Develop It!</h3>
+        <p>Put the <code>display</code> property to use. <br>Try out <code>flex</code> and its related properties.</p>
       </section>
 
       <section>
@@ -340,23 +674,23 @@
         <p>Lists are great for organizing navigation links from a semantic perspective, but they don't look great straight out of the box. CSS to the rescue!</p>
       </section>
 
-      <section>
-        <h3>Un-styling Lists</h3>
-        <div>
-          <div class="halfblock"><p>Aside from the list item bullets, lists (both ordered and unordered) come equipped with <code>margin</code> and <code>padding</code>.</p></div>
-          <div class="halfblock"><img src="img/unstyled-list.png" alt="Screenshot of an unordered list highlighted using the Developer Tools to visualize the padding and margin applied."/></div>
-        </div>
-        <p>We can get rid of all three of these properties like so:</p>
-        <pre><code class="css">ul {
+        <section>
+          <h3>Un-styling Lists</h3>
+          <div>
+            <div class="halfblock"><p>Aside from the list item bullets, lists (both ordered and unordered) come equipped with <code>margin</code> and <code>padding</code>.</p></div>
+            <div class="halfblock"><img src="img/unstyled-list.png" alt="Screenshot of an unordered list highlighted using the Developer Tools to visualize the padding and margin applied."/></div>
+          </div>
+          <p>We can get rid of all three of these properties like so:</p>
+          <pre><code class="css">ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }</code></pre>
-      </section>
+        </section>
 
-      <section>
-        <h3>Un-styling Lists</h3>
-        <p>From there, the possibilities are endless. You could use <code>flex</code> to line them up horizontally:</p>
+        <section>
+          <h3>Un-styling Lists</h3>
+          <p>From there, the possibilities are endless. You could use <code>flex</code> to line them up horizontally:</p>
             <pre style="width: 100%;"><code class="css">ul {
   margin: 0;
   padding: 0;
@@ -377,32 +711,69 @@
               <li><a href="#">News</a></li>
               <li><a href="#">Contact</a></li>
             </ul>
+        </section>
+
+        <section>
+          <h3>Un-styling Lists</h3>
+          <p>You could leave them vertically stacked and use width, padding, and borders to bulk the <code>anchor</code>s up.</p>
+          <div>
+            <div class="halfblock">
+                <pre style="width: 100%; font-size: 0.45em;"><code class="css">ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  background: mintcream;
+  text-align: center;
+}
+
+li {
+  border-bottom:
+    5px dotted thistle;
+}
+
+a {
+  display: block;
+  padding: 10px;
+}</code></pre>
+            </div>
+            <div class="halfblock">
+              <ul style="background: mintcream; margin: 0; padding: 0; list-style-type: none; width: 50%; text-align: center;">
+                <li style="border-bottom: 5px dotted thistle;"><a href="#" style="display: block;padding: 10px;">Home</a></li>
+                <li style="border-bottom: 5px dotted thistle;"><a href="#" style="display: block;padding: 10px; ">About</a></li>
+                <li style="border-bottom: 5px dotted thistle;"><a href="#" style="display: block;padding: 10px;">Shop</a></li>
+                <li style="border-bottom: 5px dotted thistle;"><a href="#" style="display: block;padding: 10px;">News</a></li>
+                <li style="border-bottom: 5px dotted thistle;"><a href="#" style="display: block;padding: 10px;">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      <section>
+        <h3>Fun fancy stuff</h3>
       </section>
 
       <section>
-          <h3>Un-styling Lists</h3>
-          <p>From there, the possibilities are endless. You could leave them vertically stacked and use width, padding, and borders to bulk the anchors up</p>
-              <pre style="width: 100%;"><code class="css">ul {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-    display: flex;
-    justify-items: space-around;
-    background: mistyrose;
-  }</code></pre>
-  <ul style="font-size: .75em; margin: 0;
-              padding: 0;
-              list-style-type: none;
-              display: flex;
-              justify-content: space-around;
-              background: mistyrose;">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">News</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-        </section>
+        <h3>Backgrounds</h3>
+      </section>
+
+      <section>
+        <h3>Backgrounds</h3>
+        <h4>Images</h4>
+        <p>Add background images to elements using the following property:</p>
+        <pre><code class="css">body {
+  background-image: url(path/to/image.jpg);
+}</code></pre>
+      </section>
+
+      <section>
+        <h3>Backgrounds</h3>
+        <h4>Repeating Images</h4>
+      </section>
+
+      <section>
+        <h3>Backgrounds</h3>
+        <h4>Gradients</h4>
+      </section>
 
       <section>
         <h3>Google Fonts</h3>
@@ -416,158 +787,6 @@
       <section>
         <h3>Google Fonts</h3>
         <h4>How to add the code</h4>
-      </section>
-
-      <section>
-        <h3>Static Positioning</h3>
-        <ul>
-          <li>HTML elements are positioned static by default.</li>
-          <li>Static elements are positioned in the normal ﬂow of the page</li>
-          <li>Static elements ignore top, bottom, right or left property specifications.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Static Positioning</h3>
-        <p>In normal flow, inline boxes flow from left to right, wrapping to next line when needed.</p>
-        <pre><code class="html">&lt;img src="img/cookie1.png"/&gt;
-&lt;img src="img/cookie2.png"/&gt;
-&lt;img src="img/cookie3.png"/&gt;
-...
-&lt;img src="img/cookie2.png"/&gt;
-&lt;img src="img/cookie3.png"/&gt;
-</code></pre>
-        <img src="img/cookie1.png" alt="Stocking-shaped cookie" />
-        <img src="img/cookie2.png" alt="Tree-shaped cookie" />
-        <img src="img/cookie3.png" alt="Snowflake-shaped cookie" />
-        <img src="img/cookie1.png" alt="Stocking-shaped cookie" />
-        <img src="img/cookie2.png" alt="Tree-shaped cookie" />
-        <img src="img/cookie3.png" alt="Snowflake-shaped cookie" />
-        <img src="img/cookie1.png" alt="Stocking-shaped cookie" />
-        <img src="img/cookie2.png" alt="Tree-shaped cookie" />
-      </section>
-
-      <section>
-        <h3>Static Positioning</h3>
-        <p>In normal flow, block boxes flow from top to bottom, making a new line after every box.</p>
-        <pre><code class ="html">&lt;p&gt;Greetings&lt;/p&gt;
-&lt;p&gt;Hello&lt;/p&gt;
-&lt;p&gt;Hi there!&lt;/p&gt;
-</code></pre>
-        <p>Greetings</p>
-        <p>Hello</p>
-        <p>Hi there!</p>
-      </section>
-
-      <!-- Relative Positioning-->
-      <section>
-        <h3>Relative Positioning</h3>
-        <ul>
-          <li>Takes the element out of the normal flow, allowing it to be moved to the top, left, right or bottom. </li>
-          <li>Does not affect the elements surrounding it.</li>
-          <li>Makes an element a "positioning context" in which to position other elements relative to it.</li>
-          <li>Relative positioning and absolute positioning are used together.</li>
-        </ul>
-      </section>
-
-      <section>
-        <h3>Relative Positioning</h3>
-        <p>The "relative" value will still put the element in the normal flow, but then offset it according to top/left/right/bottom
-          properties.
-        </p>
-        <pre><code class="css">.relative{
-  position: relative;
-  left: 80px;
-  top: 20px;
-  height: 100px;
-  background-color: yellow;
-}
-</code></pre>
-        <div style="border:2px solid black;">
-          <div style="position: relative; left: 80px; top: 20px; height: 100px; background-color: yellow; color:black; text-align:left">
-            Hello, hi!
-          </div>
-        </div>
-      </section>
-
-      <!-- Absolute positioning-->
-      <section>
-        <h3>Absolute Positioning</h3>
-        <ul>
-          <li>Positions element outside of the normal flow.</li>
-          <li>An absolutely positioned element is offset from its container block, positioned relative.</li>
-          <li>Its container block is the first element that has a position other than static.</li>
-          <li>If no such element is found, the container block is &lt;html&gt;.</li>
-          <li>Other elements act as if it's not there.</li>
-          <li>Determined by its oﬀset values in the properties top, bottom, right and left.</li>
-        </ul>
-      </section>
-
-      <section style="border: 1px solid black">
-        <h3>Absolute Positioning</h3>
-        <p>The "absolute" value will take the element out of the normal flow and position it in relation to the window (or
-          the closest non-static element).</p>
-        <pre><code class="css">.top{
-  position: absolute;
-  top: -40px;
-  right: 10px;
-  background-color: yellow
-}
-.bottom{
-  position: absolute;
-  bottom: -40px;
-  left:60px;
-  background-color: green
-}
-</code></pre>
-        <div>
-          <div style="position: absolute; top: -40px; right: 10px; background-color: yellow; color:black">
-            Up here
-          </div>
-          <div style="position: absolute; bottom: -40px; left:60px; background-color: green">
-            Down here
-          </div>
-        </div>
-      </section>
-
-      <section>
-        <h3>Example: Absolute Positioning</h3>
-        <div class="halfblock">
-          <p>Here's an example of an image with a caption absolutely positioned over top of it.</p>
-          <p>The containing div has a position of relative, and the caption has a position of absolute.</p>
-        </div>
-        <div class="halfblock">
-          <img src="img/example-absolute.png" class="noborder" alt="Photo with caption overlayed on top" />
-        </div>
-        <div class="clear"></div>
-      </section>
-
-      <section>
-        <h3>Z-index</h3>
-        <p>Sometimes elements overlap. You can change the order of overlapping with z-index. The element with highest z-index
-          goes on top.</p>
-        <pre><code class ="css">.bottom{
-  position: absolute;
-  bottom: 10px;
-  left:60px;
-  background-color: yellow;
-}
-.top{
-  position: absolute;
-  bottom: 15px;
-  left:60px;
-  background-color: green;
-  z-index: 2;
-}
-</code></pre>
-        <div style="position: absolute; bottom: -20px; left:60px; background-color: yellow; color:black">Bottom</div>
-        <div style="position: absolute; bottom: -15px; left:60px; background-color: green; z-index: 2; ">Top</div>
-      </section>
-
-      <section>
-        <h3>Let's Develop it!</h3>
-        <p>Let's add some positioning.</p>
-        <p>Let's create a div that contains an image and a caption, and position the caption absolutely overtop the image.</p>
       </section>
 
       <section>
