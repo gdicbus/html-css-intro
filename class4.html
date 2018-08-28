@@ -749,48 +749,165 @@ a {
         </section>
 
       <section>
-        <h3>Fun fancy stuff</h3>
+        <h3>Fun Fancy Stuff!</h3>
       </section>
 
       <section>
         <h3>Backgrounds</h3>
+        <p>We can do more with element backgrounds than just set them to one color!</p>
       </section>
 
       <section>
         <h3>Backgrounds</h3>
         <h4>Images</h4>
-        <p>Add background images to elements using the following property:</p>
+        <p>Add background images to elements using the <code>background-image</code> property.</p>
         <pre><code class="css">body {
   background-image: url(path/to/image.jpg);
+}</code></pre>
+        <p>You can use images in your file system or link to images that are hosted elsewhere by providing the full, absolute URL.</p>
+        <pre><code class="css">body {
+  background-image: url(http://www.example.com/img/cat.png);
 }</code></pre>
       </section>
 
       <section>
         <h3>Backgrounds</h3>
-        <h4>Repeating Images</h4>
+        <h4>Images: Repeating</h4>
+        <p>By default, background images repeat like tiles. If the image is big, you may not be able to tell that it's repeating. Remove or alter this behavior using the <code>background-repeat</code> property.</p>
+        <div>
+          <div class="halfblock">
+            <p>Remove the repeat:</p>
+              <pre style="width: 100%; font-size: 0.4em;"><code class="css">body {
+  background-image: url(img.jpg);
+  background-repeat: no-repeat;
+}</code></pre>
+<p>Repeat vertically:</p>
+              <pre style="width: 100%; font-size: 0.4em;"><code class="css">body {
+  background-image: url(img.jpg);
+  background-repeat: repeat-y;
+}</code></pre>
+</div>
+<div class="halfblock">
+    <p>Repeat vertically:</p>
+      <pre style="width: 100%; font-size: 0.4em;"><code class="css">body {
+  background-image: url(img.jpg);
+  background-repeat: repeat-y;
+}</code></pre>
+<p>Repeat but don't crop:</p>
+      <pre style="width: 100%; font-size: 0.4em;"><code class="css">body {
+  background-image: url(img.jpg);
+  background-repeat: round;
+}</code></pre>
+  </div>
+</div>
+      </section>
+
+      <section>
+          <h3>Backgrounds</h3>
+          <h4>Images: Size</h4>
+          <p>We can alter a background image's size using the <code>background-size</code> property.</p><hr>
+          <pre><code class="css">background-image: url(img/cat.png);
+background-size: 300px;</code></pre>
+<p>The background image would be <code>300px</code> wide with a height of "auto".</p><hr>
+<pre><code class="css">background-image: url(img/cat.png);
+background-size: 100% 300px;</code></pre>
+<p>This background image would be <code>100%</code> the width of the element and <code>300px</code> high.</p>
+        </section>
+
+        <section>
+          <h3>Backgrounds</h3>
+          <h4>Images: Size</h4>
+          <p>We can also use the "keywords" <code>cover</code> and <code>contain</code> to describe the <code>background-size</code> value.</p>
+          <img src="img/cover-and-contain.jpg" alt="Depiction of the effect of the cover and contain values." />
+          <p><small>Image courtesy of <a href="http://css-tricks.com" target="_blank">CSS-Tricks</a></small></p>
+        </section>
+
+        <section>
+          <h3>Backgrounds</h3>
+          <h4>Images</h4>
+          <p>There is so much more fun to be had with background images!</p>
+          <p>Learn more <a href="https://css-tricks.com/almanac/properties/b/background/" target="_blank">at CSS-Tricks</a>.</p>
+        </section>
+
+      <section>
+        <h3>Backgrounds</h3>
+        <h4>Gradients</h4>
+        <p>Another type of image, gradients are technically images the browser draws for you. Gradient code ranges from super simple to incredibly complex. There's no shame in using a generator to calculate gradient code!</p>
+        <pre><code class="css">div {
+  background: linear-gradient(thistle, purple);
+}</code></pre>
+        <div style="background: linear-gradient(thistle, purple); padding: 30px 0"><span style="font-weight: 800; color: white; font-family:monospace;">Super cool!</span></div>
       </section>
 
       <section>
         <h3>Backgrounds</h3>
         <h4>Gradients</h4>
+        <p><br>More info on gradients:</p>
+        <p><a href="https://css-tricks.com/css3-gradients/" target="_blank">CSS-Tricks: CSS Gradients</a></p>
+        <p><a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients" target="_blank">MDN: Using CSS gradients</a>
+        <p><br>Gradient generators:</p>
+        <p><a href="http://ourownthing.co.uk/gradpad.html" target="_blank">GradPad</a></p>
+        <p><a href="http://elrumordelaluz.github.io/draGGradients/#" target="_blank">draGGradients</a></p>
+        <p><a href="http://www.colorzilla.com/gradient-editor/" target="_blank">ColorZilla</a></p>
       </section>
 
       <section>
         <h3>Google Fonts</h3>
+        <p>There are many ways to add non-standard fonts to a website. Google Fonts is great because the fonts are all free and Google hosts the files.</p>
       </section>
 
       <section>
         <h3>Google Fonts</h3>
-        <h4>How to use the website</h4>
+        <p>Step 1: Pick your font(s)<br/>
+          <a href="https://fonts.google.com/">fonts.google.com</a></p>
+        <img src="img/google-fonts.png" alt="Screenshot of the Google Fonts website." />
       </section>
 
       <section>
         <h3>Google Fonts</h3>
-        <h4>How to add the code</h4>
+        <p>Step 2: Pick which weights you want</p>
+        <img src="img/google-fonts--weights.png" alt="Screenshot of the Google Fonts website." />
       </section>
 
       <section>
-        <h2>Questions?</h2>
+        <h3>Google Fonts</h3>
+        <p>Step 3: Follow the directions</p>
+        <img src="img/google-fonts--embed.png" alt="Screenshot of the Google Fonts website." />
+      </section>
+
+      <section>
+        <h3>Google Fonts</h3>
+        <p>The fonts are brought into your page via a stylesheet.</p>
+        <pre style="width: 100%"><code class="html" style="font-size: 1.05em">&lt;!Doctype html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Awesome Website&lt;/title&gt;
+    &lt;link
+      href="https://fonts.googleapis.com/css?family=Zilla+Slab:300,500,700"
+      rel="stylesheet"&gt;
+  &lt;/head&gt;
+[etc...]</code></pre>
+        <p>From there, you apply them to whichever CSS rules you want!</p>
+        <pre><code class="css" style="font-size: 1.05em">p {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 500;
+}
+
+nav {
+  font-family: 'Zilla Slab', serif;
+  font-weight: 700;
+}</code></pre>
+      </section>
+
+      <section>
+        <h3>Let's Develop It!</h3>
+        <p>Have any lists that need "un-styled"? Want to add some background images or gradients to your site? Psyched about fonts? Now's the time to add some polish to your site!</p>
+      </section>
+
+      <section>
+        <h1>🎉</h1>
+        <h2>Congratulations</h2>
+        <p>You have completed Introduction to HTML & CSS!</p>
       </section>
       </div><!-- Close slides -->
 
